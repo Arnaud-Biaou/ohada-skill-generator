@@ -9,54 +9,54 @@ export default function CPCBeninSkillGenerator() {
   const [livres, setLivres] = useState([
 {
         num: 'PREMIER',
-        title: 'LIVRE PREMIER',
+        title: 'LIVRE PREMIER - DES DISPOSITIONS COMMUNES A TOUTES LES JURIDICTIONS',
         titres: [
 {
             num: 'PREMIER',
-            title: 'TITRE PREMIER',
+            title: 'TITRE PREMIER - DES DISPOSITIONS LIMINAIRES',
             chapitres: [
 {
                 num: 'I',
-                title: 'CHAPITRE I',
+                title: 'CHAPITRE I - DES PRINCIPES DIRECTEURS DU PROCES CIVIL',
                 sections: [
 {
                     num: 'I',
-                    title: 'SECTION I',
+                    title: 'SECTION I - DE L\'INSTANCE',
                     subsections: [],
                     articlesIntro: 'Art. 2-4',
                     content: ''
                   },
 {
                     num: 'II',
-                    title: 'SECTION II',
+                    title: 'SECTION II - DE L\'OBJET DU LITIGE',
                     subsections: [],
                     articlesIntro: 'Art. 5-6',
                     content: ''
                   },
 {
                     num: 'III',
-                    title: 'SECTION III',
+                    title: 'SECTION III - DES FAITS',
                     subsections: [],
                     articlesIntro: 'Art. 7-9',
                     content: ''
                   },
 {
                     num: 'IV',
-                    title: 'SECTION IV',
+                    title: 'SECTION IV - DES PREUVES',
                     subsections: [],
                     articlesIntro: 'Art. 10-12',
                     content: ''
                   },
 {
                     num: 'V',
-                    title: 'SECTION V',
+                    title: 'SECTION V - DU DROIT',
                     subsections: [],
                     articlesIntro: 'Art. 13-14',
                     content: ''
                   },
 {
                     num: 'VI',
-                    title: 'SECTION VI',
+                    title: 'SECTION VI - DE LA CONTRADICTION',
                     subsections: [],
                     articlesIntro: 'Art. 15-18',
                     content: ''
@@ -67,32 +67,32 @@ export default function CPCBeninSkillGenerator() {
               },
 {
                 num: 'II',
-                title: 'CHAPITRE II',
+                title: 'CHAPITRE II - DE LA REPRESENTATION ET ASSISTANCE EN JUSTICE',
                 sections: [],
                 articlesIntro: 'Art. 19-29',
                 contentIntro: ''
               },
 {
                 num: 'III',
-                title: 'CHAPITRE III',
+                title: 'CHAPITRE III - DE L\'ACTION EN JUSTICE',
                 sections: [],
                 articlesIntro: 'Art. 30-33',
                 contentIntro: ''
               },
 {
                 num: 'IV',
-                title: 'CHAPITRE IV',
+                title: 'CHAPITRE IV - DE LA COMPETENCE DES JURIDICTIONS',
                 sections: [
 {
                     num: 'I',
-                    title: 'SECTION I',
+                    title: 'SECTION I - DE LA COMPETENCE D\'ATTRIBUTION',
                     subsections: [],
                     articlesIntro: 'Art. 34-39',
                     content: ''
                   },
 {
                     num: 'II',
-                    title: 'SECTION II',
+                    title: 'SECTION II - DE LA COMPÉTENCE TERRITORIALE',
                     subsections: [],
                     articlesIntro: 'Art. 40-52',
                     content: ''
@@ -107,26 +107,26 @@ export default function CPCBeninSkillGenerator() {
           },
 {
             num: 'II',
-            title: 'TITRE II',
+            title: 'TITRE II - DE L\'INTRODUCTION ET DE L\'INSTRUCTION DES INSTANCES',
             chapitres: [
 {
                 num: 'I',
-                title: 'CHAPITRE I',
+                title: 'CHAPITRE I - DES ACTES ET DÉLAIS DE PROCÉDURE',
                 sections: [
 {
                     num: 'I',
-                    title: 'SECTION I',
+                    title: 'SECTION I - DES ACTES',
                     subsections: [
 {
                         num: '1',
-                        title: 'SOUS-SECTION 1',
+                        title: 'SOUS-SECTION 1 - DE LA FORME DES ACTES',
                         paragraphes: [],
                         articles: 'Art. 53-55',
                         content: ''
                       },
 {
                         num: '2',
-                        title: 'SOUS-SECTION 2',
+                        title: 'SOUS-SECTION 2 - DE LA FORME DES NOTIFICATIONS',
                         paragraphes: [
 {
                             num: '1',
@@ -152,14 +152,14 @@ export default function CPCBeninSkillGenerator() {
                       },
 {
                         num: '3',
-                        title: 'SOUS-SECTION 3',
+                        title: 'SOUS-SECTION 3 - DES REGLES PARTICULIERES A LA NOTIFICATION DES JUGEMENTS',
                         paragraphes: [],
                         articles: 'Art. 80-84',
                         content: ''
                       },
 {
                         num: '4',
-                        title: 'SOUS-SECTION 4',
+                        title: 'SOUS-SECTION 4 - DES REGLES PARTICULIERES AUX NOTIFICATIONS INTERNATIONALES',
                         paragraphes: [
 {
                             num: '1',
@@ -179,14 +179,14 @@ export default function CPCBeninSkillGenerator() {
                       },
 {
                         num: '5',
-                        title: 'SOUS-SECTION 5',
+                        title: 'SOUS-SECTION 5 - DU LIEU DES NOTIFICATIONS',
                         paragraphes: [],
                         articles: 'Art. 100-103',
                         content: ''
                       },
 {
                         num: '6',
-                        title: 'SOUS-SECTION 6',
+                        title: 'SOUS-SECTION 6 - DES DISPOSITIONS DIVERSES',
                         paragraphes: [],
                         articles: 'Art. 104-105',
                         content: ''
@@ -197,18 +197,18 @@ export default function CPCBeninSkillGenerator() {
                   },
 {
                     num: 'II',
-                    title: 'SECTION II',
+                    title: 'SECTION II - DES DELAIS',
                     subsections: [
 {
                         num: '1',
-                        title: 'SOUS-SECTION 1',
+                        title: 'SOUS-SECTION 1 - DES DELAIS DE COMPARUTION',
                         paragraphes: [],
                         articles: 'Art. 106-108',
                         content: ''
                       },
 {
                         num: '2',
-                        title: 'SOUS-SECTION 2',
+                        title: 'SOUS-SECTION 2 - DE LA COMPUTATION DES DELAIS',
                         paragraphes: [],
                         articles: 'Art. 109-115',
                         content: ''
@@ -223,15 +223,15 @@ export default function CPCBeninSkillGenerator() {
               },
 {
                 num: 'II',
-                title: 'CHAPITRE II',
+                title: 'CHAPITRE II - DE L\'INTRODUCTION DE L\'INSTANCE',
                 sections: [
 {
                     num: 'I',
-                    title: 'SECTION I',
+                    title: 'SECTION I - DE LA DEMANDE INITIALE',
                     subsections: [
 {
                         num: '1',
-                        title: 'SOUS-SECTION 1',
+                        title: 'SOUS-SECTION 1 - DE LA REQUETE ECRITE',
                         paragraphes: [
 {
                             num: '1',
@@ -251,14 +251,14 @@ export default function CPCBeninSkillGenerator() {
                       },
 {
                         num: '2',
-                        title: 'SOUS-SECTION 2',
+                        title: 'SOUS-SECTION 2 - DE LA REQUETE CONJOINTE',
                         paragraphes: [],
                         articles: 'Art. 127-130',
                         content: ''
                       },
 {
                         num: '3',
-                        title: 'SOUS-SECTION 3',
+                        title: 'SOUS-SECTION 3 - DE L\'ASSIGNATION',
                         paragraphes: [],
                         articles: 'Art. 131-132',
                         content: ''
@@ -269,14 +269,14 @@ export default function CPCBeninSkillGenerator() {
                   },
 {
                     num: 'II',
-                    title: 'SECTION II',
+                    title: 'SECTION II - DES DEMANDES INCIDENTES',
                     subsections: [],
                     articlesIntro: 'Art. 133-140',
                     content: ''
                   },
 {
                     num: 'III',
-                    title: 'SECTION III',
+                    title: 'SECTION III - DE LA MISE AU ROLE',
                     subsections: [],
                     articlesIntro: 'Art. 141-159',
                     content: ''
@@ -287,29 +287,29 @@ export default function CPCBeninSkillGenerator() {
               },
 {
                 num: 'III',
-                title: 'CHAPITRE III',
+                title: 'CHAPITRE III - DE LA PROCEDURE PREPARATOIRE AU JUGEMENT',
                 sections: [
 {
                     num: 'I',
-                    title: 'SECTION I',
+                    title: 'SECTION I - DE L\'APPEL DES CAUSES',
                     subsections: [],
                     articlesIntro: 'Art. 160-161',
                     content: ''
                   },
 {
                     num: 'II',
-                    title: 'SECTION II',
+                    title: 'SECTION II - DES MOYENS DE DEFENSE',
                     subsections: [
 {
                         num: '1',
-                        title: 'SOUS-SECTION 1',
+                        title: 'SOUS-SECTION 1 - DE LA DEFENSE AU FOND',
                         paragraphes: [],
                         articles: 'Art. 162-163',
                         content: ''
                       },
 {
                         num: '2',
-                        title: 'SOUS-SECTION 2',
+                        title: 'SOUS-SECTION 2 - DES EXCEPTIONS DE PROCEDURE',
                         paragraphes: [
 {
                             num: '1',
@@ -353,7 +353,7 @@ export default function CPCBeninSkillGenerator() {
                       },
 {
                         num: '3',
-                        title: 'SOUS-SECTION 3',
+                        title: 'SOUS-SECTION 3 - DES FINS DE NON RECEVOIR',
                         paragraphes: [],
                         articles: 'Art. 204-208',
                         content: ''
@@ -364,11 +364,11 @@ export default function CPCBeninSkillGenerator() {
                   },
 {
                     num: 'III',
-                    title: 'SECTION III',
+                    title: 'SECTION III - DES MESURES D\'INSTRUCTION',
                     subsections: [
 {
                         num: '',
-                        title: 'SOUS-SECTION I',
+                        title: 'SOUS-SECTION I - DES PIÈCES',
                         paragraphes: [
 {
                             num: '1',
@@ -406,35 +406,35 @@ export default function CPCBeninSkillGenerator() {
                       },
 {
                         num: '2',
-                        title: 'SOUS-SECTION 2',
+                        title: 'SOUS-SECTION 2 - DES DECISIONS ORDONNANT DES MESURES D\'INSTRUCTION',
                         paragraphes: [],
                         articles: 'Art. 224-234',
                         content: ''
                       },
 {
                         num: '3',
-                        title: 'SOUS-SECTION 3',
+                        title: 'SOUS-SECTION 3 - DE L\'EXECUTION DES MESURES D\'INSTRUCTION',
                         paragraphes: [],
                         articles: 'Art. 235-255',
                         content: ''
                       },
 {
                         num: '4',
-                        title: 'SOUS-SECTION 4',
+                        title: 'SOUS-SECTION 4 - DES VERIFICATIONS PERSONNELLES DU JUGE',
                         paragraphes: [],
                         articles: 'Art. 256-259',
                         content: ''
                       },
 {
                         num: '5',
-                        title: 'SOUS-SECTION 5',
+                        title: 'SOUS-SECTION 5 - DE LA COMPARUTION PERSONNELLE DES PARTIES',
                         paragraphes: [],
                         articles: 'Art. 260-274',
                         content: ''
                       },
 {
                         num: '6',
-                        title: 'SOUS-SECTION 6',
+                        title: 'SOUS-SECTION 6 - DE L\'ENQUETE',
                         paragraphes: [
 {
                             num: '1',
@@ -460,7 +460,7 @@ export default function CPCBeninSkillGenerator() {
                       },
 {
                         num: '7',
-                        title: 'SOUS-SECTION 7',
+                        title: 'SOUS-SECTION 7 - DES MESURES D\'INSTRUCTION EXECUTEES PAR UN TECHNICIEN',
                         paragraphes: [
 {
                             num: '1',
@@ -496,11 +496,11 @@ export default function CPCBeninSkillGenerator() {
                   },
 {
                     num: 'IV',
-                    title: 'SECTION IV',
+                    title: 'SECTION IV - DES CONTESTATIONS RELATIVES A LA PREUVE LITTERALE',
                     subsections: [
 {
                         num: '1',
-                        title: 'SOUS-SECTION 1',
+                        title: 'SOUS-SECTION 1 - DES CONTESTATIONS RELATIVES AUX ACTES SOUS SEING PRIVE',
                         paragraphes: [
 {
                             num: '1',
@@ -520,7 +520,7 @@ export default function CPCBeninSkillGenerator() {
                       },
 {
                         num: '2',
-                        title: 'SOUS-SECTION 2',
+                        title: 'SOUS-SECTION 2 - DE L\'INSCRIPTION DE FAUX CONTRE LES ACTES AUTHENTIQUES',
                         paragraphes: [
 {
                             num: '1',
@@ -544,7 +544,7 @@ export default function CPCBeninSkillGenerator() {
                   },
 {
                     num: 'V',
-                    title: 'SECTION V',
+                    title: 'SECTION V - DU SERMENT JUDICIAIRE',
                     subsections: [],
                     articlesIntro: 'Art. 385-390',
                     content: ''
@@ -555,22 +555,22 @@ export default function CPCBeninSkillGenerator() {
               },
 {
                 num: 'IV',
-                title: 'CHAPITRE IV',
+                title: 'CHAPITRE IV - DES INCIDENTS D\'INSTANCE',
                 sections: [
 {
                     num: 'I',
-                    title: 'SECTION I',
+                    title: 'SECTION I - DES DEMANDES INCIDENTES',
                     subsections: [
 {
                         num: '1',
-                        title: 'SOUS-SECTION 1',
+                        title: 'SOUS-SECTION 1 - DES DEMANDES ADDITIONNELLES ET RECONVENTIONNELLES',
                         paragraphes: [],
                         articles: 'Art. 391-393',
                         content: ''
                       },
 {
                         num: '2',
-                        title: 'SOUS-SECTION 2',
+                        title: 'SOUS-SECTION 2 - DE L\'INTERVENTION',
                         paragraphes: [
 {
                             num: '1',
@@ -600,25 +600,25 @@ export default function CPCBeninSkillGenerator() {
                   },
 {
                     num: 'II',
-                    title: 'SECTION II',
+                    title: 'SECTION II - DE L\'ABSTENTION, DE LA RECUSATION ET DU RENVOI',
                     subsections: [
 {
                         num: '1',
-                        title: 'SOUS-SECTION 1',
+                        title: 'SOUS-SECTION 1 - DE L\'ABSTENTION',
                         paragraphes: [],
                         articles: 'Art. 423-424',
                         content: ''
                       },
 {
                         num: '2',
-                        title: 'SOUS-SECTION 2',
+                        title: 'SOUS-SECTION 2 - DE LA RECUSATION',
                         paragraphes: [],
                         articles: 'Art. 425-439',
                         content: ''
                       },
 {
                         num: '3',
-                        title: 'SOUS-SECTION 3',
+                        title: 'SOUS-SECTION 3 - DU RENVOI A UNE AUTRE JURIDICTION',
                         paragraphes: [
 {
                             num: '1',
@@ -648,32 +648,32 @@ export default function CPCBeninSkillGenerator() {
                   },
 {
                     num: 'III',
-                    title: 'SECTION III',
+                    title: 'SECTION III - DES JONCTIONS ET DISJONCTIONS D\'INSTANCES',
                     subsections: [],
                     articlesIntro: 'Art. 451-452',
                     content: ''
                   },
 {
                     num: 'IV',
-                    title: 'SECTION IV',
+                    title: 'SECTION IV - DE L\'INTERRUPTION DE L\'INSTANCE',
                     subsections: [],
                     articlesIntro: 'Art. 453-460',
                     content: ''
                   },
 {
                     num: 'V',
-                    title: 'SECTION V',
+                    title: 'SECTION V - DE LA SUSPENSION DE L\'INSTANCE',
                     subsections: [
 {
                         num: '1',
-                        title: 'SOUS-SECTION 1',
+                        title: 'SOUS-SECTION 1 - DU SURSIS A STATUER',
                         paragraphes: [],
                         articles: 'Art. 462-465',
                         content: ''
                       },
 {
                         num: '2',
-                        title: 'SOUS-SECTION 2',
+                        title: 'SOUS-SECTION 2 - DE LA RADIATION',
                         paragraphes: [],
                         articles: 'Art. 466-468',
                         content: ''
@@ -684,18 +684,18 @@ export default function CPCBeninSkillGenerator() {
                   },
 {
                     num: 'VI',
-                    title: 'SECTION VI',
+                    title: 'SECTION VI - DE L\'EXTINCTION DE L\'INSTANCE',
                     subsections: [
 {
                         num: '1',
-                        title: 'SOUS-SECTION 1',
+                        title: 'SOUS-SECTION 1 - DE LA PEREMPTION D\'INSTANCE',
                         paragraphes: [],
                         articles: 'Art. 471-478',
                         content: ''
                       },
 {
                         num: '2',
-                        title: 'SOUS-SECTION 2',
+                        title: 'SOUS-SECTION 2 - DU DESISTEMENT D\'INSTANCE',
                         paragraphes: [
 {
                             num: '1',
@@ -719,7 +719,7 @@ export default function CPCBeninSkillGenerator() {
                   },
 {
                     num: 'VII',
-                    title: 'SECTION VII',
+                    title: 'SECTION VII - DE L\'ACQUIESCEMENT',
                     subsections: [],
                     articlesIntro: 'Art. 491-493',
                     content: ''
@@ -734,36 +734,36 @@ export default function CPCBeninSkillGenerator() {
           },
 {
             num: 'III',
-            title: 'TITRE III',
+            title: 'TITRE III - DE LA CONCILIATION, DE L\'AUDIENCE ET DU JUGEMENT',
             chapitres: [
 {
                 num: 'I',
-                title: 'CHAPITRE I',
+                title: 'CHAPITRE I - DE LA CONCILIATION',
                 sections: [],
                 articlesIntro: 'Art. 494-496',
                 contentIntro: ''
               },
 {
                 num: 'II',
-                title: 'CHAPITRE II',
+                title: 'CHAPITRE II - DE L\'AUDIENCE',
                 sections: [
 {
                     num: 'I',
-                    title: 'SECTION I',
+                    title: 'SECTION I - DES DEBATS',
                     subsections: [],
                     articlesIntro: 'Art. 497-515',
                     content: ''
                   },
 {
                     num: 'II',
-                    title: 'SECTION II',
+                    title: 'SECTION II - DE LA PROCEDURE EN CHAMBRE DU CONSEIL',
                     subsections: [],
                     articlesIntro: 'Art. 516-519',
                     content: ''
                   },
 {
                     num: 'III',
-                    title: 'SECTION III',
+                    title: 'SECTION III - DU DELIBERE',
                     subsections: [],
                     articlesIntro: 'Art. 520-521',
                     content: ''
@@ -774,36 +774,36 @@ export default function CPCBeninSkillGenerator() {
               },
 {
                 num: 'III',
-                title: 'CHAPITRE III',
+                title: 'CHAPITRE III - DU JUGEMENT',
                 sections: [
 {
                     num: 'I',
-                    title: 'SECTION I',
+                    title: 'SECTION I - DU JUGEMENT CONTRADICTOIRE',
                     subsections: [],
                     articlesIntro: 'Art. 536-539',
                     content: ''
                   },
 {
                     num: 'II',
-                    title: 'SECTION II',
+                    title: 'SECTION II - DU JUGEMENT RENDU PAR DÉFAUT ET DU JUGEMENTRÉPUTÉ CONTRADICTOIRE',
                     subsections: [],
                     articlesIntro: 'Art. 540-548',
                     content: ''
                   },
 {
                     num: 'III',
-                    title: 'SECTION III',
+                    title: 'SECTION III - DES DISPOSITIONS SPECIALES',
                     subsections: [
 {
                         num: '1',
-                        title: 'SOUS-SECTION 1',
+                        title: 'SOUS-SECTION 1 - DES JUGEMENTS SUR LE FOND',
                         paragraphes: [],
                         articles: 'Art. 549-550',
                         content: ''
                       },
 {
                         num: '2',
-                        title: 'SOUS-SECTION 2',
+                        title: 'SOUS-SECTION 2 - DES AUTRES JUGEMENTS',
                         paragraphes: [
 {
                             num: '1',
@@ -833,39 +833,39 @@ export default function CPCBeninSkillGenerator() {
                   },
 {
                     num: 'IV',
-                    title: 'SECTION IV',
+                    title: 'SECTION IV - DE L\'EXECUTION DU JUGEMENT',
                     subsections: [
 {
                         num: '1',
-                        title: 'SOUS-SECTION 1',
+                        title: 'SOUS-SECTION 1 - DES CONDITIONS GENERALES DE L\'EXECUTION',
                         paragraphes: [],
                         articles: 'Art. 569-582',
                         content: ''
                       },
 {
                         num: '2',
-                        title: 'SOUS-SECTION 2',
+                        title: 'SOUS-SECTION 2 - DU JUGE DE L\'EXECUTION',
                         paragraphes: [],
                         articles: 'Art. 583-592',
                         content: ''
                       },
 {
                         num: '3',
-                        title: 'SOUS-SECTION 3',
+                        title: 'SOUS-SECTION 3 - DU DELAI DE GRACE',
                         paragraphes: [],
                         articles: 'Art. 593-593.2',
                         content: ''
                       },
 {
                         num: '4',
-                        title: 'SOUS-SECTION 4',
+                        title: 'SOUS-SECTION 4 - ASTREINTE',
                         paragraphes: [],
                         articles: 'Art. 594-595.3',
                         content: ''
                       },
 {
                         num: '5',
-                        title: 'SOUS-SECTION 5',
+                        title: 'SOUS-SECTION 5 - EXECUTION PROVISOIRE',
                         paragraphes: [],
                         articles: 'Art. 596-606',
                         content: ''
@@ -884,40 +884,40 @@ export default function CPCBeninSkillGenerator() {
           },
 {
             num: 'IV',
-            title: 'TITRE IV',
+            title: 'TITRE IV - DES VOIES DE RECOURS',
             chapitres: [
 {
                 num: 'I',
-                title: 'CHAPITRE I',
+                title: 'CHAPITRE I - DES DISPOSITIONS COMMUNES',
                 sections: [],
                 articlesIntro: 'Art. 608-618',
                 contentIntro: ''
               },
 {
                 num: 'II',
-                title: 'CHAPITRE II',
+                title: 'CHAPITRE II - DES VOIES ORDINAIRES DE RECOURS',
                 sections: [
 {
                     num: 'I',
-                    title: 'SECTION I',
+                    title: 'SECTION I - DE L\'APPEL',
                     subsections: [
 {
                         num: '1',
-                        title: 'SOUS-SECTION 1',
+                        title: 'SOUS-SECTION 1 - DES JUGEMENTS SUSCEPTIBLES D\'APPEL',
                         paragraphes: [],
                         articles: 'Art. 623-626',
                         content: ''
                       },
 {
                         num: '2',
-                        title: 'SOUS-SECTION 2',
+                        title: 'SOUS-SECTION 2 - DES PARTIES',
                         paragraphes: [],
                         articles: 'Art. 627-639',
                         content: ''
                       },
 {
                         num: '3',
-                        title: 'SOUS-SECTION 3',
+                        title: 'SOUS-SECTION 3 - DES EFFETS DE L\'APPEL',
                         paragraphes: [
 {
                             num: '1',
@@ -937,7 +937,7 @@ export default function CPCBeninSkillGenerator() {
                       },
 {
                         num: '4',
-                        title: 'SOUS-SECTION 4',
+                        title: 'SOUS-SECTION 4 - DES DISPOSITIONS FINALES',
                         paragraphes: [],
                         articles: 'Art. 647',
                         content: ''
@@ -948,7 +948,7 @@ export default function CPCBeninSkillGenerator() {
                   },
 {
                     num: 'II',
-                    title: 'SECTION II',
+                    title: 'SECTION II - DE L\'OPPOSITION',
                     subsections: [],
                     articlesIntro: 'Art. 648-653',
                     content: ''
@@ -959,43 +959,43 @@ export default function CPCBeninSkillGenerator() {
               },
 {
                 num: 'III',
-                title: 'CHAPITRE III',
+                title: 'CHAPITRE III - DES VOIES DE RECOURS EXTRAORDINAIRES',
                 sections: [
 {
                     num: 'I',
-                    title: 'SECTION I',
+                    title: 'SECTION I - DE LA TIERCE OPPOSITION',
                     subsections: [],
                     articlesIntro: 'Art. 657-667',
                     content: ''
                   },
 {
                     num: 'II',
-                    title: 'SECTION II',
+                    title: 'SECTION II - DU RECOURS EN REVISION',
                     subsections: [],
                     articlesIntro: 'Art. 668-678',
                     content: ''
                   },
 {
                     num: 'III',
-                    title: 'SECTION III',
+                    title: 'SECTION III - DU POURVOI EN CASSATION',
                     subsections: [
 {
                         num: '1',
-                        title: 'SOUS-SECTION 1',
+                        title: 'SOUS-SECTION 1 - DE L\'OUVERTURE DU POURVOI EN CASSATION',
                         paragraphes: [],
                         articles: 'Art. 680-691',
                         content: ''
                       },
 {
                         num: '2',
-                        title: 'SOUS-SECTION 2',
+                        title: 'SOUS-SECTION 2 - DES MODES ET FORMES DU POURVOI EN CASSATION',
                         paragraphes: [],
                         articles: 'Art. 692-693',
                         content: ''
                       },
 {
                         num: '3',
-                        title: 'SOUS-SECTION 3',
+                        title: 'SOUS-SECTION 3 - DES EFFETS DU POURVOI EN CASSATION',
                         paragraphes: [],
                         articles: 'Art. 694-712',
                         content: ''
@@ -1014,18 +1014,18 @@ export default function CPCBeninSkillGenerator() {
           },
 {
             num: 'V',
-            title: 'TITRE V',
+            title: 'TITRE V - DES FRAIS ET DES DEPENS',
             chapitres: [
 {
                 num: 'I',
-                title: 'CHAPITRE I',
+                title: 'CHAPITRE I - DE LA CHARGE DES DEPENS',
                 sections: [],
                 articlesIntro: 'Art. 713-717',
                 contentIntro: ''
               },
 {
                 num: 'II',
-                title: 'CHAPITRE II',
+                title: 'CHAPITRE II - DE LA LIQUIDATION DES DEPENS ET DES FRAIS',
                 sections: [],
                 articlesIntro: 'Art. 718-724',
                 contentIntro: ''
@@ -1036,29 +1036,29 @@ export default function CPCBeninSkillGenerator() {
           },
 {
             num: 'VI',
-            title: 'TITRE VI',
+            title: 'TITRE VI - DES COMMISSIONS ROGATOIRES',
             chapitres: [
 {
                 num: 'I',
-                title: 'CHAPITRE I',
+                title: 'CHAPITRE I - DES COMMISSIONS ROGATOIRES INTERNES',
                 sections: [],
                 articlesIntro: 'Art. 725-727',
                 contentIntro: ''
               },
 {
                 num: 'II',
-                title: 'CHAPITRE II',
+                title: 'CHAPITRE II - DES COMMISSIONS ROGATOIRES INTERNATIONALES',
                 sections: [
 {
                     num: 'I',
-                    title: 'SECTION I',
+                    title: 'SECTION I - DES COMMISSIONS ROGATOIRES A DESTINATION D\'UN ETAT ETRANGER',
                     subsections: [],
                     articlesIntro: 'Art. 728-730',
                     content: ''
                   },
 {
                     num: 'II',
-                    title: 'SECTION II',
+                    title: 'SECTION II - DES COMMISSIONS ROGATOIRES EN PROVENANCE D\'UN ETAT ETRANGER',
                     subsections: [],
                     articlesIntro: 'Art. 731-743',
                     content: ''
@@ -1075,23 +1075,23 @@ export default function CPCBeninSkillGenerator() {
       },
 {
         num: 'DEUXIEME',
-        title: 'LIVRE DEUXIEME',
+        title: 'LIVRE DEUXIEME - DES DISPOSITIONS PARTICULIERES A CHAQUE JURIDICTION',
         titres: [
 {
             num: 'PREMIER',
-            title: 'TITRE PREMIER',
+            title: 'TITRE PREMIER - DE LA PROCEDURE DEVANT LE TRIBUNAL DE PREMIERE INSTANCE',
             chapitres: [
 {
                 num: 'I',
-                title: 'CHAPITRE I',
+                title: 'CHAPITRE I - DE LA PROCEDURE DEVANT LE TRIBUNAL STATUANT EN MATIERE',
                 sections: [
 {
                     num: 'I',
-                    title: 'SECTION I',
+                    title: 'SECTION I - DE LA PROCEDURE EN MATIERE CONTENTIEUSE',
                     subsections: [
 {
                         num: '1',
-                        title: 'SOUS-SECTION 1',
+                        title: 'SOUS-SECTION 1 - DE LA PROCEDURE ORDINAIRE',
                         paragraphes: [
 {
                             num: '1',
@@ -1123,21 +1123,21 @@ export default function CPCBeninSkillGenerator() {
                       },
 {
                         num: '2',
-                        title: 'SOUS-SECTION 2',
+                        title: 'SOUS-SECTION 2 - DE LA PROCÉDURE A JOUR FIXE',
                         paragraphes: [],
                         articles: 'Art. 762-766',
                         content: ''
                       },
 {
                         num: '3',
-                        title: 'SOUS-SECTION 3',
+                        title: 'SOUS-SECTION 3 - DE LA REQUÊTE CONJOINTE',
                         paragraphes: [],
                         articles: 'Art. 767-768',
                         content: ''
                       },
 {
                         num: '4',
-                        title: 'SOUS-SECTION 4',
+                        title: 'SOUS-SECTION 4 - PROCÉDURE DES PETITES CRÉANCES',
                         paragraphes: [],
                         articles: 'Art. 768.1-768.8',
                         content: ''
@@ -1148,21 +1148,21 @@ export default function CPCBeninSkillGenerator() {
                   },
 {
                     num: 'II',
-                    title: 'SECTION II',
+                    title: 'SECTION II - DE LA PROCÉDURE EN MATIÈRE GRACIEUSE',
                     subsections: [],
                     articlesIntro: 'Art. 769-771',
                     content: ''
                   },
 {
                     num: 'III',
-                    title: 'SECTION III',
+                    title: 'SECTION III - DES RÈGLES PARTICULIÈRES A LA MATIÈRE COMMERCIALE',
                     subsections: [],
                     articlesIntro: 'Art. 772-776.9',
                     content: ''
                   },
 {
                     num: 'IV',
-                    title: 'SECTION IV',
+                    title: 'SECTION IV - DES DISPOSITIONS DIVERSES',
                     subsections: [],
                     articlesIntro: 'Art. 777-781',
                     content: ''
@@ -1173,71 +1173,71 @@ export default function CPCBeninSkillGenerator() {
               },
 {
                 num: 'II',
-                title: 'CHAPITRE II',
+                title: 'CHAPITRE II - DE LA PROCÉDURE DEVANT LE TRIBUNAL STATUANT EN MATIÈRE SOCIALE',
                 sections: [
 {
                     num: 'I',
-                    title: 'SECTION I',
+                    title: 'SECTION I - DE LA COMPÉTENCE',
                     subsections: [],
                     articlesIntro: 'Art. 782-783',
                     content: ''
                   },
 {
                     num: 'II',
-                    title: 'SECTION II',
+                    title: 'SECTION II - DE L\'INSTANCE',
                     subsections: [
 {
                         num: '1',
-                        title: 'SOUS-SECTION 1',
+                        title: 'SOUS-SECTION 1 - DE LA SAISINE DU TRIBUNAL',
                         paragraphes: [],
                         articles: 'Art. 785-790',
                         content: ''
                       },
 {
                         num: '2',
-                        title: 'SOUS-SECTION 2',
+                        title: 'SOUS-SECTION 2 - DE LA RECEVABILITE DES DEMANDES',
                         paragraphes: [],
                         articles: 'Art. 791-796',
                         content: ''
                       },
 {
                         num: '3',
-                        title: 'SOUS-SECTION 3',
+                        title: 'SOUS-SECTION 3 - DE L\'ASSISTANCE ET DE LA REPRESENTATION DES PARTIES',
                         paragraphes: [],
                         articles: 'Art. 797',
                         content: ''
                       },
 {
                         num: '4',
-                        title: 'SOUS-SECTION 4',
+                        title: 'SOUS-SECTION 4 - DE LA TENTATIVE DE CONCILIATION',
                         paragraphes: [],
                         articles: 'Art. 798-803',
                         content: ''
                       },
 {
                         num: '5',
-                        title: 'SOUS-SECTION 5',
+                        title: 'SOUS-SECTION 5 - DU JUGEMENT',
                         paragraphes: [],
                         articles: 'Art. 804-806',
                         content: ''
                       },
 {
                         num: '6',
-                        title: 'SOUS-SECTION 6',
+                        title: 'SOUS-SECTION 6 - DU REFERE EN MATIERE SOCIALE',
                         paragraphes: [],
                         articles: 'Art. 807-808',
                         content: ''
                       },
 {
                         num: '7',
-                        title: 'SOUS-SECTION 7',
+                        title: 'SOUS-SECTION 7 - DE L\'EXECUTION DES JUGEMENTS',
                         paragraphes: [],
                         articles: 'Art. 809',
                         content: ''
                       },
 {
                         num: '8',
-                        title: 'SOUS-SECTION 8',
+                        title: 'SOUS-SECTION 8 - DES DISPOSITIONS GENERALES ET DIVERSES',
                         paragraphes: [],
                         articles: 'Art. 810',
                         content: ''
@@ -1248,32 +1248,32 @@ export default function CPCBeninSkillGenerator() {
                   },
 {
                     num: 'III',
-                    title: 'SECTION III',
+                    title: 'SECTION III - DES VOIES DE RECOURS',
                     subsections: [
 {
                         num: '1',
-                        title: 'SOUS-SECTION 1',
+                        title: 'SOUS-SECTION 1 - DE L\'OUVERTURE DES VOIES DE RECOURS',
                         paragraphes: [],
                         articles: 'Art. 811-813',
                         content: ''
                       },
 {
                         num: '2',
-                        title: 'SOUS-SECTION 2',
+                        title: 'SOUS-SECTION 2 - DE L\'OPPOSITION',
                         paragraphes: [],
                         articles: 'Art. 814',
                         content: ''
                       },
 {
                         num: '3',
-                        title: 'SOUS-SECTION 3',
+                        title: 'SOUS-SECTION 3 - DE LA PROCEDURE D\'OPPOSITION A L\'EXECUTION DES CONTRAINTES DELIVREES PAR LA CAISSE NATIONALE DE SECURITE SOCIALE (CNSS)',
                         paragraphes: [],
                         articles: 'Art. 815',
                         content: ''
                       },
 {
                         num: '4',
-                        title: 'SOUS-SECTION 4',
+                        title: 'SOUS-SECTION 4 - DE L\'APPEL',
                         paragraphes: [],
                         articles: 'Art. 816-817',
                         content: ''
@@ -1288,43 +1288,43 @@ export default function CPCBeninSkillGenerator() {
               },
 {
                 num: 'III',
-                title: 'CHAPITRE III',
+                title: 'CHAPITRE III - DE LA PROCEDURE DEVANT LES JURIDICTIONS STATUANT',
                 sections: [
 {
                     num: 'I',
-                    title: 'SECTION I',
+                    title: 'SECTION I - DE LA COMPETENCE',
                     subsections: [],
                     articlesIntro: 'Art. 818',
                     content: ''
                   },
 {
                     num: 'II',
-                    title: 'SECTION II',
+                    title: 'SECTION II - DE L\'INSTANCE',
                     subsections: [
 {
                         num: '2',
-                        title: 'SOUS-SECTION 2',
+                        title: 'SOUS-SECTION 2 - DES DELAIS',
                         paragraphes: [],
                         articles: 'Art. 827-829',
                         content: ''
                       },
 {
                         num: '3',
-                        title: 'SOUS-SECTION 3',
+                        title: 'SOUS-SECTION 3 - DE L\'INSTRUCTION',
                         paragraphes: [],
                         articles: 'Art. 830-837',
                         content: ''
                       },
 {
                         num: '4',
-                        title: 'SOUS-SECTION 4',
+                        title: 'SOUS-SECTION 4 - DU SURSIS A EXECUTER ET DU REFERE',
                         paragraphes: [],
                         articles: 'Art. 838-840',
                         content: ''
                       },
 {
                         num: '5',
-                        title: 'SOUS-SECTION 5',
+                        title: 'SOUS-SECTION 5 - DU JUGEMENT',
                         paragraphes: [],
                         articles: 'Art. 841-848',
                         content: ''
@@ -1335,7 +1335,7 @@ export default function CPCBeninSkillGenerator() {
                   },
 {
                     num: 'III',
-                    title: 'SECTION III',
+                    title: 'SECTION III - DES VOIES DE RECOURS',
                     subsections: [],
                     articlesIntro: 'Art. 849-853',
                     content: ''
@@ -1346,25 +1346,25 @@ export default function CPCBeninSkillGenerator() {
               },
 {
                 num: 'IV',
-                title: 'CHAPITRE IV',
+                title: 'CHAPITRE IV - DES POUVOIRS DU PRESIDENT',
                 sections: [
 {
                     num: 'I',
-                    title: 'SECTION I',
+                    title: 'SECTION I - DES ORDONNANCES DE REFERE',
                     subsections: [],
                     articlesIntro: 'Art. 854-856',
                     content: ''
                   },
 {
                     num: 'II',
-                    title: 'SECTION II',
+                    title: 'SECTION II - DES ORDONNANCES SUR REQUETE',
                     subsections: [],
                     articlesIntro: 'Art. 857-858',
                     content: ''
                   },
 {
                     num: 'III',
-                    title: 'SECTION III',
+                    title: 'SECTION III - DES MESURES D\'ADMINISTRATION JUDICIAIRE',
                     subsections: [],
                     articlesIntro: 'Art. 859-861',
                     content: ''
@@ -1379,26 +1379,26 @@ export default function CPCBeninSkillGenerator() {
           },
 {
             num: 'II',
-            title: 'TITRE II',
+            title: 'TITRE II - DES DISPOSITIONS PARTICULIERES DEVANT LA COUR D\'APPEL',
             chapitres: [
 {
                 num: 'I',
-                title: 'CHAPITRE I',
+                title: 'CHAPITRE I - DE LA PROCEDURE DEVANT LA COUR STATUANT EN MATIERE JUDICIAIRE,',
                 sections: [
 {
                     num: 'I',
-                    title: 'SECTION I',
+                    title: 'SECTION I - DE LA COMPETENCE, DE LA SAISINE ET DE LA MISE AU ROLE',
                     subsections: [
 {
                         num: '1',
-                        title: 'SOUS-SECTION 1',
+                        title: 'SOUS-SECTION 1 - DE LA COMPETENCE',
                         paragraphes: [],
                         articles: 'Art. 862',
                         content: ''
                       },
 {
                         num: '2',
-                        title: 'SOUS-SECTION 2',
+                        title: 'SOUS-SECTION 2 - DE LA SAISINE ET DE LA MISE AU ROLE',
                         paragraphes: [
 {
                             num: '1',
@@ -1428,11 +1428,11 @@ export default function CPCBeninSkillGenerator() {
                   },
 {
                     num: 'II',
-                    title: 'SECTION II',
+                    title: 'SECTION II - DE L\'INSTANCE',
                     subsections: [
 {
                         num: '1',
-                        title: 'SOUS-SECTION 1',
+                        title: 'SOUS-SECTION 1 - DE LA PROCEDURE CONTENTIEUSE',
                         paragraphes: [
 {
                             num: '1',
@@ -1458,14 +1458,14 @@ export default function CPCBeninSkillGenerator() {
                       },
 {
                         num: '2',
-                        title: 'SOUS-SECTION 2',
+                        title: 'SOUS-SECTION 2 - DE LA PROCEDURE EN MATIERE GRACIEUSE',
                         paragraphes: [],
                         articles: 'Art. 894-895',
                         content: ''
                       },
 {
                         num: '3',
-                        title: 'SOUS-SECTION 3',
+                        title: 'SOUS-SECTION 3 - DES DISPOSITIONS DIVERSES',
                         paragraphes: [],
                         articles: 'Art. 896-898',
                         content: ''
@@ -1480,25 +1480,25 @@ export default function CPCBeninSkillGenerator() {
               },
 {
                 num: 'II',
-                title: 'CHAPITRE II',
+                title: 'CHAPITRE II - DE LA PROCEDURE DEVANT LA COUR STATUANT EN',
                 sections: [
 {
                     num: 'I',
-                    title: 'SECTION I',
+                    title: 'SECTION I - DE LA COMPETENCE',
                     subsections: [],
                     articlesIntro: 'Art. 899',
                     content: ''
                   },
 {
                     num: 'II',
-                    title: 'SECTION II',
+                    title: 'SECTION II - DE L\'INSTANCE',
                     subsections: [],
                     articlesIntro: 'Art. 900-901',
                     content: ''
                   },
 {
                     num: 'III',
-                    title: 'SECTION III',
+                    title: 'SECTION III - DES RECOURS',
                     subsections: [],
                     articlesIntro: 'Art. 902-905',
                     content: ''
@@ -1509,25 +1509,25 @@ export default function CPCBeninSkillGenerator() {
               },
 {
                 num: 'III',
-                title: 'CHAPITRE III',
+                title: 'CHAPITRE III - DE LA PROCEDURE DEVANT LES JURIDICTIONS STATUANT',
                 sections: [
 {
                     num: 'I',
-                    title: 'SECTION I',
+                    title: 'SECTION I - DE LA COMPETENCE',
                     subsections: [],
                     articlesIntro: 'Art. 906-907',
                     content: ''
                   },
 {
                     num: 'II',
-                    title: 'SECTION II',
+                    title: 'SECTION II - DE L\'INSTANCE',
                     subsections: [],
                     articlesIntro: 'Art. 908-909',
                     content: ''
                   },
 {
                     num: 'III',
-                    title: 'SECTION III',
+                    title: 'SECTION III - DES RECOURS',
                     subsections: [],
                     articlesIntro: 'Art. 910-912',
                     content: ''
@@ -1538,18 +1538,18 @@ export default function CPCBeninSkillGenerator() {
               },
 {
                 num: 'IV',
-                title: 'CHAPITRE IV',
+                title: 'CHAPITRE IV - DES POUVOIRS DU PRESIDENT',
                 sections: [
 {
                     num: 'I',
-                    title: 'SECTION I',
+                    title: 'SECTION I - DES ORDONNANCES SUR REQUETE',
                     subsections: [],
                     articlesIntro: 'Art. 913-914',
                     content: ''
                   },
 {
                     num: 'II',
-                    title: 'SECTION II',
+                    title: 'SECTION II - DES MESURES D\'ADMINISTRATION JUDICIAIRE',
                     subsections: [],
                     articlesIntro: 'Art. 915-917',
                     content: ''
@@ -1564,22 +1564,22 @@ export default function CPCBeninSkillGenerator() {
           },
 {
             num: 'III',
-            title: 'TITRE III',
+            title: 'TITRE III - DES DISPOSITIONS PARTICULIERES A LA COUR SUPREME',
             chapitres: [
 {
                 num: 'I',
-                title: 'CHAPITRE I',
+                title: 'CHAPITRE I - DE LA PROCEDURE EN MATIERE CIVILE, COMMERCIALE,',
                 sections: [
 {
                     num: 'I',
-                    title: 'SECTION I',
+                    title: 'SECTION I - DE LA SAISINE',
                     subsections: [],
                     articlesIntro: 'Art. 918-932',
                     content: ''
                   },
 {
                     num: 'II',
-                    title: 'SECTION II',
+                    title: 'SECTION II - DE L\'INSTANCE',
                     subsections: [],
                     articlesIntro: 'Art. 933-947',
                     content: ''
@@ -1590,18 +1590,18 @@ export default function CPCBeninSkillGenerator() {
               },
 {
                 num: 'II',
-                title: 'CHAPITRE II',
+                title: 'CHAPITRE II - DE LA PROCEDURE DEVANT LA CHAMBRE ADMINISTRATIVE',
                 sections: [
 {
                     num: 'I',
-                    title: 'SECTION I',
+                    title: 'SECTION I - DE LA COMPETENCE',
                     subsections: [],
                     articlesIntro: 'Art. 948-952',
                     content: ''
                   },
 {
                     num: 'II',
-                    title: 'SECTION II',
+                    title: 'SECTION II - DE L\'INSTANCE',
                     subsections: [],
                     articlesIntro: 'Art. 953-955',
                     content: ''
@@ -1612,46 +1612,46 @@ export default function CPCBeninSkillGenerator() {
               },
 {
                 num: 'III',
-                title: 'CHAPITRE III',
+                title: 'CHAPITRE III - DE LA PROCEDURE DEVANT LA CHAMBRE DES COMPTES',
                 sections: [],
                 articlesIntro: 'Art. 956-958',
                 contentIntro: ''
               },
 {
                 num: 'IV',
-                title: 'CHAPITRE IV',
+                title: 'CHAPITRE IV - DES DISPOSITIONS DIVERSES',
                 sections: [
 {
                     num: 'I',
-                    title: 'SECTION I',
+                    title: 'SECTION I - DU DESISTEMENT',
                     subsections: [],
                     articlesIntro: 'Art. 959-961',
                     content: ''
                   },
 {
                     num: 'II',
-                    title: 'SECTION II',
+                    title: 'SECTION II - DE LA RECUSATION',
                     subsections: [],
                     articlesIntro: 'Art. 962',
                     content: ''
                   },
 {
                     num: 'III',
-                    title: 'SECTION III',
+                    title: 'SECTION III - DE LA DEMANDE EN FAUX',
                     subsections: [],
                     articlesIntro: 'Art. 963-966',
                     content: ''
                   },
 {
                     num: 'IV',
-                    title: 'SECTION IV',
+                    title: 'SECTION IV - DE LA PRISE A PARTIE',
                     subsections: [],
                     articlesIntro: 'Art. 967-979',
                     content: ''
                   },
 {
                     num: 'V',
-                    title: 'SECTION V',
+                    title: 'SECTION V - DES DISPOSITIONS PARTICULIERES AUX JURIDICTIONS DE RENVOI APRES CASSATION',
                     subsections: [],
                     articlesIntro: 'Art. 980-981',
                     content: ''
@@ -1668,58 +1668,58 @@ export default function CPCBeninSkillGenerator() {
       },
 {
         num: 'III',
-        title: 'LIVRE III',
+        title: 'LIVRE III - DES PROCEDURES PARTICULIERES A CERTAINES MATIERES',
         titres: [
 {
             num: 'I',
-            title: 'TITRE I',
+            title: 'TITRE I - DES DISPOSITIONS RELATIVES AUX PERSONNES ET A LA FAMILLE',
             chapitres: [
 {
                 num: 'I',
-                title: 'CHAPITRE I',
+                title: 'CHAPITRE I - DES BIENS',
                 sections: [
 {
                     num: 'I',
-                    title: 'SECTION I',
+                    title: 'SECTION I - DE LA VENTE DES BIENS IMMEUBLES APPARTENANT A DES MINEURS',
                     subsections: [],
                     articlesIntro: 'Art. 982-992',
                     content: ''
                   },
 {
                     num: 'II',
-                    title: 'SECTION II',
+                    title: 'SECTION II - DES PARTAGES ET LICITATIONS',
                     subsections: [],
                     articlesIntro: 'Art. 993-1009',
                     content: ''
                   },
 {
                     num: 'III',
-                    title: 'SECTION III',
+                    title: 'SECTION III - DES DISPOSITIONS RELATIVES A L\'ADMINISTRATION PROVISOIRE DES BIENS EN CAS DE DECLARATION DE PRESOMPTION D\'ABSENCE',
                     subsections: [],
                     articlesIntro: 'Art. 1010-1012',
                     content: ''
                   },
 {
                     num: 'IV',
-                    title: 'SECTION IV',
+                    title: 'SECTION IV - DE LA VENTE DU MOBILIER',
                     subsections: [],
                     articlesIntro: 'Art. 1013-1020',
                     content: ''
                   },
 {
                     num: 'V',
-                    title: 'SECTION V',
+                    title: 'SECTION V - DE LA PROCEDURE RELATIVE A L\'OUVERTURE DES SUCCESSIONS',
                     subsections: [
 {
                         num: '1',
-                        title: 'SOUS-SECTION 1',
+                        title: 'SOUS-SECTION 1 - DE LA DESIGNATION DU LIQUIDATEUR DE SUCCESSION',
                         paragraphes: [],
                         articles: 'Art. 1021-1024',
                         content: ''
                       },
 {
                         num: '2',
-                        title: 'SOUS-SECTION 2',
+                        title: 'SOUS-SECTION 2 - DE L\'ADMINISTRATION DES SUCCESSIONS ET DES BIENS VACANTS',
                         paragraphes: [
 {
                             num: '1',
@@ -1771,29 +1771,29 @@ export default function CPCBeninSkillGenerator() {
               },
 {
                 num: 'II',
-                title: 'CHAPITRE II',
+                title: 'CHAPITRE II - DES PERSONNES',
                 sections: [
 {
                     num: 'I',
-                    title: 'SECTION I',
+                    title: 'SECTION I - DU JUGE DES TUTELLES ET DES CONSEILS DE FAMILLE',
                     subsections: [
 {
                         num: '1',
-                        title: 'SOUS-SECTION 1',
+                        title: 'SOUS-SECTION 1 - DU JUGE DES TUTELLES',
                         paragraphes: [],
                         articles: 'Art. 1064',
                         content: ''
                       },
 {
                         num: '2',
-                        title: 'SOUS-SECTION 2',
+                        title: 'SOUS-SECTION 2 - DU CONSEIL DE FAMILLE',
                         paragraphes: [],
                         articles: 'Art. 1065-1069',
                         content: ''
                       },
 {
                         num: '3',
-                        title: 'SOUS-SECTION 3',
+                        title: 'SOUS-SECTION 3 - DES DISPOSITIONS COMMUNES',
                         paragraphes: [],
                         articles: 'Art. 1070-1076',
                         content: ''
@@ -1804,25 +1804,25 @@ export default function CPCBeninSkillGenerator() {
                   },
 {
                     num: 'II',
-                    title: 'SECTION II',
+                    title: 'SECTION II - DES REGIMES DE PROTECTION APPLICABLES AUX MAJEURS',
                     subsections: [
 {
                         num: '1',
-                        title: 'SOUS-SECTION 1',
+                        title: 'SOUS-SECTION 1 - DES MAJEURS EN TUTELLE',
                         paragraphes: [],
                         articles: 'Art. 1077-1094',
                         content: ''
                       },
 {
                         num: '2',
-                        title: 'SOUS-SECTION 2',
+                        title: 'SOUS-SECTION 2 - DE LA CURATELLE',
                         paragraphes: [],
                         articles: 'Art. 1095-1096',
                         content: ''
                       },
 {
                         num: '3',
-                        title: 'SOUS-SECTION 3',
+                        title: 'SOUS-SECTION 3 - DU PLACEMENT SOUS SAUVEGARDE DE JUSTICE',
                         paragraphes: [],
                         articles: 'Art. 1097-1105',
                         content: ''
@@ -1833,42 +1833,42 @@ export default function CPCBeninSkillGenerator() {
                   },
 {
                     num: 'III',
-                    title: 'SECTION III',
+                    title: 'SECTION III - DE L\'INTERVENTION EN JUSTICE QUANT AUX DROITS DES EPOUX',
                     subsections: [],
                     articlesIntro: 'Art. 1106-1109',
                     content: ''
                   },
 {
                     num: 'IV',
-                    title: 'SECTION IV',
+                    title: 'SECTION IV - DE L\'APPOSITION DES SCELLES',
                     subsections: [],
                     articlesIntro: 'Art. 1110-1127',
                     content: ''
                   },
 {
                     num: 'V',
-                    title: 'SECTION V',
+                    title: 'SECTION V - DES OPPOSITIONS AUX SCELLES',
                     subsections: [],
                     articlesIntro: 'Art. 1128-1129',
                     content: ''
                   },
 {
                     num: 'VI',
-                    title: 'SECTION VI',
+                    title: 'SECTION VI - DE LA LEVEE DES SCELLES',
                     subsections: [],
                     articlesIntro: 'Art. 1130-1143',
                     content: ''
                   },
 {
                     num: 'VII',
-                    title: 'SECTION VII',
+                    title: 'SECTION VII - DE L\'INVENTAIRE',
                     subsections: [],
                     articlesIntro: 'Art. 1144-1147',
                     content: ''
                   },
 {
                     num: 'VIII',
-                    title: 'SECTION VIII',
+                    title: 'SECTION VIII - DU BENEFICE D\'INVENTAIRE',
                     subsections: [],
                     articlesIntro: 'Art. 1148-1158',
                     content: ''
@@ -1883,18 +1883,18 @@ export default function CPCBeninSkillGenerator() {
           },
 {
             num: 'II',
-            title: 'TITRE II',
+            title: 'TITRE II - DE LA PROCEDURE D\'EXEQUATUR ET DE L\'ARBITRAGE',
             chapitres: [
 {
                 num: 'I',
-                title: 'CHAPITRE I',
+                title: 'CHAPITRE I - DE LA PROCEDURE D\'EXEQUATUR',
                 sections: [],
                 articlesIntro: 'Art. 1159-1166',
                 contentIntro: ''
               },
 {
                 num: 'II',
-                title: 'CHAPITRE II',
+                title: 'CHAPITRE II - DE LA PROCÉDURE DE L\'ARBITRAGE',
                 sections: [],
                 articlesIntro: 'Art. 1167-1170',
                 contentIntro: ''
@@ -1905,67 +1905,67 @@ export default function CPCBeninSkillGenerator() {
           },
 {
             num: 'III',
-            title: 'TITRE III',
+            title: 'TITRE III - DES DISPOSITIONS DIVERSES',
             chapitres: [
 {
                 num: 'I',
-                title: 'CHAPITRE I',
+                title: 'CHAPITRE I - DE L\'APPOSITION DE LA FORMULE EXÉCUTOIRE SUR LES ARRÊTS DE LA COUR COMMUNE DE JUSTICE ET D\'ARBITRAGE',
                 sections: [],
                 articlesIntro: 'Art. 1171',
                 contentIntro: ''
               },
 {
                 num: 'II',
-                title: 'CHAPITRE II',
+                title: 'CHAPITRE II - DES OFFRES DE PAIEMENT ET DE LA CONSIGNATION',
                 sections: [],
                 articlesIntro: 'Art. 1172-1177',
                 contentIntro: ''
               },
 {
                 num: 'III',
-                title: 'CHAPITRE III',
+                title: 'CHAPITRE III - DES VOIES À PRENDRE POUR AVOIR EXPÉDITION OU COPIE D\'UN ACTE OU POUR LE FAIRE REFORMER',
                 sections: [],
                 articlesIntro: 'Art. 1178-1198',
                 contentIntro: ''
               },
 {
                 num: 'IV',
-                title: 'CHAPITRE IV',
+                title: 'CHAPITRE IV - DE LA RECONSTITUTION DES ACTES DÉTRUITS',
                 sections: [],
                 articlesIntro: 'Art. 1199-1203',
                 contentIntro: ''
               },
 {
                 num: 'V',
-                title: 'CHAPITRE V',
+                title: 'CHAPITRE V - DES RÉCEPTIONS DE CAUTIONNEMENT',
                 sections: [],
                 articlesIntro: 'Art. 1204-1205',
                 contentIntro: ''
               },
 {
                 num: 'VI',
-                title: 'CHAPITRE VI',
+                title: 'CHAPITRE VI - DES REDDITIONS DE COMPTES',
                 sections: [],
                 articlesIntro: 'Art. 1206-1221',
                 contentIntro: ''
               },
 {
                 num: 'VII',
-                title: 'CHAPITRE VII',
+                title: 'CHAPITRE VII - DES BIENS INSAISISSABLES',
                 sections: [],
                 articlesIntro: 'Art. 1222-1223',
                 contentIntro: ''
               },
 {
                 num: 'VIII',
-                title: 'CHAPITRE VIII',
+                title: 'CHAPITRE VIII - DES PROCEDURES SIMPLIFIEES DE RECOUVREMENT',
                 sections: [],
                 articlesIntro: 'Art. 1224',
                 contentIntro: ''
               },
 {
                 num: 'IX',
-                title: 'CHAPITRE IX',
+                title: 'CHAPITRE IX - DE LA SUSPENSION DES DELAIS DE SAISINE, DE PRESCRIPTION, DE PEREMPTION D\'INSTANCE, D\'EXERCICE DES VOIES DE RECOURS ET DES VOIES D\'EXECUTION EN CAS DE CESSATION CONCERTEE DU TRAVAIL',
                 sections: [],
                 articlesIntro: 'Art. 1225-1226',
                 contentIntro: ''
@@ -1976,7 +1976,7 @@ export default function CPCBeninSkillGenerator() {
           },
 {
             num: 'IV',
-            title: 'TITRE IV',
+            title: 'TITRE IV - DES DISPOSITIONS TRANSITOIRES ET DIVERSES',
             chapitres: [],
             articlesIntro: 'Art. 1227-1231',
             contentIntro: ''
@@ -1990,8 +1990,8 @@ export default function CPCBeninSkillGenerator() {
   const [expanded, setExpanded] = useState({
     livre: {0: true},
     titre: {'0-0': true},
-    chapitre: {'0-1-0': true},
-    section: {'0-1-0-0': true},
+    chapitre: {'0-0-0': true},
+    section: {},
     subsection: {}
   });
 
@@ -2000,14 +2000,12 @@ export default function CPCBeninSkillGenerator() {
   };
 
   const sanitize = (name) => name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9-_]/g, '-').replace(/-+/g, '-').substring(0, 50);
-  const romanToArabic = (r) => ({'I':1,'II':2,'III':3,'IV':4,'V':5,'VI':6,'VII':7,'VIII':8,'IX':9,'X':10,'PREMIER':1,'DEUXIÈME':2,'DEUXIEME':2,'TROISIÈME':3,'TROISIEME':3,'III':3}[r] || r);
+  const romanToArabic = (r) => ({'I':1,'II':2,'III':3,'IV':4,'V':5,'VI':6,'VII':7,'VIII':8,'IX':9,'X':10,'PREMIER':1,'DEUXIÈME':2,'DEUXIEME':2,'TROISIÈME':3,'TROISIEME':3}[r] || r);
 
   const updateField = (path, field, value) => {
     const u = JSON.parse(JSON.stringify(livres));
     let obj = u;
-    for (let i = 0; i < path.length; i++) {
-      obj = obj[path[i]];
-    }
+    for (let i = 0; i < path.length; i++) { obj = obj[path[i]]; }
     obj[field] = value;
     setLivres(u);
   };
@@ -2026,14 +2024,14 @@ export default function CPCBeninSkillGenerator() {
 
   const generateSkillMd = () => {
     let nav = '';
-    livres.forEach((livre, li) => {
+    livres.forEach((livre) => {
       nav += `\n## 📖 ${livre.title}\n\n`;
-      livre.titres.forEach((titre, ti) => {
-        nav += `### ${titre.title}\n`;
-        if (titre.articlesIntro) nav += `*Intro: ${titre.articlesIntro}*\n`;
+      livre.titres.forEach((t) => {
+        nav += `### ${t.title}\n`;
+        if (t.articlesIntro) nav += `*Intro: ${t.articlesIntro}*\n`;
         nav += '\n';
-        titre.chapitres.forEach((chap, ci) => {
-          const path = `references/livre-${romanToArabic(livre.num)}/titre-${romanToArabic(titre.num)}/chapitre-${romanToArabic(chap.num)}.md`;
+        t.chapitres.forEach((chap) => {
+          const path = `references/livre-${romanToArabic(livre.num)}/titre-${romanToArabic(t.num)}/chapitre-${romanToArabic(chap.num)}.md`;
           nav += `- [${chap.title}](${path})`;
           if (chap.articlesIntro) nav += ` *(${chap.articlesIntro})*`;
           nav += '\n';
@@ -2045,11 +2043,6 @@ export default function CPCBeninSkillGenerator() {
               nav += `    - ${ss.title}`;
               if (ss.articles) nav += ` *(${ss.articles})*`;
               nav += '\n';
-              ss.paragraphes.forEach(p => {
-                nav += `      - ${p.title}`;
-                if (p.articles) nav += ` *(${p.articles})*`;
-                nav += '\n';
-              });
             });
           });
         });
@@ -2059,8 +2052,8 @@ export default function CPCBeninSkillGenerator() {
     return `---\nname: "${sanitize(skillName)}"\ndescription: "${skillDescription}"\n---\n\n# ${skillName}\n${nav}\n## Instructions\n\n${mainInstructions}\n`;
   };
 
-  const generateChapitreContent = (livre, titre, chap) => {
-    let c = `# ${livre.title}\n## ${titre.title}\n### ${chap.title}\n\n`;
+  const generateChapitreContent = (livre, t, chap) => {
+    let c = `# ${livre.title}\n## ${t.title}\n### ${chap.title}\n\n`;
     if (chap.articlesIntro) {
       c += `## Dispositions générales\n\n**Articles:** ${chap.articlesIntro}\n\n${chap.contentIntro || '[À compléter]'}\n\n---\n\n`;
     }
@@ -2078,14 +2071,10 @@ export default function CPCBeninSkillGenerator() {
           c += (p.content || '[À compléter]') + '\n\n';
         });
       });
-      if (sec.subsections.length === 0 && !sec.content) {
-        c += '[À compléter]\n\n';
-      }
+      if (sec.subsections.length === 0 && !sec.content) c += '[À compléter]\n\n';
       c += '---\n\n';
     });
-    if (chap.sections.length === 0) {
-      c += (chap.contentIntro || '[À compléter]') + '\n';
-    }
+    if (chap.sections.length === 0) c += (chap.contentIntro || '[À compléter]') + '\n';
     return c;
   };
 
@@ -2098,15 +2087,15 @@ export default function CPCBeninSkillGenerator() {
       zip.file(`${fn}/SKILL.md`, generateSkillMd());
       livres.forEach((livre) => {
         const ln = romanToArabic(livre.num);
-        livre.titres.forEach((titre) => {
-          const tn = romanToArabic(titre.num);
-          if (titre.articlesIntro) {
+        livre.titres.forEach((t) => {
+          const tn = romanToArabic(t.num);
+          if (t.articlesIntro) {
             zip.file(`${fn}/references/livre-${ln}/titre-${tn}/00-intro.md`, 
-              `# ${titre.title}\n\n**${titre.articlesIntro}**\n\n${titre.contentIntro || '[À compléter]'}\n`);
+              `# ${t.title}\n\n**${t.articlesIntro}**\n\n${t.contentIntro || '[À compléter]'}\n`);
           }
-          titre.chapitres.forEach((chap) => {
+          t.chapitres.forEach((chap) => {
             const cn = romanToArabic(chap.num);
-            zip.file(`${fn}/references/livre-${ln}/titre-${tn}/chapitre-${cn}.md`, generateChapitreContent(livre, titre, chap));
+            zip.file(`${fn}/references/livre-${ln}/titre-${tn}/chapitre-${cn}.md`, generateChapitreContent(livre, t, chap));
           });
         });
       });
@@ -2120,8 +2109,6 @@ export default function CPCBeninSkillGenerator() {
     document.body.appendChild(script);
   };
 
-  const truncate = (s, n) => s && s.length > n ? s.substring(0, n) + '...' : s;
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-slate-900 to-slate-900 p-2">
       <div className="max-w-7xl mx-auto">
@@ -2129,7 +2116,7 @@ export default function CPCBeninSkillGenerator() {
           <div>
             <h1 className="text-lg font-bold text-white flex items-center gap-2">
               <Scale size={18} className="text-blue-400" />
-              CPC Bénin v10 - Structure Complète
+              CPC Bénin v11 - Titres Complets
             </h1>
             <p className="text-slate-400 text-xs">{stats.sec} Sections • {stats.ss} Sous-sections • {stats.para} Paragraphes</p>
           </div>
@@ -2154,46 +2141,46 @@ export default function CPCBeninSkillGenerator() {
               <div className="space-y-1 max-h-[500px] overflow-y-auto pr-1 text-xs">
                 {livres.map((livre, li) => (
                   <div key={li} className="border border-slate-600 rounded">
-                    <div className="flex items-center p-1 bg-blue-900/40 cursor-pointer" onClick={() => toggle('livre', li)}>
-                      {expanded.livre[li] ? <ChevronDown size={10} /> : <ChevronRight size={10} />}
-                      <span className="text-white ml-1 font-medium">📖 {truncate(livre.title, 60)}</span>
+                    <div className="flex items-center p-1.5 bg-blue-900/40 cursor-pointer" onClick={() => toggle('livre', li)}>
+                      {expanded.livre[li] ? <ChevronDown size={12} /> : <ChevronRight size={12} />}
+                      <span className="text-white ml-1 font-medium">📖 {livre.title}</span>
                     </div>
                     {expanded.livre[li] && (
                       <div className="p-1 space-y-1">
-                        {livre.titres.map((titre, ti) => (
-                          <div key={ti} className="border border-slate-600 rounded ml-1">
-                            <div className="flex items-center p-1 bg-indigo-900/40 cursor-pointer" onClick={() => toggle('titre', `${li}-${ti}`)}>
-                              {expanded.titre[`${li}-${ti}`] ? <ChevronDown size={10} /> : <ChevronRight size={10} />}
-                              <span className="text-white ml-1">📁 {truncate(titre.title, 50)}</span>
-                              {titre.articlesIntro && <span className="text-yellow-400 ml-1">({titre.articlesIntro})</span>}
+                        {livre.titres.map((t, ti) => (
+                          <div key={ti} className="border border-slate-600 rounded ml-2">
+                            <div className="flex items-center p-1.5 bg-indigo-900/40 cursor-pointer" onClick={() => toggle('titre', `${li}-${ti}`)}>
+                              {expanded.titre[`${li}-${ti}`] ? <ChevronDown size={12} /> : <ChevronRight size={12} />}
+                              <span className="text-indigo-200 ml-1">📁 {t.title}</span>
+                              {t.articlesIntro && <span className="text-yellow-400 ml-1">({t.articlesIntro})</span>}
                             </div>
                             {expanded.titre[`${li}-${ti}`] && (
                               <div className="p-1 space-y-1">
-                                {titre.articlesIntro && (
-                                  <div className="bg-yellow-900/20 border border-yellow-700/50 rounded p-1 ml-1">
-                                    <span className="text-yellow-400 text-xs">Intro Titre: {titre.articlesIntro}</span>
-                                    <textarea value={titre.contentIntro || ''} 
+                                {t.articlesIntro && (
+                                  <div className="bg-yellow-900/20 border border-yellow-700/50 rounded p-1.5 ml-2">
+                                    <span className="text-yellow-400 text-xs font-medium">Intro Titre: {t.articlesIntro}</span>
+                                    <textarea value={t.contentIntro || ''} 
                                       onChange={e => updateField([li, 'titres', ti], 'contentIntro', e.target.value)}
                                       rows="2" className="w-full mt-1 px-1 bg-slate-700 border border-slate-600 rounded text-white text-xs" 
                                       placeholder="Contenu intro titre..." />
                                   </div>
                                 )}
-                                {titre.chapitres.map((chap, ci) => (
-                                  <div key={ci} className="border border-slate-600 rounded ml-1">
-                                    <div className="flex items-center p-1 bg-green-900/30 cursor-pointer" onClick={() => toggle('chapitre', `${li}-${ti}-${ci}`)}>
-                                      {expanded.chapitre[`${li}-${ti}-${ci}`] ? <ChevronDown size={10} /> : <ChevronRight size={10} />}
-                                      <span className="text-green-300 ml-1">📄 {truncate(chap.title, 45)}</span>
+                                {t.chapitres.map((chap, ci) => (
+                                  <div key={ci} className="border border-slate-600 rounded ml-2">
+                                    <div className="flex items-center p-1.5 bg-green-900/30 cursor-pointer" onClick={() => toggle('chapitre', `${li}-${ti}-${ci}`)}>
+                                      {expanded.chapitre[`${li}-${ti}-${ci}`] ? <ChevronDown size={12} /> : <ChevronRight size={12} />}
+                                      <span className="text-green-300 ml-1">📄 {chap.title}</span>
                                       {chap.articlesIntro && <span className="text-orange-400 ml-1">[{chap.articlesIntro}]</span>}
-                                      <span className="text-slate-500 ml-1">[{chap.sections.length}sec]</span>
+                                      <span className="text-slate-500 ml-auto">[{chap.sections.length} sec]</span>
                                     </div>
                                     {expanded.chapitre[`${li}-${ti}-${ci}`] && (
-                                      <div className="p-1 bg-slate-900/50 space-y-1">
+                                      <div className="p-1.5 bg-slate-900/50 space-y-1">
                                         {chap.articlesIntro && (
-                                          <div className="bg-orange-900/20 border border-orange-700/50 rounded p-1">
-                                            <span className="text-orange-400">Intro Chap: {chap.articlesIntro}</span>
+                                          <div className="bg-orange-900/20 border border-orange-700/50 rounded p-1.5">
+                                            <span className="text-orange-400 font-medium">Intro: {chap.articlesIntro}</span>
                                             <textarea value={chap.contentIntro || ''} 
                                               onChange={e => updateField([li, 'titres', ti, 'chapitres', ci], 'contentIntro', e.target.value)}
-                                              rows="2" className="w-full mt-1 px-1 bg-slate-700 border border-slate-600 rounded text-white text-xs" />
+                                              rows="3" className="w-full mt-1 px-1 bg-slate-700 border border-slate-600 rounded text-white text-xs" />
                                           </div>
                                         )}
                                         {chap.sections.length === 0 && !chap.articlesIntro && (
@@ -2203,44 +2190,44 @@ export default function CPCBeninSkillGenerator() {
                                             placeholder="Contenu du chapitre..." />
                                         )}
                                         {chap.sections.map((sec, si) => (
-                                          <div key={si} className="border border-cyan-800/50 rounded p-1 ml-1">
+                                          <div key={si} className="border border-cyan-800/50 rounded p-1.5 ml-1">
                                             <div className="flex items-center cursor-pointer" onClick={() => toggle('section', `${li}-${ti}-${ci}-${si}`)}>
-                                              {expanded.section[`${li}-${ti}-${ci}-${si}`] ? <ChevronDown size={10} className="text-cyan-400" /> : <ChevronRight size={10} className="text-cyan-400" />}
-                                              <span className="text-cyan-300 ml-1">{truncate(sec.title, 40)}</span>
+                                              {expanded.section[`${li}-${ti}-${ci}-${si}`] ? <ChevronDown size={12} className="text-cyan-400" /> : <ChevronRight size={12} className="text-cyan-400" />}
+                                              <span className="text-cyan-300 ml-1">{sec.title}</span>
                                               {sec.articlesIntro && <span className="text-teal-400 ml-1">({sec.articlesIntro})</span>}
-                                              {sec.subsections.length > 0 && <span className="text-purple-400 ml-1">[{sec.subsections.length}ss]</span>}
+                                              {sec.subsections.length > 0 && <span className="text-purple-400 ml-auto">[{sec.subsections.length} ss]</span>}
                                             </div>
                                             {expanded.section[`${li}-${ti}-${ci}-${si}`] && (
-                                              <div className="mt-1 pl-2 space-y-1">
+                                              <div className="mt-1.5 pl-3 space-y-1.5">
                                                 {sec.subsections.length === 0 && (
                                                   <textarea value={sec.content || ''} 
                                                     onChange={e => updateField([li, 'titres', ti, 'chapitres', ci, 'sections', si], 'content', e.target.value)}
-                                                    rows="2" className="w-full px-1 bg-slate-700 border border-slate-600 rounded text-white text-xs" 
+                                                    rows="3" className="w-full px-1 bg-slate-700 border border-slate-600 rounded text-white text-xs" 
                                                     placeholder="Contenu section..." />
                                                 )}
                                                 {sec.subsections.map((ss, ssi) => (
-                                                  <div key={ssi} className="bg-purple-900/20 border border-purple-700/50 rounded p-1">
+                                                  <div key={ssi} className="bg-purple-900/20 border border-purple-700/50 rounded p-1.5">
                                                     <div className="flex items-center cursor-pointer" onClick={() => toggle('subsection', `${li}-${ti}-${ci}-${si}-${ssi}`)}>
-                                                      {expanded.subsection[`${li}-${ti}-${ci}-${si}-${ssi}`] ? <ChevronDown size={8} className="text-purple-400" /> : <ChevronRight size={8} className="text-purple-400" />}
-                                                      <span className="text-purple-300 ml-1">{truncate(ss.title, 35)}</span>
+                                                      {expanded.subsection[`${li}-${ti}-${ci}-${si}-${ssi}`] ? <ChevronDown size={10} className="text-purple-400" /> : <ChevronRight size={10} className="text-purple-400" />}
+                                                      <span className="text-purple-300 ml-1">{ss.title}</span>
                                                       {ss.articles && <span className="text-slate-400 ml-1">({ss.articles})</span>}
-                                                      {ss.paragraphes.length > 0 && <span className="text-pink-400 ml-1">[{ss.paragraphes.length}¶]</span>}
+                                                      {ss.paragraphes.length > 0 && <span className="text-pink-400 ml-auto">[{ss.paragraphes.length} ¶]</span>}
                                                     </div>
                                                     {expanded.subsection[`${li}-${ti}-${ci}-${si}-${ssi}`] && (
-                                                      <div className="mt-1 pl-2 space-y-1">
+                                                      <div className="mt-1.5 pl-3 space-y-1.5">
                                                         {ss.paragraphes.length === 0 && (
                                                           <textarea value={ss.content || ''} 
                                                             onChange={e => updateField([li, 'titres', ti, 'chapitres', ci, 'sections', si, 'subsections', ssi], 'content', e.target.value)}
-                                                            rows="2" className="w-full px-1 bg-slate-700 border border-slate-600 rounded text-white text-xs" 
+                                                            rows="3" className="w-full px-1 bg-slate-700 border border-slate-600 rounded text-white text-xs" 
                                                             placeholder="Contenu sous-section..." />
                                                         )}
                                                         {ss.paragraphes.map((p, pi) => (
-                                                          <div key={pi} className="bg-pink-900/20 border border-pink-700/50 rounded p-1">
-                                                            <span className="text-pink-300">{truncate(p.title, 40)}</span>
-                                                            {p.articles && <span className="text-slate-400 ml-1">({p.articles})</span>}
+                                                          <div key={pi} className="bg-pink-900/20 border border-pink-700/50 rounded p-1.5">
+                                                            <div className="text-pink-300 font-medium">{p.title}</div>
+                                                            {p.articles && <div className="text-slate-400 text-xs">({p.articles})</div>}
                                                             <textarea value={p.content || ''} 
                                                               onChange={e => updateField([li, 'titres', ti, 'chapitres', ci, 'sections', si, 'subsections', ssi, 'paragraphes', pi], 'content', e.target.value)}
-                                                              rows="2" className="w-full mt-1 px-1 bg-slate-700 border border-slate-600 rounded text-white text-xs" 
+                                                              rows="3" className="w-full mt-1 px-1 bg-slate-700 border border-slate-600 rounded text-white text-xs" 
                                                               placeholder="Contenu paragraphe..." />
                                                           </div>
                                                         ))}
@@ -2271,16 +2258,16 @@ export default function CPCBeninSkillGenerator() {
           <div className="space-y-2">
             <div className="bg-slate-800 rounded p-2 border border-slate-700">
               <h3 className="text-sm font-bold text-white mb-1">Aperçu SKILL.md</h3>
-              <div className="bg-slate-900 rounded p-1 max-h-36 overflow-y-auto border border-slate-700">
-                <pre className="text-slate-300 text-xs whitespace-pre-wrap font-mono">{generateSkillMd().substring(0, 1200)}...</pre>
+              <div className="bg-slate-900 rounded p-1.5 max-h-40 overflow-y-auto border border-slate-700">
+                <pre className="text-slate-300 text-xs whitespace-pre-wrap font-mono">{generateSkillMd().substring(0, 1500)}...</pre>
               </div>
               <button onClick={() => { navigator.clipboard.writeText(generateSkillMd()); setCopied(true); setTimeout(() => setCopied(false), 2000); }} 
-                className="w-full mt-1 px-2 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded text-xs flex items-center justify-center gap-1">
+                className="w-full mt-1.5 px-2 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded text-xs flex items-center justify-center gap-1">
                 <Copy size={12} /> {copied ? '✓ Copié!' : 'Copier SKILL.md'}
               </button>
             </div>
 
-            <button onClick={downloadZip} className="w-full px-4 py-2 rounded font-medium bg-green-600 hover:bg-green-700 text-white flex items-center justify-center gap-2">
+            <button onClick={downloadZip} className="w-full px-4 py-2.5 rounded font-medium bg-green-600 hover:bg-green-700 text-white flex items-center justify-center gap-2">
               <Download size={16} /> {zipGenerated ? '✓ Téléchargé!' : 'Télécharger ZIP'}
             </button>
 
@@ -2292,7 +2279,6 @@ export default function CPCBeninSkillGenerator() {
                 <div><span className="text-cyan-400">●</span> Section</div>
                 <div><span className="text-purple-400">●</span> Sous-section</div>
                 <div><span className="text-pink-400">●</span> Paragraphe</div>
-                <div><span className="text-teal-400">●</span> Articles</div>
               </div>
             </div>
 
