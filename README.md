@@ -1,22 +1,23 @@
-# ⚖️ Générateur de Skills OHADA
+# ⚖️ Générateur de Skills CPC Bénin
 
 [![React](https://img.shields.io/badge/React-18.2-61DAFB?logo=react)](https://reactjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.0-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Générateur de Skills pour Claude Code** - Un outil visuel pour créer des Skills documentant les procédures OHADA d'exécution forcée et de recouvrement.
+**Générateur de Skills pour Claude Code** - Un outil visuel pour créer des Skills documentant le Code de Procédure Civile du Bénin avec une structure hiérarchique complète.
 
 ![Screenshot](./docs/screenshot.png)
 
 ## ✨ Fonctionnalités
 
-- 📚 **Sections prédéfinies OHADA** : Injonction de payer, Saisies conservatoires, Saisie-vente, etc.
-- 🎨 **Interface visuelle intuitive** : Design moderne avec gradient violet/slate
-- 📋 **Prévisualisation en temps réel** : Voir le SKILL.md généré instantanément
-- 📁 **Génération de structure** : Visualisation de l'arborescence des fichiers
-- 📦 **Export ZIP** : Téléchargez un package complet prêt pour Claude Code
-- ✏️ **Édition flexible** : Modifiez le contenu de chaque section
-- 🔄 **Réinitialisation** : Remise à zéro rapide du formulaire
+- 📚 **Structure hiérarchique** : Sections → Sous-sections avec articles
+- 📊 **Tables de référence** : Délais, compétences, voies de recours
+- 🎨 **Interface visuelle intuitive** : Design moderne avec gradient bleu/slate
+- 📋 **15 sections prédéfinies** : Couvrant tout le CPC Bénin
+- 📁 **Génération complète** : SKILL.md + fichiers de référence + tables
+- 📦 **Export ZIP** : Package complet prêt pour Claude Code
+- ✏️ **Édition flexible** : Ajoutez, modifiez, supprimez sections et sous-sections
+- 🔄 **Versions législatives** : 2016-16, 2020-08, 2022-20 intégrées
 
 ## 🚀 Installation
 
@@ -43,73 +44,82 @@ npm start
 
 L'application sera disponible sur `http://localhost:3000`
 
-## 📖 Utilisation
-
-### 1. Remplir les informations de base
-
-- **Nom de la Skill** : Ex: "Guide OHADA - Procédures d'Exécution"
-- **Description** : Quand Claude doit utiliser cette Skill
-- **Instructions Principales** : Instructions générales en Markdown
-
-### 2. Compléter les sections de référence
-
-8 sections prédéfinies couvrant l'AUPSRVE :
-- Dispositions Communes (Art. 1 à 53)
-- Injonction de Payer (Art. 2 à 18)
-- Injonction de Délivrer/Restituer (Art. 19 à 27)
-- Dispositions Générales Exécution (Art. 28 à 53)
-- Saisies Conservatoires (Art. 54 à 90)
-- Saisie-Vente (Art. 91 à 152-15)
-- Saisie-Attribution (Art. 153 à 172)
-- Saisie Rémunérations (Art. 173 à 217)
-
-### 3. Exporter
-
-- **Copier** : Copiez le SKILL.md dans le presse-papiers
-- **Télécharger ZIP** : Obtenez un package complet avec tous les fichiers
-
-### 4. Installer dans Claude Code
-
-```bash
-# Extraire le ZIP dans le dossier skills de Claude
-unzip ma-skill.zip -d ~/.claude/skills/
-
-# Ou pour un projet spécifique
-unzip ma-skill.zip -d /chemin/vers/projet/.claude/skills/
-```
-
-## 📁 Structure générée
+## 📖 Structure générée
 
 ```
-guide-ohada-procedures-execution/
-├── SKILL.md                              # Fichier principal (navigation + instructions)
+cpc-benin/
+├── SKILL.md
 └── references/
-    ├── dispositions-communes.md
-    ├── injonction-de-payer.md
-    ├── injonction-de-delivrer-restituer.md
-    ├── dispositions-generales-execution.md
-    ├── saisies-conservatoires.md
-    ├── saisie-vente.md
-    ├── saisie-attribution.md
-    └── saisie-remunerations.md
+    ├── 01-dispositions-communes.md
+    │   ├── Principes directeurs (Art. 1-34)
+    │   ├── Compétence territoriale (Art. 35-56)
+    │   └── Actes de procédure (Art. 57-115)
+    │
+    ├── 02-demande-en-justice.md
+    ├── 03-administration-preuve.md
+    ├── 04-incidents-instance.md
+    ├── 05-jugement.md
+    ├── 06-voies-recours.md
+    ├── 07-procedure-civile-tpi.md
+    ├── 08-procedure-commerciale.md
+    ├── 09-procedure-sociale.md
+    ├── 10-procedure-administrative.md
+    ├── 11-procedure-comptes.md
+    ├── 12-procedures-speciales.md
+    ├── 13-modifications-2016-16.md
+    ├── 14-modernisation-2020-08.md
+    ├── 15-modification-2022-20.md
+    │
+    └── tables/
+        ├── delais-imperatifs.md
+        ├── competences-materielles.md
+        ├── competences-territoriales.md
+        └── voies-recours-tableau.md
 ```
+
+## 📋 Sections prédéfinies (15)
+
+| # | Section | Contenu |
+|---|---------|---------|
+| 01 | Dispositions Communes | Principes directeurs, Compétence, Actes |
+| 02 | Demande en Justice | Initiale, Incidentes, Moyens de défense |
+| 03 | Administration Preuve | Enquêtes, Expertise, Serment, etc. |
+| 04 | Incidents d'Instance | Jonction, Interruption, Péremption |
+| 05 | Jugement | Prononcé, Chose jugée, Exécution provisoire |
+| 06 | Voies de Recours | Opposition, Appel, Cassation |
+| 07 | Procédure Civile TPI | Ordinaire, Jour fixe, Référés |
+| 08 | Procédure Commerciale | Tribunaux commerce, Petites créances |
+| 09 | Procédure Sociale | Compétence, Procédure, Recours |
+| 10 | Procédure Administrative | REP, Plein contentieux, Référés |
+| 11 | Procédure des Comptes | Juridiction, Jugement, Recours |
+| 12 | Procédures Spéciales | Exequatur, Arbitrage, Reddition |
+| 13 | Modifications 2016-16 | Articles modifiés |
+| 14 | Modernisation 2020-08 | Électronique, Petites créances, Pool |
+| 15 | Modification 2022-20 | Art. 585.1 (saisies immobilières) |
+
+## 📊 Tables de référence (4)
+
+- **Délais impératifs** : Tous les délais de procédure
+- **Compétences matérielles** : Répartition par juridiction
+- **Compétences territoriales** : Règles de territorialité
+- **Voies de recours** : Tableau récapitulatif
 
 ## 🎯 Cas d'utilisation
 
 ### Pour les Huissiers de Justice
-- Documentation rapide des procédures OHADA
-- Référence pour la rédaction d'actes
+- Référence rapide des procédures
+- Vérification des délais
 - Formation des collaborateurs
 
-### Pour les Juristes
-- Aide à la rédaction de conclusions
-- Vérification des délais et formalités
-- Recherche jurisprudentielle
+### Pour les Avocats
+- Rédaction de conclusions
+- Recherche procédurale
+- Préparation des audiences
 
-### Pour les Étudiants en Droit
-- Support de révision OHADA
-- Compréhension des procédures d'exécution
-- Préparation aux examens
+### Pour les Magistrats
+- Vérification des formalités
+- Contrôle des délais
+- Aide à la décision
 
 ## 🛠️ Technologies
 
@@ -120,24 +130,19 @@ guide-ohada-procedures-execution/
 
 ## 📝 Personnalisation
 
-### Ajouter de nouvelles sections
+### Ajouter une section
 
-Modifiez le state initial `referenceSections` dans `OhadaSkillGenerator.jsx` :
+Cliquez sur le bouton "Ajouter Section" en haut de l'interface.
 
-```javascript
-const [referenceSections, setReferenceSections] = useState([
-  { title: 'Nouvelle Section', articles: 'Art. X à Y', content: '' },
-  // ... autres sections
-]);
-```
+### Ajouter une sous-section
 
-### Modifier le thème
+1. Développez une section existante
+2. Cliquez sur "Ajouter sous-section"
+3. Remplissez le titre, les articles et le contenu
 
-Les couleurs sont définies avec Tailwind. Modifiez les classes :
+### Ajouter une table
 
-- `from-purple-900` → Couleur de fond (dégradé)
-- `bg-slate-800` → Couleur des cartes
-- `text-purple-400` → Couleur d'accent
+Cliquez sur "Ajouter Table" pour créer une nouvelle table de référence.
 
 ## 🤝 Contribution
 
@@ -160,21 +165,21 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 - Membre de la Chambre Nationale des Huissiers de Justice du Bénin
 - GitHub: [@Arnaud-Biaou](https://github.com/Arnaud-Biaou)
 
-## 📚 Références OHADA
+## 📚 Références législatives
 
-- **AUPSRVE** : Acte Uniforme portant organisation des Procédures Simplifiées de Recouvrement et des Voies d'Exécution
-- Version révisée 2023, entrée en vigueur le 16 février 2024
-- [Site officiel OHADA](https://www.ohada.org)
+- **Code de Procédure Civile du Bénin** (version initiale)
+- **Loi 2016-16** : Modifications diverses
+- **Loi 2020-08** : Modernisation de la procédure civile
+- **Loi 2022-20** : Dispositions sur les saisies immobilières
 
 ## 🙏 Remerciements
 
 - [Anthropic](https://www.anthropic.com/) pour Claude et Claude Code
-- [OHADA](https://www.ohada.org/) pour l'harmonisation du droit des affaires
 - [Lucide](https://lucide.dev/) pour les icônes
 - [Tailwind CSS](https://tailwindcss.com/) pour le framework CSS
 
 ---
 
 <p align="center">
-  Fait avec ❤️ pour la communauté juridique OHADA
+  Fait avec ❤️ pour la communauté juridique béninoise
 </p>

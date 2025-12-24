@@ -1,17 +1,17 @@
 {
-  "name": "ohada-skill-generator",
+  "name": "cpc-benin-skill-generator",
   "version": "1.0.0",
-  "description": "Générateur de Skills OHADA pour Claude Code - Créez des Skills pour les procédures d'exécution forcée OHADA",
+  "description": "Générateur de Skills pour Claude Code - Code de Procédure Civile du Bénin avec structure hiérarchique",
   "private": true,
   "keywords": [
     "claude",
     "anthropic",
     "skill-generator",
     "claude-code",
-    "ohada",
+    "cpc-benin",
+    "procedure-civile",
     "legal-documentation",
-    "huissier",
-    "execution-forcee"
+    "huissier"
   ],
   "author": "Me Martial Arnaud BIAOU",
   "license": "MIT",

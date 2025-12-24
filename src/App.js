@@ -1,10 +1,10 @@
 import React from 'react';
-import OhadaSkillGenerator from './components/OhadaSkillGenerator';
+import CPCBeninSkillGenerator from './components/CPCBeninSkillGenerator';
 
 function App() {
   return (
     <div className="App">
-      <OhadaSkillGenerator />
+      <CPCBeninSkillGenerator />
     </div>
   );
 }
