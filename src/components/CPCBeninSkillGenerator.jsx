@@ -18,7 +18,7 @@ Loi N° 2008-07 du 28 février 2011, modifiée et complétée par:
 ## Utilisation
 Documentation complète pour les praticiens du droit béninois.`);
 
-  // Structure EXACTE du CPC Bénin
+  // Structure EXACTE du CPC Bénin avec contenu au niveau TITRE pour Article 1
   const [livres, setLivres] = useState([
     {
       num: 'PREMIER',
@@ -27,11 +27,13 @@ Documentation complète pour les praticiens du droit béninois.`);
         {
           num: 'PREMIER',
           title: 'DES DISPOSITIONS LIMINAIRES',
+          articlesIntro: 'Art. 1',
+          contentIntro: '', // Pour l'Article 1 qui est avant le Chapitre I
           chapitres: [
             { 
               num: 'I', 
               title: 'DES PRINCIPES DIRECTEURS DU PROCÈS CIVIL', 
-              articles: 'Art. 1-18',
+              articles: 'Art. 2-18',
               sections: [
                 { num: 'I', title: 'De l\'instance', articles: 'Art. 2-4', content: '' },
                 { num: 'II', title: 'De l\'objet du litige', articles: 'Art. 5-6', content: '' },
@@ -59,6 +61,8 @@ Documentation complète pour les praticiens du droit béninois.`);
         {
           num: 'II',
           title: 'DE L\'INTRODUCTION ET DE L\'INSTRUCTION DES INSTANCES',
+          articlesIntro: '',
+          contentIntro: '',
           chapitres: [
             { 
               num: 'I', 
@@ -114,6 +118,8 @@ Documentation complète pour les praticiens du droit béninois.`);
         {
           num: 'III',
           title: 'DE LA CONCILIATION, DE L\'AUDIENCE ET DU JUGEMENT',
+          articlesIntro: '',
+          contentIntro: '',
           chapitres: [
             { num: 'I', title: 'DE LA CONCILIATION', articles: '', sections: [], content: '' },
             { 
@@ -144,6 +150,8 @@ Documentation complète pour les praticiens du droit béninois.`);
         {
           num: 'IV',
           title: 'DES VOIES DE RECOURS',
+          articlesIntro: '',
+          contentIntro: '',
           chapitres: [
             { num: 'I', title: 'DES DISPOSITIONS COMMUNES', articles: 'Art. 607-620', sections: [], content: '' },
             { 
@@ -172,6 +180,8 @@ Documentation complète pour les praticiens du droit béninois.`);
         {
           num: 'V',
           title: 'DES FRAIS ET DES DÉPENS',
+          articlesIntro: '',
+          contentIntro: '',
           chapitres: [
             { num: 'I', title: 'DE LA CHARGE DES DÉPENS', articles: '', sections: [], content: '' },
             { num: 'II', title: 'DE LA LIQUIDATION DES DÉPENS ET DES FRAIS', articles: '', sections: [], content: '' },
@@ -180,6 +190,8 @@ Documentation complète pour les praticiens du droit béninois.`);
         {
           num: 'VI',
           title: 'DES COMMISSIONS ROGATOIRES',
+          articlesIntro: '',
+          contentIntro: '',
           chapitres: [
             { num: 'I', title: 'DES COMMISSIONS ROGATOIRES INTERNES', articles: '', sections: [], content: '' },
             { 
@@ -203,6 +215,8 @@ Documentation complète pour les praticiens du droit béninois.`);
         {
           num: 'PREMIER',
           title: 'DE LA PROCÉDURE DEVANT LE TRIBUNAL DE PREMIÈRE INSTANCE',
+          articlesIntro: '',
+          contentIntro: '',
           chapitres: [
             { 
               num: 'I', 
@@ -254,6 +268,8 @@ Documentation complète pour les praticiens du droit béninois.`);
         {
           num: 'II',
           title: 'DES DISPOSITIONS PARTICULIÈRES DEVANT LA COUR D\'APPEL',
+          articlesIntro: '',
+          contentIntro: '',
           chapitres: [
             { 
               num: 'I', 
@@ -302,6 +318,8 @@ Documentation complète pour les praticiens du droit béninois.`);
         {
           num: 'III',
           title: 'DES DISPOSITIONS PARTICULIÈRES À LA COUR SUPRÊME',
+          articlesIntro: '',
+          contentIntro: '',
           chapitres: [
             { 
               num: 'I', 
@@ -348,6 +366,8 @@ Documentation complète pour les praticiens du droit béninois.`);
         {
           num: 'I',
           title: 'DES DISPOSITIONS RELATIVES AUX PERSONNES ET À LA FAMILLE',
+          articlesIntro: '',
+          contentIntro: '',
           chapitres: [
             { 
               num: 'I', 
@@ -383,6 +403,8 @@ Documentation complète pour les praticiens du droit béninois.`);
         {
           num: 'II',
           title: 'DE LA PROCÉDURE D\'EXEQUATUR ET DE L\'ARBITRAGE',
+          articlesIntro: '',
+          contentIntro: '',
           chapitres: [
             { num: 'I', title: 'DE LA PROCÉDURE D\'EXEQUATUR', articles: 'Art. 1159 et s.', sections: [], content: '' },
             { num: 'II', title: 'DE LA PROCÉDURE DE L\'ARBITRAGE', articles: '', sections: [], content: '' },
@@ -391,6 +413,8 @@ Documentation complète pour les praticiens du droit béninois.`);
         {
           num: 'III',
           title: 'DES DISPOSITIONS DIVERSES',
+          articlesIntro: '',
+          contentIntro: '',
           chapitres: [
             { num: 'I', title: 'DES SAISIES', articles: '', sections: [], content: '' },
             { num: 'II', title: 'DES OFFRES DE PAIEMENT ET DE LA CONSIGNATION', articles: '', sections: [], content: '' },
@@ -406,6 +430,8 @@ Documentation complète pour les praticiens du droit béninois.`);
         {
           num: 'IV',
           title: 'DES DISPOSITIONS TRANSITOIRES ET DIVERSES',
+          articlesIntro: '',
+          contentIntro: '',
           chapitres: [
             { num: 'I', title: 'DES DISPOSITIONS TRANSITOIRES', articles: '', sections: [], content: '' },
             { num: 'II', title: 'DES DISPOSITIONS FINALES', articles: '', sections: [], content: '' },
@@ -432,7 +458,7 @@ Documentation complète pour les praticiens du droit béninois.`);
   const [copied, setCopied] = useState(null);
   const [zipGenerated, setZipGenerated] = useState(false);
   const [expandedLivres, setExpandedLivres] = useState({0: true});
-  const [expandedTitres, setExpandedTitres] = useState({});
+  const [expandedTitres, setExpandedTitres] = useState({'0-0': true});
   const [expandedChapitres, setExpandedChapitres] = useState({});
   const [showModifications, setShowModifications] = useState(false);
   const [showTables, setShowTables] = useState(false);
@@ -449,12 +475,15 @@ Documentation complète pour les praticiens du droit béninois.`);
 
   const generateSkillMd = () => {
     let nav = '';
-    livres.forEach((livre, li) => {
+    livres.forEach((livre) => {
       const livreNum = romanToArabic(livre.num);
       nav += `\n## 📖 LIVRE ${livre.num} - ${livre.title}\n\n`;
-      livre.titres.forEach((titre, ti) => {
+      livre.titres.forEach((titre) => {
         const titreNum = romanToArabic(titre.num);
         nav += `### TITRE ${titre.num} - ${titre.title}\n\n`;
+        if (titre.articlesIntro) {
+          nav += `- *Dispositions introductives (${titre.articlesIntro})*\n`;
+        }
         titre.chapitres.forEach((chap) => {
           const path = `references/livre-${livreNum}/titre-${titreNum}/chapitre-${romanToArabic(chap.num)}.md`;
           nav += `- [**Chapitre ${chap.num}**: ${chap.title}](${path})`;
@@ -478,6 +507,14 @@ Documentation complète pour les praticiens du droit béninois.`);
     return `---\nname: "${sanitizeFilename(skillName)}"\ndescription: "${skillDescription}"\n---\n\n# ${skillName}\n\n${nav}\n\n## Instructions\n\n${mainInstructions}\n`;
   };
 
+  const generateTitreIntroContent = (livre, titre) => {
+    let c = `# LIVRE ${livre.num} - ${livre.title}\n## TITRE ${titre.num} - ${titre.title}\n\n`;
+    c += `## Dispositions Introductives\n\n`;
+    if (titre.articlesIntro) c += `**Articles:** ${titre.articlesIntro}\n\n`;
+    c += titre.contentIntro || '[Contenu à compléter]\n';
+    return c;
+  };
+
   const generateChapitreContent = (livre, titre, chap) => {
     let c = `# LIVRE ${livre.num} - ${livre.title}\n## TITRE ${titre.num} - ${titre.title}\n### CHAPITRE ${chap.num} - ${chap.title}\n\n`;
     if (chap.articles) c += `**Articles:** ${chap.articles}\n\n---\n\n`;
@@ -493,6 +530,9 @@ Documentation complète pour les praticiens du droit béninois.`);
     return c;
   };
 
+  const updateTitre = (li, ti, field, value) => {
+    const u = [...livres]; u[li].titres[ti][field] = value; setLivres(u);
+  };
   const updateSection = (li, ti, ci, si, field, value) => {
     const u = [...livres]; u[li].titres[ti].chapitres[ci].sections[si][field] = value; setLivres(u);
   };
@@ -520,6 +560,10 @@ Documentation complète pour les praticiens du droit béninois.`);
         const ln = romanToArabic(livre.num);
         livre.titres.forEach((titre) => {
           const tn = romanToArabic(titre.num);
+          // Fichier pour les dispositions introductives du titre (Art. 1 etc.)
+          if (titre.contentIntro || titre.articlesIntro) {
+            zip.file(`${fn}/references/livre-${ln}/titre-${tn}/00-dispositions-introductives.md`, generateTitreIntroContent(livre, titre));
+          }
           titre.chapitres.forEach((chap) => {
             const cn = romanToArabic(chap.num);
             zip.file(`${fn}/references/livre-${ln}/titre-${tn}/chapitre-${cn}.md`, generateChapitreContent(livre, titre, chap));
@@ -603,9 +647,34 @@ Documentation complète pour les praticiens du droit béninois.`);
                             <div className="flex items-center p-2 bg-indigo-900/30 hover:bg-indigo-900/50 cursor-pointer" onClick={() => setExpandedTitres({...expandedTitres, [`${li}-${ti}`]: !expandedTitres[`${li}-${ti}`]})}>
                               {expandedTitres[`${li}-${ti}`] ? <ChevronDown size={10} className="text-indigo-400" /> : <ChevronRight size={10} className="text-indigo-400" />}
                               <span className="text-white text-xs ml-2">📁 TITRE {titre.num} - {titre.title}</span>
+                              {titre.articlesIntro && <span className="text-yellow-400 text-xs ml-2">({titre.articlesIntro})</span>}
                             </div>
                             {expandedTitres[`${li}-${ti}`] && (
-                              <div className="p-2 space-y-1">
+                              <div className="p-2 space-y-2">
+                                {/* Zone pour Article 1 et dispositions introductives du Titre */}
+                                {(titre.articlesIntro || ti === 0) && (
+                                  <div className="bg-yellow-900/20 border border-yellow-700/50 rounded p-2 mb-2">
+                                    <div className="flex items-center gap-2 mb-2">
+                                      <Edit3 size={12} className="text-yellow-400" />
+                                      <span className="text-yellow-400 text-xs font-medium">Dispositions introductives du Titre</span>
+                                    </div>
+                                    <input 
+                                      type="text" 
+                                      value={titre.articlesIntro || ''} 
+                                      onChange={e => updateTitre(li, ti, 'articlesIntro', e.target.value)} 
+                                      className="w-full px-2 py-1 bg-slate-700 border border-slate-600 rounded text-white text-xs mb-2" 
+                                      placeholder="Articles (ex: Art. 1)" 
+                                    />
+                                    <textarea 
+                                      value={titre.contentIntro || ''} 
+                                      onChange={e => updateTitre(li, ti, 'contentIntro', e.target.value)} 
+                                      placeholder="Saisissez ici le contenu de l'Article 1 et autres dispositions introductives du Titre..." 
+                                      rows="4" 
+                                      className="w-full px-2 py-1 bg-slate-700 border border-slate-600 rounded text-white text-xs font-mono resize-y" 
+                                    />
+                                  </div>
+                                )}
+                                
                                 {titre.chapitres.map((chap, ci) => (
                                   <div key={ci} className="border border-slate-600 rounded ml-2">
                                     <div className="flex items-center justify-between p-1.5 bg-slate-700/50 hover:bg-slate-700 cursor-pointer" onClick={() => setExpandedChapitres({...expandedChapitres, [`${li}-${ti}-${ci}`]: !expandedChapitres[`${li}-${ti}-${ci}`]})}>
@@ -617,7 +686,7 @@ Documentation complète pour les praticiens du droit béninois.`);
                                     </div>
                                     {expandedChapitres[`${li}-${ti}-${ci}`] && (
                                       <div className="p-2 bg-slate-900/50 space-y-2">
-                                        <input type="text" value={chap.articles} onChange={e => updateChapitre(li,ti,ci,'articles',e.target.value)} className="w-full px-2 py-1 bg-slate-700 border border-slate-600 rounded text-white text-xs" placeholder="Articles (ex: Art. 1-18)" />
+                                        <input type="text" value={chap.articles} onChange={e => updateChapitre(li,ti,ci,'articles',e.target.value)} className="w-full px-2 py-1 bg-slate-700 border border-slate-600 rounded text-white text-xs" placeholder="Articles (ex: Art. 2-18)" />
                                         {chap.sections.length === 0 && (
                                           <textarea value={chap.content} onChange={e => updateChapitre(li,ti,ci,'content',e.target.value)} placeholder="Contenu du chapitre..." rows="4" className="w-full px-2 py-1 bg-slate-700 border border-slate-600 rounded text-white text-xs font-mono resize-y" />
                                         )}
@@ -693,13 +762,11 @@ Documentation complète pour les praticiens du droit béninois.`);
               </div>
             </div>
 
-            <div className="bg-slate-800/50 rounded-lg p-3 border border-slate-700">
-              <h4 className="text-xs font-bold text-white mb-2">📖 Structure Officielle</h4>
-              <div className="space-y-1 text-xs text-slate-300">
-                <p>• <strong>LIVRE I:</strong> Dispositions communes (6 titres)</p>
-                <p>• <strong>LIVRE II:</strong> Dispositions particulières (3 titres)</p>
-                <p>• <strong>LIVRE III:</strong> Procédures particulières (4 titres)</p>
-              </div>
+            <div className="bg-yellow-900/20 rounded-lg p-3 border border-yellow-700/50">
+              <h4 className="text-xs font-bold text-yellow-400 mb-2">💡 Article 1</h4>
+              <p className="text-xs text-slate-300">
+                L'Article 1 se trouve dans la zone <strong>"Dispositions introductives du Titre"</strong> (encadré jaune) sous le TITRE PREMIER.
+              </p>
             </div>
           </div>
         </div>
