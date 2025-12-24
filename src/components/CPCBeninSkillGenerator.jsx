@@ -8,8 +8,12 @@ import {
   FileText, 
   Plus, 
   Trash2,
-  FolderPlus,
-  Table
+  Book,
+  Table,
+  Scale,
+  FileEdit,
+  Folder,
+  File
 } from 'lucide-react';
 
 export default function CPCBeninSkillGenerator() {
@@ -19,8 +23,8 @@ export default function CPCBeninSkillGenerator() {
 
 ## À Propos de cette Skill
 
-Cette Skill fournit une documentation exhaustive du Code de Procédure Civile du Bénin, incluant:
-- Les dispositions originales
+Documentation exhaustive du Code de Procédure Civile du Bénin, incluant:
+- Les dispositions originales organisées en 3 Livres
 - Les modifications de la Loi 2016-16
 - La modernisation par la Loi 2020-08 (procédure électronique, petites créances)
 - Les ajouts de la Loi 2022-20 (saisies immobilières)
@@ -29,167 +33,225 @@ Cette Skill fournit une documentation exhaustive du Code de Procédure Civile du
 
 Accède rapidement aux articles et procédures selon le type de contentieux ou la phase procédurale.`);
 
-  // Structure principale avec sous-sections
-  const [sections, setSections] = useState([
+  // Structure EXACTE fournie par l'utilisateur
+  // type: 'file' = fichier .md unique, 'folder' = dossier avec sections séparées
+  const [livres, setLivres] = useState([
     {
-      num: '01',
+      num: '1',
       title: 'Dispositions Communes',
-      subsections: [
-        { title: 'Principes directeurs', articles: 'Art. 1-34', content: '' },
-        { title: 'Compétence territoriale', articles: 'Art. 35-56', content: '' },
-        { title: 'Actes de procédure', articles: 'Art. 57-115', content: '' },
+      titres: [
+        {
+          num: '1',
+          title: 'Dispositions Liminaires',
+          type: 'folder',
+          chapitres: [
+            { num: '1', title: 'Principes Directeurs', articles: 'Art. 1-21', type: 'file', sections: [], content: '' },
+            { num: '2', title: 'Représentation et Assistance', articles: 'Art. 22-29', type: 'file', sections: [], content: '' },
+            { num: '3', title: 'Action en Justice', articles: 'Art. 30-33', type: 'file', sections: [], content: '' },
+            { 
+              num: '4', 
+              title: 'Compétence des Juridictions', 
+              articles: 'Art. 34-52',
+              type: 'file', // sections incluses dans le fichier
+              sections: [
+                { num: '1', title: 'Compétence d\'attribution', articles: 'Art. 34-39', content: '' },
+                { num: '2', title: 'Compétence territoriale', articles: 'Art. 40-52', content: '' }
+              ],
+              content: '' 
+            },
+          ]
+        },
+        {
+          num: '2',
+          title: 'Introduction et Instruction de l\'Instance',
+          type: 'folder',
+          chapitres: [
+            { num: '1', title: 'Actes et Délais de Procédure', articles: 'Art. 53-115', type: 'file', sections: [], content: '' },
+            { 
+              num: '2', 
+              title: 'Introduction de l\'Instance', 
+              articles: 'Art. 116-144',
+              type: 'file',
+              sections: [
+                { num: '1', title: 'Demande initiale', articles: 'Art. 116-132', content: '' },
+                { num: '2', title: 'Demandes incidentes', articles: 'Art. 133-140', content: '' },
+                { num: '3', title: 'Mise au rôle', articles: 'Art. 141-144', content: '' }
+              ],
+              content: '' 
+            },
+            { num: '3', title: 'Instruction de l\'Affaire', articles: 'Art. 145-390', type: 'file', sections: [], content: '' },
+          ]
+        },
+        {
+          num: '3',
+          title: 'Jugement',
+          type: 'folder',
+          chapitres: [
+            { num: '1', title: 'Dispositions Générales', articles: 'Art. 500-540', type: 'file', sections: [], content: '' },
+            { num: '2', title: 'Défaut', articles: 'Art. 541-548', type: 'file', sections: [], content: '' },
+            { 
+              num: '3', 
+              title: 'Dispositions Spéciales aux Jugements', 
+              articles: 'Art. 549-606',
+              type: 'file',
+              sections: [
+                { num: '1', title: 'Jugements sur le fond', articles: 'Art. 549-570', content: '' },
+                { num: '2', title: 'Exécution provisoire', articles: 'Art. 597-606', content: '' },
+                { num: '3', title: 'Délai de grâce, astreinte', articles: 'Art. 593-596', content: '' }
+              ],
+              content: '' 
+            },
+          ]
+        },
+        {
+          num: '4',
+          title: 'Voies de Recours',
+          type: 'folder',
+          chapitres: [
+            { num: '1', title: 'Dispositions Communes', articles: 'Art. 607-620', type: 'file', sections: [], content: '' },
+            { 
+              num: '2', 
+              title: 'Voies de Recours Ordinaires', 
+              articles: 'Art. 621-656',
+              type: 'folder', // DOSSIER avec fichiers sections séparés
+              sections: [
+                { num: '1', title: 'Appel', articles: 'Art. 621-647', content: '' },
+                { num: '2', title: 'Opposition', articles: 'Art. 648-653', content: '' }
+              ],
+              content: '' 
+            },
+            { 
+              num: '3', 
+              title: 'Voies de Recours Extraordinaires', 
+              articles: 'Art. 657-708',
+              type: 'folder', // DOSSIER avec fichiers sections séparés
+              sections: [
+                { num: '1', title: 'Tierce opposition', articles: 'Art. 657-667', content: '' },
+                { num: '2', title: 'Recours en révision', articles: 'Art. 668-678', content: '' },
+                { num: '3', title: 'Pourvoi en cassation', articles: 'Art. 679-708', content: '' }
+              ],
+              content: '' 
+            },
+          ]
+        },
+        {
+          num: '6',
+          title: 'Coopération Judiciaire Internationale',
+          type: 'file', // TITRE comme fichier unique
+          articles: 'Art. 709-743',
+          chapitres: [],
+          content: ''
+        },
       ]
     },
     {
-      num: '02',
-      title: 'Demande en Justice',
-      subsections: [
-        { title: 'Demande initiale', articles: 'Art. 116-145', content: '' },
-        { title: 'Demandes incidentes', articles: 'Art. 146-175', content: '' },
-        { title: 'Moyens de défense', articles: 'Art. 176-210', content: '' },
+      num: '2',
+      title: 'Dispositions Particulières aux Juridictions',
+      titres: [
+        {
+          num: '1',
+          title: 'Procédure devant le TPI',
+          type: 'folder',
+          chapitres: [
+            { num: '1', title: 'Matière Civile et Commerciale', articles: 'Art. 744-781', type: 'file', sections: [], content: '' },
+            { num: '2', title: 'Matière Sociale', articles: 'Art. 782-820', type: 'file', sections: [], content: '' },
+            { num: '3', title: 'Matière Administrative', articles: 'Art. 821-853', type: 'file', sections: [], content: '' },
+            { 
+              num: '4', 
+              title: 'Pouvoirs du Président du TPI', 
+              articles: 'Art. 854-861',
+              type: 'file',
+              sections: [
+                { num: '1', title: 'Référés', articles: 'Art. 854-856', content: '' },
+                { num: '2', title: 'Ordonnances sur requête', articles: 'Art. 857-858', content: '' }
+              ],
+              content: '' 
+            },
+          ]
+        },
+        {
+          num: '2',
+          title: 'Procédure devant la Cour d\'Appel',
+          type: 'folder',
+          chapitres: [
+            { num: '1', title: 'Matière Civile, Commerciale et Sociale', articles: 'Art. 862-898', type: 'file', sections: [], content: '' },
+            { num: '2', title: 'Matière Administrative', articles: 'Art. 899-905', type: 'file', sections: [], content: '' },
+            { num: '3', title: 'Matière des Comptes', articles: 'Art. 906-910', type: 'file', sections: [], content: '' },
+          ]
+        },
+        {
+          num: '3',
+          title: 'Procédure devant la Cour Suprême',
+          type: 'file', // TITRE comme fichier unique
+          articles: 'Art. 918-980',
+          chapitres: [],
+          content: ''
+        },
       ]
     },
     {
-      num: '03',
-      title: 'Administration de la Preuve',
-      subsections: [
-        { title: 'Dispositions générales', articles: 'Art. 211-240', content: '' },
-        { title: 'Vérifications personnelles du juge', articles: 'Art. 241-260', content: '' },
-        { title: 'Comparution personnelle', articles: 'Art. 261-290', content: '' },
-        { title: 'Attestations', articles: 'Art. 291-320', content: '' },
-        { title: 'Enquêtes', articles: 'Art. 321-380', content: '' },
-        { title: 'Expertise', articles: 'Art. 381-450', content: '' },
-        { title: 'Serment', articles: 'Art. 451-470', content: '' },
-      ]
-    },
-    {
-      num: '04',
-      title: 'Incidents d\'Instance',
-      subsections: [
-        { title: 'Jonction et disjonction', articles: 'Art. 471-490', content: '' },
-        { title: 'Interruption', articles: 'Art. 491-510', content: '' },
-        { title: 'Suspension', articles: 'Art. 511-530', content: '' },
-        { title: 'Péremption', articles: 'Art. 531-545', content: '' },
-        { title: 'Désistement', articles: 'Art. 546-570', content: '' },
-      ]
-    },
-    {
-      num: '05',
-      title: 'Jugement',
-      subsections: [
-        { title: 'Dispositions générales', articles: 'Art. 571-600', content: '' },
-        { title: 'Prononcé', articles: 'Art. 601-620', content: '' },
-        { title: 'Force de chose jugée', articles: 'Art. 621-640', content: '' },
-        { title: 'Exécution provisoire', articles: 'Art. 641-670', content: '' },
-      ]
-    },
-    {
-      num: '06',
-      title: 'Voies de Recours',
-      subsections: [
-        { title: 'Dispositions communes', articles: 'Art. 671-690', content: '' },
-        { title: 'Opposition', articles: 'Art. 691-720', content: '' },
-        { title: 'Appel', articles: 'Art. 721-780', content: '' },
-        { title: 'Tierce opposition', articles: 'Art. 781-810', content: '' },
-        { title: 'Recours en révision', articles: 'Art. 811-840', content: '' },
-        { title: 'Pourvoi en cassation', articles: 'Art. 841-920', content: '' },
-      ]
-    },
-    {
-      num: '07',
-      title: 'Procédure Civile TPI',
-      subsections: [
-        { title: 'Procédure ordinaire', articles: 'Art. 721-760', content: '' },
-        { title: 'Procédure à jour fixe', articles: 'Art. 761-770', content: '' },
-        { title: 'Référés', articles: 'Art. 771-800', content: '' },
-        { title: 'Requêtes', articles: 'Art. 801-830', content: '' },
-      ]
-    },
-    {
-      num: '08',
-      title: 'Procédure Commerciale',
-      subsections: [
-        { title: 'Dispositions générales', articles: 'Art. 831-860', content: '' },
-        { title: 'Tribunaux de commerce', articles: 'Art. 861-890', content: '' },
-        { title: 'Procédures collectives', articles: 'Renvoi OHADA', content: '' },
-        { title: 'Petites créances', articles: 'Art. 768-1 et s. (Loi 2020-08)', content: '' },
-      ]
-    },
-    {
-      num: '09',
-      title: 'Procédure Sociale',
-      subsections: [
-        { title: 'Compétence', articles: 'Art. 891-910', content: '' },
-        { title: 'Procédure', articles: 'Art. 911-950', content: '' },
-        { title: 'Voies de recours', articles: 'Art. 951-980', content: '' },
-      ]
-    },
-    {
-      num: '10',
-      title: 'Procédure Administrative',
-      subsections: [
-        { title: 'Recours pour excès de pouvoir', articles: 'Art. 981-1020', content: '' },
-        { title: 'Plein contentieux', articles: 'Art. 1021-1060', content: '' },
-        { title: 'Référés administratifs', articles: 'Art. 1061-1100', content: '' },
-        { title: 'Exécution des décisions', articles: 'Art. 1101-1130', content: '' },
-      ]
-    },
-    {
-      num: '11',
-      title: 'Procédure des Comptes',
-      subsections: [
-        { title: 'Juridiction des comptes', articles: 'Art. 1131-1160', content: '' },
-        { title: 'Jugement des comptes', articles: 'Art. 1161-1190', content: '' },
-        { title: 'Voies de recours', articles: 'Art. 1191-1220', content: '' },
-      ]
-    },
-    {
-      num: '12',
-      title: 'Procédures Spéciales',
-      subsections: [
-        { title: 'Exequatur', articles: 'Art. 1159-1180', content: '' },
-        { title: 'Arbitrage', articles: 'Art. 1181-1200', content: '' },
-        { title: 'Reddition de comptes', articles: 'Art. 1206-1220', content: '' },
-        { title: 'Reconstitution d\'actes', articles: 'Art. 1201-1205', content: '' },
-      ]
-    },
-    {
-      num: '13',
-      title: 'Modifications 2016-16',
-      subsections: [
-        { title: 'Articles modifiés', articles: 'Ancienne/nouvelle rédaction', content: '' },
-      ]
-    },
-    {
-      num: '14',
-      title: 'Modernisation 2020-08',
-      subsections: [
-        { title: 'Procédure électronique', articles: '', content: '' },
-        { title: 'Petites créances', articles: 'Art. 768-1 et s.', content: '' },
-        { title: 'Pool de l\'exécution', articles: '', content: '' },
-        { title: 'Médiation judiciaire', articles: '', content: '' },
-      ]
-    },
-    {
-      num: '15',
-      title: 'Modification 2022-20',
-      subsections: [
-        { title: 'Article 585.1 nouveau', articles: 'Saisies immobilières', content: '' },
+      num: '3',
+      title: 'Procédures Particulières',
+      titres: [
+        {
+          num: '1',
+          title: 'Personnes et Famille',
+          type: 'file',
+          articles: 'Art. 981 et s.',
+          chapitres: [],
+          content: ''
+        },
+        {
+          num: '2',
+          title: 'Arbitrage et Exequatur',
+          type: 'file',
+          articles: 'Art. 1159 et s.',
+          chapitres: [],
+          content: ''
+        },
+        {
+          num: '3',
+          title: 'Dispositions Diverses',
+          type: 'file',
+          articles: 'Art. 1171 et s.',
+          chapitres: [],
+          content: ''
+        },
       ]
     },
   ]);
 
+  // Modifications législatives
+  const [modifications] = useState([
+    { filename: 'loi-2016-16-modifications', title: 'Loi 2016-16 - Modifications', subsections: [], content: '' },
+    { 
+      filename: 'loi-2020-08-modernisation', 
+      title: 'Loi 2020-08 - Modernisation',
+      subsections: [
+        'Procédure électronique (Art. 57, 116 modifiés)',
+        'Petites créances (Art. 768-1 et s.)',
+        'Pool de l\'exécution'
+      ],
+      content: '' 
+    },
+    { filename: 'loi-2022-20-article-585-1', title: 'Loi 2022-20 - Article 585.1 (saisies immobilières)', subsections: [], content: '' },
+  ]);
+
   // Tables de référence
-  const [tables, setTables] = useState([
-    { filename: 'delais-imperatifs', title: 'Délais Impératifs', content: '' },
-    { filename: 'competences-materielles', title: 'Compétences Matérielles', content: '' },
-    { filename: 'competences-territoriales', title: 'Compétences Territoriales', content: '' },
-    { filename: 'voies-recours-tableau', title: 'Voies de Recours (Tableau)', content: '' },
+  const [tables] = useState([
+    { filename: 'delais-imperatifs', title: 'Délais Impératifs' },
+    { filename: 'competences-attribution', title: 'Compétences d\'Attribution' },
+    { filename: 'competences-territoriales', title: 'Compétences Territoriales' },
+    { filename: 'voies-recours-synthese', title: 'Voies de Recours - Synthèse' },
+    { filename: 'mentions-obligatoires', title: 'Mentions Obligatoires' },
   ]);
 
   const [copied, setCopied] = useState(null);
   const [zipGenerated, setZipGenerated] = useState(false);
-  const [expandedSections, setExpandedSections] = useState({});
+  const [expandedLivres, setExpandedLivres] = useState({});
+  const [expandedTitres, setExpandedTitres] = useState({});
+  const [expandedChapitres, setExpandedChapitres] = useState({});
+  const [showModifications, setShowModifications] = useState(false);
   const [showTables, setShowTables] = useState(false);
 
   const sanitizeFilename = (name) => {
@@ -202,23 +264,77 @@ Accède rapidement aux articles et procédures selon le type de contentieux ou l
       .replace(/^-|-$/g, '');
   };
 
-  // Générer le SKILL.md
+  // Générer le SKILL.md avec navigation complète
   const generateSkillMd = () => {
     const cleanedName = sanitizeFilename(skillName);
+    let navigation = '';
     
-    let navigation = '## Navigation par Thème\n\n';
-    
-    sections.forEach((section) => {
-      const sectionFilename = `${section.num}-${sanitizeFilename(section.title)}`;
-      navigation += `### ${section.num}. ${section.title}\n`;
-      navigation += `📄 [${section.title}](references/${sectionFilename}.md)\n`;
-      section.subsections.forEach((sub) => {
-        navigation += `   - ${sub.title}${sub.articles ? ` (${sub.articles})` : ''}\n`;
+    livres.forEach((livre) => {
+      const livreSlug = `livre-${livre.num}-${sanitizeFilename(livre.title)}`;
+      navigation += `\n## 📖 Livre ${livre.num} - ${livre.title}\n\n`;
+      
+      livre.titres.forEach((titre) => {
+        const titreSlug = `titre-${titre.num}-${sanitizeFilename(titre.title)}`;
+        
+        if (titre.type === 'file') {
+          // Titre comme fichier unique
+          const filePath = `references/${livreSlug}/${titreSlug}.md`;
+          navigation += `### [Titre ${titre.num} - ${titre.title}](${filePath})`;
+          if (titre.articles) navigation += ` *(${titre.articles})*`;
+          navigation += '\n\n';
+        } else {
+          // Titre comme dossier
+          navigation += `### Titre ${titre.num} - ${titre.title}\n`;
+          
+          titre.chapitres.forEach((chap) => {
+            const chapSlug = `chap-${chap.num}-${sanitizeFilename(chap.title)}`;
+            
+            if (chap.type === 'folder' && chap.sections.length > 0) {
+              // Chapitre comme dossier avec sections fichiers
+              navigation += `- 📁 **Chapitre ${chap.num}: ${chap.title}**`;
+              if (chap.articles) navigation += ` *(${chap.articles})*`;
+              navigation += '\n';
+              
+              chap.sections.forEach((section) => {
+                const secSlug = `section-${section.num}-${sanitizeFilename(section.title)}`;
+                const secPath = `references/${livreSlug}/${titreSlug}/${chapSlug}/${secSlug}.md`;
+                navigation += `  - [Section ${section.num}: ${section.title}](${secPath})`;
+                if (section.articles) navigation += ` *(${section.articles})*`;
+                navigation += '\n';
+              });
+            } else {
+              // Chapitre comme fichier unique
+              const filePath = `references/${livreSlug}/${titreSlug}/${chapSlug}.md`;
+              navigation += `- [Chapitre ${chap.num}: ${chap.title}](${filePath})`;
+              if (chap.articles) navigation += ` *(${chap.articles})*`;
+              navigation += '\n';
+              
+              // Sections incluses dans le fichier
+              if (chap.sections && chap.sections.length > 0) {
+                chap.sections.forEach((section) => {
+                  navigation += `  - Section ${section.num}: ${section.title}`;
+                  if (section.articles) navigation += ` *(${section.articles})*`;
+                  navigation += '\n';
+                });
+              }
+            }
+          });
+          navigation += '\n';
+        }
       });
-      navigation += '\n';
     });
 
-    navigation += '### 📊 Tables de Référence\n';
+    navigation += `## 📜 Modifications Législatives\n\n`;
+    modifications.forEach((mod) => {
+      navigation += `- [${mod.title}](references/modifications/${mod.filename}.md)\n`;
+      if (mod.subsections && mod.subsections.length > 0) {
+        mod.subsections.forEach((sub) => {
+          navigation += `  - ${sub}\n`;
+        });
+      }
+    });
+
+    navigation += `\n## 📊 Tables de Référence\n\n`;
     tables.forEach((table) => {
       navigation += `- [${table.title}](references/tables/${table.filename}.md)\n`;
     });
@@ -232,432 +348,466 @@ description: "${skillDescription}"
 
 ${navigation}
 
-## Instructions Principales
+## Instructions
 
 ${mainInstructions}
 
-## Structure de la Skill
+## Structure des Fichiers
 
-Cette Skill contient une documentation complète organisée comme suit:
-
-- **references/** - Fichiers détaillés par thème (15 sections)
-- **references/tables/** - Tableaux de synthèse (délais, compétences, voies de recours)
-- **SKILL.md** - Ce fichier (navigation et instructions générales)
-
-## Utilisation
-
-Claude charge automatiquement les fichiers de référence pertinents selon le type de procédure ou la question posée.
-
-## Versions du Code
-
-- **Version initiale** : Code de Procédure Civile du Bénin
-- **Loi 2016-16** : Modifications diverses
-- **Loi 2020-08** : Modernisation (électronique, petites créances, pool exécution)
-- **Loi 2022-20** : Article 585.1 (saisies immobilières)
+\`\`\`
+references/
+├── livre-1-dispositions-communes/
+│   ├── titre-1-.../
+│   │   ├── chap-1-....md (fichier)
+│   │   └── chap-2-.../   (dossier si sections séparées)
+│   │       ├── section-1-....md
+│   │       └── section-2-....md
+│   └── titre-6-....md (fichier si titre simple)
+├── modifications/
+└── tables/
+\`\`\`
 `;
   };
 
-  // Générer le contenu d'une section
-  const generateSectionContent = (section) => {
-    let content = `# ${section.num}. ${section.title}\n\n`;
-    content += `## Sommaire\n\n`;
-    
-    section.subsections.forEach((sub, idx) => {
-      content += `${idx + 1}. [${sub.title}](#${sanitizeFilename(sub.title)})${sub.articles ? ` - ${sub.articles}` : ''}\n`;
-    });
-    
-    content += '\n---\n\n';
-    
-    section.subsections.forEach((sub) => {
-      content += `## ${sub.title} {#${sanitizeFilename(sub.title)}}\n\n`;
-      if (sub.articles) {
-        content += `**Articles:** ${sub.articles}\n\n`;
-      }
-      content += sub.content || `[Contenu à compléter pour ${sub.title}]\n`;
-      content += '\n---\n\n';
-    });
-    
-    return content;
-  };
-
-  // Générer le contenu d'une table
-  const generateTableContent = (table) => {
-    return `# ${table.title}
-
-## Description
-
-${table.content || `[Contenu à compléter pour ${table.title}]`}
-
----
-
-*Table de référence du Code de Procédure Civile du Bénin*
-`;
-  };
-
-  // Générer l'aperçu de la structure
+  // Générer l'aperçu de la structure EXACTE
   const generateFolderStructure = () => {
     const cleanedName = sanitizeFilename(skillName);
     let structure = `${cleanedName}/\n├── SKILL.md\n└── references/\n`;
     
-    sections.forEach((section, idx) => {
-      const sectionFilename = `${section.num}-${sanitizeFilename(section.title)}.md`;
-      const isLast = idx === sections.length - 1 && tables.length === 0;
-      structure += `    ${isLast ? '└──' : '├──'} ${sectionFilename}\n`;
+    const lastLivreIdx = livres.length - 1;
+    
+    livres.forEach((livre, livreIdx) => {
+      const livreSlug = `livre-${livre.num}-${sanitizeFilename(livre.title)}`;
+      const isLastLivre = livreIdx === lastLivreIdx && modifications.length === 0 && tables.length === 0;
+      const livrePrefix = isLastLivre ? '└──' : '├──';
+      structure += `    ${livrePrefix} ${livreSlug}/\n`;
       
-      // Afficher les sous-sections comme commentaires
-      section.subsections.forEach((sub, subIdx) => {
-        const prefix = isLast ? '        ' : '    │   ';
-        const subPrefix = subIdx === section.subsections.length - 1 ? '└──' : '├──';
-        structure += `${prefix}${subPrefix} ${sub.title}${sub.articles ? ` (${sub.articles})` : ''}\n`;
+      const lastTitreIdx = livre.titres.length - 1;
+      
+      livre.titres.forEach((titre, titreIdx) => {
+        const titreSlug = `titre-${titre.num}-${sanitizeFilename(titre.title)}`;
+        const isLastTitre = titreIdx === lastTitreIdx;
+        const titreConnector = isLastLivre ? '    ' : '│   ';
+        const titrePrefix = isLastTitre ? '└──' : '├──';
+        
+        if (titre.type === 'file') {
+          structure += `    ${titreConnector}${titrePrefix} ${titreSlug}.md\n`;
+        } else {
+          structure += `    ${titreConnector}${titrePrefix} ${titreSlug}/\n`;
+          
+          const lastChapIdx = titre.chapitres.length - 1;
+          
+          titre.chapitres.forEach((chap, chapIdx) => {
+            const chapSlug = `chap-${chap.num}-${sanitizeFilename(chap.title)}`;
+            const isLastChap = chapIdx === lastChapIdx;
+            const chapConnector = isLastTitre ? '    ' : '│   ';
+            const chapPrefix = isLastChap ? '└──' : '├──';
+            
+            if (chap.type === 'folder' && chap.sections.length > 0) {
+              structure += `    ${titreConnector}${chapConnector}${chapPrefix} ${chapSlug}/\n`;
+              
+              chap.sections.forEach((section, secIdx) => {
+                const secSlug = `section-${section.num}-${sanitizeFilename(section.title)}.md`;
+                const isLastSec = secIdx === chap.sections.length - 1;
+                const secConnector = isLastChap ? '    ' : '│   ';
+                const secPrefix = isLastSec ? '└──' : '├──';
+                structure += `    ${titreConnector}${chapConnector}${secConnector}${secPrefix} ${secSlug}\n`;
+              });
+            } else {
+              structure += `    ${titreConnector}${chapConnector}${chapPrefix} ${chapSlug}.md\n`;
+              
+              // Afficher les sections comme commentaires
+              if (chap.sections && chap.sections.length > 0) {
+                chap.sections.forEach((section) => {
+                  const secConnector = isLastChap ? '    ' : '│   ';
+                  structure += `    ${titreConnector}${chapConnector}${secConnector}    ├── Section ${section.num}: ${section.title}\n`;
+                });
+              }
+            }
+          });
+        }
       });
     });
+    
+    if (modifications.length > 0) {
+      const hasTablesAfter = tables.length > 0;
+      structure += `    ${hasTablesAfter ? '├──' : '└──'} modifications/\n`;
+      modifications.forEach((mod, idx) => {
+        const isLast = idx === modifications.length - 1;
+        const connector = hasTablesAfter ? '│   ' : '    ';
+        structure += `    ${connector}${isLast ? '└──' : '├──'} ${mod.filename}.md\n`;
+      });
+    }
     
     if (tables.length > 0) {
       structure += `    └── tables/\n`;
       tables.forEach((table, idx) => {
-        const isLast = idx === tables.length - 1;
-        structure += `        ${isLast ? '└──' : '├──'} ${table.filename}.md\n`;
+        structure += `        ${idx === tables.length - 1 ? '└──' : '├──'} ${table.filename}.md\n`;
       });
     }
     
     return structure;
   };
 
-  // Mettre à jour une sous-section
-  const updateSubsection = (sectionIdx, subIdx, field, value) => {
-    const updated = [...sections];
-    updated[sectionIdx].subsections[subIdx][field] = value;
-    setSections(updated);
+  // Générer le contenu d'un fichier chapitre
+  const generateChapitreContent = (livre, titre, chapitre) => {
+    let content = `# Livre ${livre.num} - ${livre.title}\n`;
+    content += `## Titre ${titre.num} - ${titre.title}\n`;
+    content += `### Chapitre ${chapitre.num} - ${chapitre.title}\n\n`;
+    if (chapitre.articles) content += `**Articles:** ${chapitre.articles}\n\n`;
+    content += `---\n\n`;
+    
+    if (chapitre.sections && chapitre.sections.length > 0 && chapitre.type === 'file') {
+      content += `## Sommaire\n\n`;
+      chapitre.sections.forEach((section) => {
+        content += `- [Section ${section.num}: ${section.title}](#section-${section.num})`;
+        if (section.articles) content += ` - ${section.articles}`;
+        content += '\n';
+      });
+      content += '\n---\n\n';
+      
+      chapitre.sections.forEach((section) => {
+        content += `## Section ${section.num} - ${section.title} {#section-${section.num}}\n\n`;
+        if (section.articles) content += `**Articles:** ${section.articles}\n\n`;
+        content += section.content || `[Contenu à compléter]\n`;
+        content += '\n---\n\n';
+      });
+    } else {
+      content += chapitre.content || `[Contenu à compléter]\n`;
+    }
+    return content;
   };
 
-  // Ajouter une sous-section
-  const addSubsection = (sectionIdx) => {
-    const updated = [...sections];
-    updated[sectionIdx].subsections.push({
-      title: 'Nouvelle sous-section',
-      articles: '',
-      content: ''
-    });
-    setSections(updated);
+  // Générer le contenu d'un fichier section séparé
+  const generateSectionContent = (livre, titre, chapitre, section) => {
+    let content = `# Livre ${livre.num} - ${livre.title}\n`;
+    content += `## Titre ${titre.num} - ${titre.title}\n`;
+    content += `### Chapitre ${chapitre.num} - ${chapitre.title}\n`;
+    content += `#### Section ${section.num} - ${section.title}\n\n`;
+    if (section.articles) content += `**Articles:** ${section.articles}\n\n`;
+    content += `---\n\n`;
+    content += section.content || `[Contenu à compléter]\n`;
+    return content;
   };
 
-  // Supprimer une sous-section
-  const removeSubsection = (sectionIdx, subIdx) => {
-    const updated = [...sections];
-    updated[sectionIdx].subsections.splice(subIdx, 1);
-    setSections(updated);
+  // Générer le contenu d'un titre-fichier
+  const generateTitreContent = (livre, titre) => {
+    let content = `# Livre ${livre.num} - ${livre.title}\n`;
+    content += `## Titre ${titre.num} - ${titre.title}\n\n`;
+    if (titre.articles) content += `**Articles:** ${titre.articles}\n\n`;
+    content += `---\n\n`;
+    content += titre.content || `[Contenu à compléter]\n`;
+    return content;
+  };
+
+  // Toggle chapitre type (file <-> folder)
+  const toggleChapitreType = (livreIdx, titreIdx, chapIdx) => {
+    const updated = [...livres];
+    const chap = updated[livreIdx].titres[titreIdx].chapitres[chapIdx];
+    chap.type = chap.type === 'file' ? 'folder' : 'file';
+    setLivres(updated);
+  };
+
+  // Mettre à jour un chapitre
+  const updateChapitre = (livreIdx, titreIdx, chapIdx, field, value) => {
+    const updated = [...livres];
+    updated[livreIdx].titres[titreIdx].chapitres[chapIdx][field] = value;
+    setLivres(updated);
+  };
+
+  // Mettre à jour une section
+  const updateSection = (livreIdx, titreIdx, chapIdx, secIdx, field, value) => {
+    const updated = [...livres];
+    updated[livreIdx].titres[titreIdx].chapitres[chapIdx].sections[secIdx][field] = value;
+    setLivres(updated);
   };
 
   // Ajouter une section
-  const addSection = () => {
-    const nextNum = String(sections.length + 1).padStart(2, '0');
-    setSections([...sections, {
-      num: nextNum,
-      title: 'Nouvelle Section',
-      subsections: [
-        { title: 'Sous-section 1', articles: '', content: '' }
-      ]
-    }]);
+  const addSection = (livreIdx, titreIdx, chapIdx) => {
+    const updated = [...livres];
+    const sections = updated[livreIdx].titres[titreIdx].chapitres[chapIdx].sections;
+    sections.push({ num: String(sections.length + 1), title: 'Nouvelle section', articles: '', content: '' });
+    setLivres(updated);
   };
 
   // Supprimer une section
-  const removeSection = (sectionIdx) => {
-    if (sections.length <= 1) return;
-    const updated = sections.filter((_, idx) => idx !== sectionIdx);
-    // Renuméroter
-    updated.forEach((section, idx) => {
-      section.num = String(idx + 1).padStart(2, '0');
-    });
-    setSections(updated);
+  const removeSection = (livreIdx, titreIdx, chapIdx, secIdx) => {
+    const updated = [...livres];
+    const sections = updated[livreIdx].titres[titreIdx].chapitres[chapIdx].sections;
+    sections.splice(secIdx, 1);
+    sections.forEach((s, i) => { s.num = String(i + 1); });
+    setLivres(updated);
   };
 
-  // Mettre à jour une table
-  const updateTable = (tableIdx, field, value) => {
-    const updated = [...tables];
-    updated[tableIdx][field] = value;
-    setTables(updated);
+  // Ajouter un chapitre
+  const addChapitre = (livreIdx, titreIdx) => {
+    const updated = [...livres];
+    const chapitres = updated[livreIdx].titres[titreIdx].chapitres;
+    chapitres.push({ num: String(chapitres.length + 1), title: 'Nouveau Chapitre', articles: '', type: 'file', sections: [], content: '' });
+    setLivres(updated);
   };
 
-  // Ajouter une table
-  const addTable = () => {
-    setTables([...tables, {
-      filename: 'nouvelle-table',
-      title: 'Nouvelle Table',
-      content: ''
-    }]);
-  };
-
-  // Supprimer une table
-  const removeTable = (tableIdx) => {
-    setTables(tables.filter((_, idx) => idx !== tableIdx));
+  // Supprimer un chapitre
+  const removeChapitre = (livreIdx, titreIdx, chapIdx) => {
+    const updated = [...livres];
+    const chapitres = updated[livreIdx].titres[titreIdx].chapitres;
+    chapitres.splice(chapIdx, 1);
+    chapitres.forEach((c, i) => { c.num = String(i + 1); });
+    setLivres(updated);
   };
 
   // Copier dans le presse-papiers
-  const copyToClipboard = (text, type = 'skill') => {
+  const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
-    setCopied(type);
+    setCopied(true);
     setTimeout(() => setCopied(null), 2000);
   };
 
   // Télécharger le ZIP
   const downloadZip = () => {
-    try {
-      const script = document.createElement('script');
-      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js';
-      script.onload = () => {
-        const JSZip = window.JSZip;
-        const zip = new JSZip();
-        const folderName = sanitizeFilename(skillName);
+    const script = document.createElement('script');
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js';
+    script.onload = () => {
+      const JSZip = window.JSZip;
+      const zip = new JSZip();
+      const folderName = sanitizeFilename(skillName);
 
-        // Ajouter SKILL.md
-        zip.file(`${folderName}/SKILL.md`, generateSkillMd());
+      zip.file(`${folderName}/SKILL.md`, generateSkillMd());
 
-        // Ajouter les fichiers de sections
-        sections.forEach((section) => {
-          const sectionFilename = `${section.num}-${sanitizeFilename(section.title)}.md`;
-          zip.folder(`${folderName}/references`).file(sectionFilename, generateSectionContent(section));
+      livres.forEach((livre) => {
+        const livreSlug = `livre-${livre.num}-${sanitizeFilename(livre.title)}`;
+        
+        livre.titres.forEach((titre) => {
+          const titreSlug = `titre-${titre.num}-${sanitizeFilename(titre.title)}`;
+          
+          if (titre.type === 'file') {
+            // Titre comme fichier unique
+            zip.file(`${folderName}/references/${livreSlug}/${titreSlug}.md`, generateTitreContent(livre, titre));
+          } else {
+            // Titre comme dossier avec chapitres
+            titre.chapitres.forEach((chapitre) => {
+              const chapSlug = `chap-${chapitre.num}-${sanitizeFilename(chapitre.title)}`;
+              
+              if (chapitre.type === 'folder' && chapitre.sections.length > 0) {
+                // Chapitre comme dossier avec sections fichiers
+                chapitre.sections.forEach((section) => {
+                  const secSlug = `section-${section.num}-${sanitizeFilename(section.title)}`;
+                  zip.file(
+                    `${folderName}/references/${livreSlug}/${titreSlug}/${chapSlug}/${secSlug}.md`,
+                    generateSectionContent(livre, titre, chapitre, section)
+                  );
+                });
+              } else {
+                // Chapitre comme fichier unique (avec sections incluses)
+                zip.file(
+                  `${folderName}/references/${livreSlug}/${titreSlug}/${chapSlug}.md`,
+                  generateChapitreContent(livre, titre, chapitre)
+                );
+              }
+            });
+          }
         });
+      });
 
-        // Ajouter les tables
-        tables.forEach((table) => {
-          zip.folder(`${folderName}/references/tables`).file(`${table.filename}.md`, generateTableContent(table));
-        });
+      // Modifications
+      modifications.forEach((mod) => {
+        let content = `# ${mod.title}\n\n`;
+        if (mod.subsections && mod.subsections.length > 0) {
+          content += `## Contenu\n\n`;
+          mod.subsections.forEach((sub) => { content += `- ${sub}\n`; });
+          content += '\n';
+        }
+        content += mod.content || '[Contenu à compléter]\n';
+        zip.file(`${folderName}/references/modifications/${mod.filename}.md`, content);
+      });
 
-        // Générer le ZIP
-        zip.generateAsync({ type: 'blob' }).then((content) => {
-          const url = URL.createObjectURL(content);
-          const link = document.createElement('a');
-          link.href = url;
-          link.download = `${folderName}.zip`;
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-          setTimeout(() => URL.revokeObjectURL(url), 100);
+      // Tables
+      tables.forEach((table) => {
+        zip.file(`${folderName}/references/tables/${table.filename}.md`, `# ${table.title}\n\n[Contenu à compléter]\n`);
+      });
 
-          setZipGenerated(true);
-          setTimeout(() => setZipGenerated(false), 3000);
-        });
-      };
-      document.body.appendChild(script);
-    } catch (error) {
-      console.error('Erreur:', error);
-      alert('Impossible de générer le ZIP.');
-    }
+      zip.generateAsync({ type: 'blob' }).then((content) => {
+        const url = URL.createObjectURL(content);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `${folderName}.zip`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        setTimeout(() => URL.revokeObjectURL(url), 100);
+        setZipGenerated(true);
+        setTimeout(() => setZipGenerated(false), 3000);
+      });
+    };
+    document.body.appendChild(script);
   };
 
-  // Réinitialiser
-  const resetForm = () => {
-    if (window.confirm('Réinitialiser le formulaire ? Toutes les modifications seront perdues.')) {
-      window.location.reload();
-    }
-  };
+  const resetForm = () => { if (window.confirm('Réinitialiser ?')) window.location.reload(); };
 
   const isComplete = skillName && skillDescription && mainInstructions;
+  
+  // Calcul des stats
+  let fileCount = 0;
+  livres.forEach(livre => {
+    livre.titres.forEach(titre => {
+      if (titre.type === 'file') {
+        fileCount++;
+      } else {
+        titre.chapitres.forEach(chap => {
+          if (chap.type === 'folder' && chap.sections.length > 0) {
+            fileCount += chap.sections.length;
+          } else {
+            fileCount++;
+          }
+        });
+      }
+    });
+  });
+  fileCount += modifications.length + tables.length;
 
-  // Statistiques
   const stats = {
-    sections: sections.length,
-    subsections: sections.reduce((acc, s) => acc + s.subsections.length, 0),
-    tables: tables.length
+    livres: livres.length,
+    titres: livres.reduce((acc, l) => acc + l.titres.length, 0),
+    chapitres: livres.reduce((acc, l) => acc + l.titres.reduce((a, t) => a + (t.chapitres ? t.chapitres.length : 0), 0), 0),
+    files: fileCount
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-slate-900 to-slate-900 p-4 md:p-6">
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-slate-900 to-slate-900 p-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="mb-6">
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-2 flex items-center gap-3">
-            <FileText size={36} className="text-blue-400" />
+        <div className="mb-4">
+          <h1 className="text-2xl font-bold text-white mb-1 flex items-center gap-2">
+            <Scale size={24} className="text-blue-400" />
             Générateur de Skills CPC Bénin
           </h1>
-          <p className="text-slate-300 text-sm md:text-base">
-            Crée des Skills complètes pour le Code de Procédure Civile du Bénin
-          </p>
+          <p className="text-slate-400 text-xs">Structure exacte : Livres → Titres → Chapitres → Sections (fichiers ou dossiers)</p>
         </div>
 
         {/* Stats */}
-        <div className="mb-6 grid grid-cols-3 gap-4">
-          <div className="bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700">
-            <div className="text-2xl font-bold text-blue-400">{stats.sections}</div>
-            <div className="text-xs text-slate-400">Sections</div>
+        <div className="mb-4 grid grid-cols-4 gap-2">
+          <div className="bg-slate-800/50 rounded p-2 text-center border border-slate-700">
+            <div className="text-lg font-bold text-blue-400">{stats.livres}</div>
+            <div className="text-xs text-slate-400">Livres</div>
           </div>
-          <div className="bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700">
-            <div className="text-2xl font-bold text-green-400">{stats.subsections}</div>
-            <div className="text-xs text-slate-400">Sous-sections</div>
+          <div className="bg-slate-800/50 rounded p-2 text-center border border-slate-700">
+            <div className="text-lg font-bold text-indigo-400">{stats.titres}</div>
+            <div className="text-xs text-slate-400">Titres</div>
           </div>
-          <div className="bg-slate-800/50 rounded-lg p-3 text-center border border-slate-700">
-            <div className="text-2xl font-bold text-amber-400">{stats.tables}</div>
-            <div className="text-xs text-slate-400">Tables</div>
+          <div className="bg-slate-800/50 rounded p-2 text-center border border-slate-700">
+            <div className="text-lg font-bold text-green-400">{stats.chapitres}</div>
+            <div className="text-xs text-slate-400">Chapitres</div>
+          </div>
+          <div className="bg-slate-800/50 rounded p-2 text-center border border-slate-700">
+            <div className="text-lg font-bold text-amber-400">{stats.files}</div>
+            <div className="text-xs text-slate-400">Fichiers</div>
           </div>
         </div>
 
-        {/* Controls */}
-        <div className="mb-6 flex flex-wrap gap-2">
-          <button
-            onClick={resetForm}
-            className="flex items-center gap-2 px-4 py-2 rounded-lg font-medium bg-slate-700 text-slate-300 hover:bg-slate-600 transition text-sm"
-          >
-            <RotateCcw size={18} /> Réinitialiser
-          </button>
-          <button
-            onClick={addSection}
-            className="flex items-center gap-2 px-4 py-2 rounded-lg font-medium bg-blue-600 text-white hover:bg-blue-700 transition text-sm"
-          >
-            <FolderPlus size={18} /> Ajouter Section
-          </button>
-          <button
-            onClick={addTable}
-            className="flex items-center gap-2 px-4 py-2 rounded-lg font-medium bg-amber-600 text-white hover:bg-amber-700 transition text-sm"
-          >
-            <Table size={18} /> Ajouter Table
+        <div className="flex gap-2 mb-4">
+          <button onClick={resetForm} className="flex items-center gap-1 px-3 py-1.5 rounded bg-slate-700 text-slate-300 hover:bg-slate-600 text-sm">
+            <RotateCcw size={14} /> Reset
           </button>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Left Column - Form */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          {/* Left Column */}
           <div className="lg:col-span-2 space-y-4">
-            {/* Main Info */}
-            <div className="bg-slate-800 rounded-lg p-5 border border-slate-700">
-              <h2 className="text-lg font-bold text-white mb-4">📋 Informations Principales</h2>
-              
-              <div className="space-y-3">
-                <div>
-                  <label className="block text-sm font-medium text-slate-300 mb-1">Nom de la Skill *</label>
-                  <input
-                    type="text"
-                    value={skillName}
-                    onChange={(e) => setSkillName(e.target.value)}
-                    className={`w-full px-3 py-2 bg-slate-700 border rounded-lg text-white text-sm focus:outline-none transition ${
-                      skillName ? 'border-green-500/50' : 'border-slate-600 focus:border-blue-500'
-                    }`}
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-slate-300 mb-1">Description *</label>
-                  <input
-                    type="text"
-                    value={skillDescription}
-                    onChange={(e) => setSkillDescription(e.target.value)}
-                    className={`w-full px-3 py-2 bg-slate-700 border rounded-lg text-white text-sm focus:outline-none transition ${
-                      skillDescription ? 'border-green-500/50' : 'border-slate-600 focus:border-blue-500'
-                    }`}
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-slate-300 mb-1">Instructions (Markdown) *</label>
-                  <textarea
-                    value={mainInstructions}
-                    onChange={(e) => setMainInstructions(e.target.value)}
-                    rows="4"
-                    className={`w-full px-3 py-2 bg-slate-700 border rounded-lg text-white text-sm focus:outline-none transition resize-none font-mono ${
-                      mainInstructions ? 'border-green-500/50' : 'border-slate-600 focus:border-blue-500'
-                    }`}
-                  />
-                </div>
+            {/* Info */}
+            <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
+              <h2 className="text-sm font-bold text-white mb-2 flex items-center gap-2">
+                <FileText size={14} className="text-blue-400" /> Informations
+              </h2>
+              <div className="space-y-2">
+                <input type="text" value={skillName} onChange={(e) => setSkillName(e.target.value)} placeholder="Nom" className="w-full px-3 py-1.5 bg-slate-700 border border-slate-600 rounded text-white text-sm" />
+                <input type="text" value={skillDescription} onChange={(e) => setSkillDescription(e.target.value)} placeholder="Description" className="w-full px-3 py-1.5 bg-slate-700 border border-slate-600 rounded text-white text-sm" />
+                <textarea value={mainInstructions} onChange={(e) => setMainInstructions(e.target.value)} placeholder="Instructions" rows="3" className="w-full px-3 py-1.5 bg-slate-700 border border-slate-600 rounded text-white text-sm font-mono resize-none" />
               </div>
             </div>
 
-            {/* Sections */}
-            <div className="bg-slate-800 rounded-lg p-5 border border-slate-700">
-              <h2 className="text-lg font-bold text-white mb-4">📚 Sections ({sections.length})</h2>
-              
-              <div className="space-y-2 max-h-96 overflow-y-auto pr-2">
-                {sections.map((section, sectionIdx) => (
-                  <div key={sectionIdx} className="border border-slate-600 rounded-lg overflow-hidden">
-                    {/* Section Header */}
-                    <div
-                      className="flex items-center justify-between p-3 bg-slate-700 hover:bg-slate-600 cursor-pointer transition"
-                      onClick={() => setExpandedSections({
-                        ...expandedSections,
-                        [sectionIdx]: !expandedSections[sectionIdx]
-                      })}
-                    >
+            {/* Livres */}
+            <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
+              <h2 className="text-sm font-bold text-white mb-2 flex items-center gap-2">
+                <Book size={14} className="text-blue-400" /> Structure du Code
+              </h2>
+              <div className="space-y-2 max-h-[450px] overflow-y-auto">
+                {livres.map((livre, livreIdx) => (
+                  <div key={livreIdx} className="border border-slate-600 rounded overflow-hidden">
+                    <div className="flex items-center justify-between p-2 bg-blue-900/30 hover:bg-blue-900/50 cursor-pointer" onClick={() => setExpandedLivres({...expandedLivres, [livreIdx]: !expandedLivres[livreIdx]})}>
                       <div className="flex items-center gap-2">
-                        {expandedSections[sectionIdx] ? (
-                          <ChevronDown size={16} className="text-blue-400" />
-                        ) : (
-                          <ChevronRight size={16} className="text-blue-400" />
-                        )}
-                        <span className="text-white text-sm font-medium">
-                          {section.num}. {section.title}
-                        </span>
-                        <span className="text-slate-400 text-xs">
-                          ({section.subsections.length} sous-sections)
-                        </span>
+                        {expandedLivres[livreIdx] ? <ChevronDown size={12} className="text-blue-400" /> : <ChevronRight size={12} className="text-blue-400" />}
+                        <span className="text-white text-sm">📖 Livre {livre.num} - {livre.title}</span>
                       </div>
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          removeSection(sectionIdx);
-                        }}
-                        className="text-red-400 hover:text-red-300 p-1"
-                        disabled={sections.length <= 1}
-                      >
-                        <Trash2 size={14} className={sections.length <= 1 ? 'opacity-30' : ''} />
-                      </button>
                     </div>
-
-                    {/* Section Content */}
-                    {expandedSections[sectionIdx] && (
-                      <div className="p-3 bg-slate-800 border-t border-slate-600 space-y-2">
-                        {/* Edit section title */}
-                        <input
-                          type="text"
-                          value={section.title}
-                          onChange={(e) => {
-                            const updated = [...sections];
-                            updated[sectionIdx].title = e.target.value;
-                            setSections(updated);
-                          }}
-                          className="w-full px-2 py-1.5 bg-slate-700 border border-slate-600 rounded text-white text-sm"
-                          placeholder="Titre de la section"
-                        />
-
-                        {/* Subsections */}
-                        <div className="space-y-2 ml-4 border-l-2 border-slate-600 pl-3">
-                          {section.subsections.map((sub, subIdx) => (
-                            <div key={subIdx} className="bg-slate-700/50 rounded p-2">
-                              <div className="flex items-center justify-between mb-2">
-                                <input
-                                  type="text"
-                                  value={sub.title}
-                                  onChange={(e) => updateSubsection(sectionIdx, subIdx, 'title', e.target.value)}
-                                  className="flex-1 px-2 py-1 bg-slate-600 border border-slate-500 rounded text-white text-xs"
-                                  placeholder="Titre"
-                                />
-                                <button
-                                  onClick={() => removeSubsection(sectionIdx, subIdx)}
-                                  className="text-red-400 hover:text-red-300 p-1 ml-2"
-                                >
-                                  <Trash2 size={12} />
+                    {expandedLivres[livreIdx] && (
+                      <div className="p-2 bg-slate-800/50 space-y-2">
+                        {livre.titres.map((titre, titreIdx) => (
+                          <div key={titreIdx} className="border border-slate-600 rounded ml-2">
+                            <div className="flex items-center p-2 bg-indigo-900/30 hover:bg-indigo-900/50 cursor-pointer" onClick={() => setExpandedTitres({...expandedTitres, [`${livreIdx}-${titreIdx}`]: !expandedTitres[`${livreIdx}-${titreIdx}`]})}>
+                              <div className="flex items-center gap-2 flex-1">
+                                {expandedTitres[`${livreIdx}-${titreIdx}`] ? <ChevronDown size={10} className="text-indigo-400" /> : <ChevronRight size={10} className="text-indigo-400" />}
+                                {titre.type === 'file' ? <File size={12} className="text-yellow-400" /> : <Folder size={12} className="text-indigo-400" />}
+                                <span className="text-white text-xs">Titre {titre.num} - {titre.title}</span>
+                                {titre.articles && <span className="text-slate-400 text-xs">({titre.articles})</span>}
+                                <span className="text-xs px-1 rounded bg-slate-700 text-slate-400">{titre.type}</span>
+                              </div>
+                            </div>
+                            {expandedTitres[`${livreIdx}-${titreIdx}`] && titre.type === 'folder' && (
+                              <div className="p-2 space-y-1">
+                                {titre.chapitres.map((chap, chapIdx) => (
+                                  <div key={chapIdx} className="border border-slate-600 rounded ml-2">
+                                    <div className="flex items-center justify-between p-1.5 bg-slate-700/50 hover:bg-slate-700 cursor-pointer" onClick={() => setExpandedChapitres({...expandedChapitres, [`${livreIdx}-${titreIdx}-${chapIdx}`]: !expandedChapitres[`${livreIdx}-${titreIdx}-${chapIdx}`]})}>
+                                      <div className="flex items-center gap-1 flex-1">
+                                        {expandedChapitres[`${livreIdx}-${titreIdx}-${chapIdx}`] ? <ChevronDown size={10} className="text-green-400" /> : <ChevronRight size={10} className="text-green-400" />}
+                                        {chap.type === 'folder' ? <Folder size={10} className="text-amber-400" /> : <File size={10} className="text-green-400" />}
+                                        <span className="text-white text-xs truncate">Ch.{chap.num}: {chap.title}</span>
+                                        {chap.articles && <span className="text-slate-400 text-xs">({chap.articles})</span>}
+                                        <span className="text-xs px-1 rounded bg-slate-600 text-slate-300">{chap.type}</span>
+                                        {chap.sections.length > 0 && <span className="text-cyan-400 text-xs">[{chap.sections.length} sec]</span>}
+                                      </div>
+                                      <button onClick={(e) => { e.stopPropagation(); removeChapitre(livreIdx, titreIdx, chapIdx); }} className="text-red-400 hover:text-red-300 p-0.5">
+                                        <Trash2 size={10} />
+                                      </button>
+                                    </div>
+                                    {expandedChapitres[`${livreIdx}-${titreIdx}-${chapIdx}`] && (
+                                      <div className="p-2 bg-slate-900/50 space-y-1">
+                                        <div className="flex gap-2 items-center">
+                                          <input type="text" value={chap.title} onChange={(e) => updateChapitre(livreIdx, titreIdx, chapIdx, 'title', e.target.value)} className="flex-1 px-2 py-1 bg-slate-700 border border-slate-600 rounded text-white text-xs" placeholder="Titre" />
+                                          <button onClick={() => toggleChapitreType(livreIdx, titreIdx, chapIdx)} className="px-2 py-1 bg-slate-600 hover:bg-slate-500 rounded text-xs text-white">
+                                            {chap.type === 'file' ? '→ Dossier' : '→ Fichier'}
+                                          </button>
+                                        </div>
+                                        <input type="text" value={chap.articles} onChange={(e) => updateChapitre(livreIdx, titreIdx, chapIdx, 'articles', e.target.value)} className="w-full px-2 py-1 bg-slate-700 border border-slate-600 rounded text-white text-xs" placeholder="Articles" />
+                                        
+                                        {chap.sections.length > 0 && (
+                                          <div className="mt-1 ml-2 space-y-1">
+                                            <p className="text-cyan-400 text-xs font-medium">
+                                              Sections {chap.type === 'folder' ? '(fichiers séparés)' : '(dans le fichier)'}:
+                                            </p>
+                                            {chap.sections.map((sec, secIdx) => (
+                                              <div key={secIdx} className="flex items-center gap-1 bg-slate-800/50 p-1 rounded">
+                                                <span className="text-slate-400 text-xs">S{sec.num}:</span>
+                                                <input type="text" value={sec.title} onChange={(e) => updateSection(livreIdx, titreIdx, chapIdx, secIdx, 'title', e.target.value)} className="flex-1 px-1 py-0.5 bg-slate-700 border border-slate-600 rounded text-white text-xs" />
+                                                <input type="text" value={sec.articles} onChange={(e) => updateSection(livreIdx, titreIdx, chapIdx, secIdx, 'articles', e.target.value)} className="w-20 px-1 py-0.5 bg-slate-700 border border-slate-600 rounded text-white text-xs" placeholder="Art." />
+                                                <button onClick={() => removeSection(livreIdx, titreIdx, chapIdx, secIdx)} className="text-red-400"><Trash2 size={10} /></button>
+                                              </div>
+                                            ))}
+                                          </div>
+                                        )}
+                                        <button onClick={() => addSection(livreIdx, titreIdx, chapIdx)} className="w-full flex items-center justify-center gap-1 px-2 py-1 bg-cyan-900/30 hover:bg-cyan-900/50 rounded text-xs text-cyan-400">
+                                          <Plus size={10} /> Section
+                                        </button>
+                                      </div>
+                                    )}
+                                  </div>
+                                ))}
+                                <button onClick={() => addChapitre(livreIdx, titreIdx)} className="w-full flex items-center justify-center gap-1 px-2 py-1 bg-green-900/30 hover:bg-green-900/50 rounded text-xs text-green-400">
+                                  <Plus size={10} /> Chapitre
                                 </button>
                               </div>
-                              <input
-                                type="text"
-                                value={sub.articles}
-                                onChange={(e) => updateSubsection(sectionIdx, subIdx, 'articles', e.target.value)}
-                                className="w-full px-2 py-1 bg-slate-600 border border-slate-500 rounded text-white text-xs mb-2"
-                                placeholder="Articles (ex: Art. 1-34)"
-                              />
-                              <textarea
-                                value={sub.content}
-                                onChange={(e) => updateSubsection(sectionIdx, subIdx, 'content', e.target.value)}
-                                className="w-full px-2 py-1 bg-slate-600 border border-slate-500 rounded text-white text-xs resize-none font-mono"
-                                rows="2"
-                                placeholder="Contenu Markdown..."
-                              />
-                            </div>
-                          ))}
-                          
-                          <button
-                            onClick={() => addSubsection(sectionIdx)}
-                            className="w-full flex items-center justify-center gap-1 px-2 py-1.5 bg-slate-700/50 hover:bg-slate-700 rounded text-xs text-blue-400"
-                          >
-                            <Plus size={12} /> Ajouter sous-section
-                          </button>
-                        </div>
+                            )}
+                          </div>
+                        ))}
                       </div>
                     )}
                   </div>
@@ -665,133 +815,62 @@ ${table.content || `[Contenu à compléter pour ${table.title}]`}
               </div>
             </div>
 
-            {/* Tables */}
-            <div className="bg-slate-800 rounded-lg p-5 border border-slate-700">
-              <div
-                className="flex items-center justify-between cursor-pointer"
-                onClick={() => setShowTables(!showTables)}
-              >
-                <h2 className="text-lg font-bold text-white flex items-center gap-2">
-                  <Table size={20} className="text-amber-400" />
-                  Tables de Référence ({tables.length})
-                </h2>
-                {showTables ? <ChevronDown size={20} className="text-slate-400" /> : <ChevronRight size={20} className="text-slate-400" />}
-              </div>
-              
-              {showTables && (
-                <div className="mt-4 space-y-3">
-                  {tables.map((table, idx) => (
-                    <div key={idx} className="bg-slate-700 rounded p-3">
-                      <div className="flex items-center justify-between mb-2">
-                        <input
-                          type="text"
-                          value={table.title}
-                          onChange={(e) => updateTable(idx, 'title', e.target.value)}
-                          className="flex-1 px-2 py-1 bg-slate-600 border border-slate-500 rounded text-white text-sm"
-                          placeholder="Titre de la table"
-                        />
-                        <button
-                          onClick={() => removeTable(idx)}
-                          className="text-red-400 hover:text-red-300 p-1 ml-2"
-                        >
-                          <Trash2 size={14} />
-                        </button>
-                      </div>
-                      <input
-                        type="text"
-                        value={table.filename}
-                        onChange={(e) => updateTable(idx, 'filename', sanitizeFilename(e.target.value))}
-                        className="w-full px-2 py-1 bg-slate-600 border border-slate-500 rounded text-white text-xs mb-2"
-                        placeholder="nom-fichier"
-                      />
-                      <textarea
-                        value={table.content}
-                        onChange={(e) => updateTable(idx, 'content', e.target.value)}
-                        className="w-full px-2 py-1 bg-slate-600 border border-slate-500 rounded text-white text-xs resize-none font-mono"
-                        rows="2"
-                        placeholder="Contenu de la table..."
-                      />
-                    </div>
-                  ))}
+            {/* Modifications & Tables */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-slate-800 rounded-lg p-3 border border-slate-700">
+                <div className="flex items-center justify-between cursor-pointer" onClick={() => setShowModifications(!showModifications)}>
+                  <h2 className="text-xs font-bold text-white flex items-center gap-1"><FileEdit size={12} className="text-amber-400" /> Modifications ({modifications.length})</h2>
+                  {showModifications ? <ChevronDown size={12} className="text-slate-400" /> : <ChevronRight size={12} className="text-slate-400" />}
                 </div>
-              )}
+                {showModifications && <div className="mt-2 space-y-1">{modifications.map((m, i) => <div key={i} className="bg-slate-700/50 rounded p-1.5 text-xs text-white">{m.title}</div>)}</div>}
+              </div>
+              <div className="bg-slate-800 rounded-lg p-3 border border-slate-700">
+                <div className="flex items-center justify-between cursor-pointer" onClick={() => setShowTables(!showTables)}>
+                  <h2 className="text-xs font-bold text-white flex items-center gap-1"><Table size={12} className="text-purple-400" /> Tables ({tables.length})</h2>
+                  {showTables ? <ChevronDown size={12} className="text-slate-400" /> : <ChevronRight size={12} className="text-slate-400" />}
+                </div>
+                {showTables && <div className="mt-2 space-y-1">{tables.map((t, i) => <div key={i} className="bg-slate-700/50 rounded p-1.5 text-xs text-white">{t.title}</div>)}</div>}
+              </div>
             </div>
           </div>
 
-          {/* Right Column - Preview & Download */}
+          {/* Right Column */}
           <div className="space-y-4">
-            {/* Structure Preview */}
-            <div className="bg-slate-800 rounded-lg p-5 border border-slate-700">
-              <h3 className="text-lg font-bold text-white mb-3">📁 Structure</h3>
-              <pre className="bg-slate-900 p-3 rounded text-slate-300 text-xs overflow-x-auto max-h-64 overflow-y-auto">
-                {generateFolderStructure()}
-              </pre>
+            <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
+              <h3 className="text-sm font-bold text-white mb-2">📁 Structure des Fichiers</h3>
+              <pre className="bg-slate-900 p-2 rounded text-slate-300 text-xs overflow-auto max-h-52">{generateFolderStructure()}</pre>
             </div>
-
-            {/* SKILL.md Preview */}
-            <div className="bg-slate-800 rounded-lg p-5 border border-slate-700">
-              <h3 className="text-lg font-bold text-white mb-3">🔍 Aperçu SKILL.md</h3>
-              
-              <div className="bg-slate-900 rounded p-3 max-h-72 overflow-y-auto border border-slate-700">
-                <pre className="text-slate-300 text-xs whitespace-pre-wrap break-words font-mono">
-                  {generateSkillMd()}
-                </pre>
+            <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
+              <h3 className="text-sm font-bold text-white mb-2">🔍 SKILL.md</h3>
+              <div className="bg-slate-900 rounded p-2 max-h-40 overflow-y-auto border border-slate-700">
+                <pre className="text-slate-300 text-xs whitespace-pre-wrap font-mono">{generateSkillMd()}</pre>
               </div>
-
-              <button
-                onClick={() => copyToClipboard(generateSkillMd())}
-                className="w-full mt-3 flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium text-sm transition"
-              >
-                <Copy size={16} />
-                {copied === 'skill' ? '✓ Copié!' : 'Copier SKILL.md'}
+              <button onClick={() => copyToClipboard(generateSkillMd())} className="w-full mt-2 flex items-center justify-center gap-1 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded text-xs">
+                <Copy size={12} /> {copied ? '✓ Copié!' : 'Copier'}
               </button>
             </div>
-
-            {/* Download */}
-            <div className="bg-slate-800 rounded-lg p-5 border border-slate-700">
-              <h3 className="text-lg font-bold text-white mb-4">⬇️ Télécharger</h3>
-              
-              <button
-                onClick={downloadZip}
-                disabled={!isComplete}
-                className={`w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-medium transition ${
-                  isComplete
-                    ? 'bg-green-600 hover:bg-green-700 text-white cursor-pointer'
-                    : 'bg-slate-700 text-slate-500 cursor-not-allowed'
-                }`}
-              >
-                <Download size={20} />
-                {zipGenerated ? '✓ ZIP Téléchargé!' : 'Télécharger ZIP'}
+            <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
+              <button onClick={downloadZip} disabled={!isComplete} className={`w-full flex items-center justify-center gap-2 px-4 py-2 rounded font-medium ${isComplete ? 'bg-green-600 hover:bg-green-700 text-white' : 'bg-slate-700 text-slate-500 cursor-not-allowed'}`}>
+                <Download size={16} /> {zipGenerated ? '✓ Téléchargé!' : 'Télécharger ZIP'}
               </button>
-
-              {!isComplete && (
-                <p className="text-slate-400 text-xs mt-2 text-center">
-                  Complète les champs * pour activer
-                </p>
-              )}
-
-              {isComplete && (
-                <div className="mt-3 p-3 bg-green-900/50 border border-green-700 rounded-lg text-green-200 text-xs">
-                  ✓ {stats.sections} sections, {stats.subsections} sous-sections, {stats.tables} tables
+              {isComplete && <div className="mt-2 p-2 bg-green-900/30 border border-green-700 rounded text-green-200 text-xs text-center">✓ {stats.files} fichiers générés</div>}
+            </div>
+            
+            {/* Légende */}
+            <div className="bg-slate-800/50 rounded-lg p-3 border border-slate-700">
+              <h4 className="text-xs font-bold text-white mb-2">📖 Légende</h4>
+              <div className="space-y-1 text-xs">
+                <div className="flex items-center gap-2">
+                  <File size={12} className="text-yellow-400" />
+                  <span className="text-slate-300">Titre/Chapitre = fichier .md unique</span>
                 </div>
-              )}
-            </div>
-
-            {/* Help */}
-            <div className="bg-slate-800/50 rounded-lg p-4 border border-slate-700">
-              <h4 className="text-sm font-semibold text-white mb-2">📖 Installation</h4>
-              <div className="text-xs text-slate-400 space-y-1">
-                <p>1. Téléchargez le ZIP</p>
-                <p>2. Extrayez dans <code className="bg-slate-700 px-1 rounded">~/.claude/skills/</code></p>
-                <p>3. Ou dans <code className="bg-slate-700 px-1 rounded">.claude/skills/</code> de votre projet</p>
+                <div className="flex items-center gap-2">
+                  <Folder size={12} className="text-amber-400" />
+                  <span className="text-slate-300">Chapitre = dossier avec sections séparées</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Footer */}
-        <div className="mt-6 text-center text-slate-500 text-xs">
-          <p>Générateur de Skills CPC Bénin • Me Martial Arnaud BIAOU</p>
         </div>
       </div>
     </div>
