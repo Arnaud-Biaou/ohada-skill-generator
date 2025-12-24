@@ -12,13 +12,13 @@ export default function CPCBeninSkillGenerator() {
 ## Source
 Loi N° 2008-07 du 28 février 2011, modifiée et complétée par:
 - Loi N° 2016-16 du 28 juillet 2016
-- Loi N° 2020-08 du 23 avril 2020
+- Loi N° 2020-08 du 23 avril 2020  
 - Loi N° 2022-20 du 19 octobre 2022
 
 ## Utilisation
 Documentation complète pour les praticiens du droit béninois.`);
 
-  // Structure EXACTE du CPC Bénin avec contenu au niveau TITRE pour Article 1
+  // Structure EXACTE du CPC Bénin avec numéros d'articles corrects
   const [livres, setLivres] = useState([
     {
       num: 'PREMIER',
@@ -27,8 +27,8 @@ Documentation complète pour les praticiens du droit béninois.`);
         {
           num: 'PREMIER',
           title: 'DES DISPOSITIONS LIMINAIRES',
-          articlesIntro: 'Art. 1',
-          contentIntro: '', // Pour l'Article 1 qui est avant le Chapitre I
+          articlesIntro: 'Art. 1er',
+          contentIntro: '',
           chapitres: [
             { 
               num: 'I', 
@@ -69,47 +69,47 @@ Documentation complète pour les praticiens du droit béninois.`);
               title: 'DES ACTES ET DÉLAIS DE PROCÉDURE', 
               articles: 'Art. 53-115',
               sections: [
-                { num: 'I', title: 'Des actes', articles: 'Art. 53-99', content: '' },
-                { num: 'II', title: 'Des délais', articles: 'Art. 100-115', content: '' },
+                { num: 'I', title: 'Des actes', articles: 'Art. 53-105', content: '' },
+                { num: 'II', title: 'Des délais', articles: 'Art. 106-115', content: '' },
               ],
               content: '' 
             },
             { 
               num: 'II', 
               title: 'DE L\'INTRODUCTION DE L\'INSTANCE', 
-              articles: 'Art. 116-144',
+              articles: 'Art. 116-159',
               sections: [
                 { num: 'I', title: 'De la demande initiale', articles: 'Art. 116-132', content: '' },
                 { num: 'II', title: 'Des demandes incidentes', articles: 'Art. 133-140', content: '' },
-                { num: 'III', title: 'De la mise au rôle', articles: 'Art. 141-144', content: '' },
+                { num: 'III', title: 'De la mise au rôle', articles: 'Art. 141-159', content: '' },
               ],
               content: '' 
             },
             { 
               num: 'III', 
               title: 'DE LA PROCÉDURE PRÉPARATOIRE AU JUGEMENT', 
-              articles: 'Art. 145-390',
+              articles: 'Art. 160-390',
               sections: [
-                { num: 'I', title: 'De l\'appel des causes', articles: '', content: '' },
-                { num: 'II', title: 'Des moyens de défense', articles: '', content: '' },
-                { num: 'III', title: 'Des mesures d\'instruction', articles: '', content: '' },
-                { num: 'IV', title: 'Des contestations relatives à la preuve littérale', articles: '', content: '' },
-                { num: 'V', title: 'Du serment judiciaire', articles: '', content: '' },
+                { num: 'I', title: 'De l\'appel des causes', articles: 'Art. 160-161', content: '' },
+                { num: 'II', title: 'Des moyens de défense', articles: 'Art. 162-208', content: '' },
+                { num: 'III', title: 'Des mesures d\'instruction', articles: 'Art. 209-352', content: '' },
+                { num: 'IV', title: 'Des contestations relatives à la preuve littérale', articles: 'Art. 353-384', content: '' },
+                { num: 'V', title: 'Du serment judiciaire', articles: 'Art. 385-390', content: '' },
               ],
               content: '' 
             },
             { 
               num: 'IV', 
               title: 'DES INCIDENTS D\'INSTANCE', 
-              articles: '',
+              articles: 'Art. 391-493',
               sections: [
-                { num: 'I', title: 'Des demandes incidentes', articles: '', content: '' },
-                { num: 'II', title: 'De l\'abstention, de la récusation et du renvoi', articles: '', content: '' },
-                { num: 'III', title: 'Des jonctions et disjonctions d\'instances', articles: '', content: '' },
-                { num: 'IV', title: 'De l\'interruption de l\'instance', articles: '', content: '' },
-                { num: 'V', title: 'De la suspension de l\'instance', articles: '', content: '' },
-                { num: 'VI', title: 'De l\'extinction de l\'instance', articles: '', content: '' },
-                { num: 'VII', title: 'De l\'acquiescement', articles: '', content: '' },
+                { num: 'I', title: 'Des demandes incidentes', articles: 'Art. 391-422', content: '' },
+                { num: 'II', title: 'De l\'abstention, de la récusation et du renvoi', articles: 'Art. 423-450', content: '' },
+                { num: 'III', title: 'Des jonctions et disjonctions d\'instances', articles: 'Art. 451-452', content: '' },
+                { num: 'IV', title: 'De l\'interruption de l\'instance', articles: 'Art. 453-460', content: '' },
+                { num: 'V', title: 'De la suspension de l\'instance', articles: 'Art. 461-468', content: '' },
+                { num: 'VI', title: 'De l\'extinction de l\'instance', articles: 'Art. 469-490', content: '' },
+                { num: 'VII', title: 'De l\'acquiescement', articles: 'Art. 491-493', content: '' },
               ],
               content: '' 
             },
@@ -121,27 +121,28 @@ Documentation complète pour les praticiens du droit béninois.`);
           articlesIntro: '',
           contentIntro: '',
           chapitres: [
-            { num: 'I', title: 'DE LA CONCILIATION', articles: '', sections: [], content: '' },
+            { num: 'I', title: 'DE LA CONCILIATION', articles: 'Art. 494-496', sections: [], content: '' },
             { 
               num: 'II', 
               title: 'DE L\'AUDIENCE', 
-              articles: '',
+              articles: 'Art. 497-521',
               sections: [
-                { num: 'I', title: 'Des débats', articles: '', content: '' },
-                { num: 'II', title: 'De la procédure en chambre du conseil', articles: '', content: '' },
-                { num: 'III', title: 'Du délibéré', articles: '', content: '' },
+                { num: 'I', title: 'Des débats', articles: 'Art. 497-515', content: '' },
+                { num: 'II', title: 'De la procédure en chambre du conseil', articles: 'Art. 516-519', content: '' },
+                { num: 'III', title: 'Du délibéré', articles: 'Art. 520-521', content: '' },
               ],
               content: '' 
             },
             { 
               num: 'III', 
               title: 'DU JUGEMENT', 
-              articles: '',
+              articles: 'Art. 522-606',
+              articlesIntro: 'Art. 522-535',
               sections: [
-                { num: 'I', title: 'Du jugement contradictoire', articles: '', content: '' },
-                { num: 'II', title: 'Du jugement rendu par défaut et du jugement réputé contradictoire', articles: '', content: '' },
-                { num: 'III', title: 'Des dispositions spéciales', articles: '', content: '' },
-                { num: 'IV', title: 'De l\'exécution du jugement', articles: '', content: '' },
+                { num: 'I', title: 'Du jugement contradictoire', articles: 'Art. 536-539', content: '' },
+                { num: 'II', title: 'Du jugement rendu par défaut et du jugement réputé contradictoire', articles: 'Art. 540-548', content: '' },
+                { num: 'III', title: 'Des dispositions spéciales', articles: 'Art. 549-568', content: '' },
+                { num: 'IV', title: 'De l\'exécution du jugement', articles: 'Art. 569-606', content: '' },
               ],
               content: '' 
             },
@@ -150,28 +151,30 @@ Documentation complète pour les praticiens du droit béninois.`);
         {
           num: 'IV',
           title: 'DES VOIES DE RECOURS',
-          articlesIntro: '',
+          articlesIntro: 'Art. 607',
           contentIntro: '',
           chapitres: [
-            { num: 'I', title: 'DES DISPOSITIONS COMMUNES', articles: 'Art. 607-620', sections: [], content: '' },
+            { num: 'I', title: 'DES DISPOSITIONS COMMUNES', articles: 'Art. 608-618', sections: [], content: '' },
             { 
               num: 'II', 
               title: 'DES VOIES ORDINAIRES DE RECOURS', 
-              articles: 'Art. 621-656',
+              articles: 'Art. 619-653',
+              articlesIntro: 'Art. 619-620',
               sections: [
                 { num: 'I', title: 'De l\'appel', articles: 'Art. 621-647', content: '' },
-                { num: 'II', title: 'De l\'opposition', articles: 'Art. 648-656', content: '' },
+                { num: 'II', title: 'De l\'opposition', articles: 'Art. 648-653', content: '' },
               ],
               content: '' 
             },
             { 
               num: 'III', 
               title: 'DES VOIES DE RECOURS EXTRAORDINAIRES', 
-              articles: 'Art. 657-708',
+              articles: 'Art. 654-712',
+              articlesIntro: 'Art. 654-656',
               sections: [
                 { num: 'I', title: 'De la tierce opposition', articles: 'Art. 657-667', content: '' },
                 { num: 'II', title: 'Du recours en révision', articles: 'Art. 668-678', content: '' },
-                { num: 'III', title: 'Du pourvoi en cassation', articles: 'Art. 679-708', content: '' },
+                { num: 'III', title: 'Du pourvoi en cassation', articles: 'Art. 679-712', content: '' },
               ],
               content: '' 
             },
@@ -183,8 +186,8 @@ Documentation complète pour les praticiens du droit béninois.`);
           articlesIntro: '',
           contentIntro: '',
           chapitres: [
-            { num: 'I', title: 'DE LA CHARGE DES DÉPENS', articles: '', sections: [], content: '' },
-            { num: 'II', title: 'DE LA LIQUIDATION DES DÉPENS ET DES FRAIS', articles: '', sections: [], content: '' },
+            { num: 'I', title: 'DE LA CHARGE DES DÉPENS', articles: 'Art. 713-717', sections: [], content: '' },
+            { num: 'II', title: 'DE LA LIQUIDATION DES DÉPENS ET DES FRAIS', articles: 'Art. 718-724', sections: [], content: '' },
           ]
         },
         {
@@ -193,14 +196,14 @@ Documentation complète pour les praticiens du droit béninois.`);
           articlesIntro: '',
           contentIntro: '',
           chapitres: [
-            { num: 'I', title: 'DES COMMISSIONS ROGATOIRES INTERNES', articles: '', sections: [], content: '' },
+            { num: 'I', title: 'DES COMMISSIONS ROGATOIRES INTERNES', articles: 'Art. 725-727', sections: [], content: '' },
             { 
               num: 'II', 
               title: 'DES COMMISSIONS ROGATOIRES INTERNATIONALES', 
-              articles: '',
+              articles: 'Art. 728-743',
               sections: [
-                { num: 'I', title: 'Des commissions rogatoires à destination d\'un État étranger', articles: '', content: '' },
-                { num: 'II', title: 'Des commissions rogatoires en provenance d\'un État étranger', articles: '', content: '' },
+                { num: 'I', title: 'Des commissions rogatoires à destination d\'un État étranger', articles: 'Art. 728-730', content: '' },
+                { num: 'II', title: 'Des commissions rogatoires en provenance d\'un État étranger', articles: 'Art. 731-743', content: '' },
               ],
               content: '' 
             },
@@ -223,32 +226,32 @@ Documentation complète pour les praticiens du droit béninois.`);
               title: 'DE LA PROCÉDURE EN MATIÈRE CIVILE ET COMMERCIALE', 
               articles: 'Art. 744-781',
               sections: [
-                { num: 'I', title: 'De la procédure en matière contentieuse', articles: '', content: '' },
-                { num: 'II', title: 'De la procédure en matière gracieuse', articles: '', content: '' },
-                { num: 'III', title: 'Des règles particulières à la matière commerciale', articles: '', content: '' },
-                { num: 'IV', title: 'Des dispositions diverses', articles: '', content: '' },
+                { num: 'I', title: 'De la procédure en matière contentieuse', articles: 'Art. 744-768.8', content: '' },
+                { num: 'II', title: 'De la procédure en matière gracieuse', articles: 'Art. 769-771', content: '' },
+                { num: 'III', title: 'Des règles particulières à la matière commerciale', articles: 'Art. 772-776.9', content: '' },
+                { num: 'IV', title: 'Des dispositions diverses', articles: 'Art. 777-781', content: '' },
               ],
               content: '' 
             },
             { 
               num: 'II', 
               title: 'DE LA PROCÉDURE EN MATIÈRE SOCIALE', 
-              articles: 'Art. 782-820',
+              articles: 'Art. 782-817',
               sections: [
-                { num: 'I', title: 'De la compétence', articles: '', content: '' },
-                { num: 'II', title: 'De l\'instance', articles: '', content: '' },
-                { num: 'III', title: 'Des voies de recours', articles: '', content: '' },
+                { num: 'I', title: 'De la compétence', articles: 'Art. 782-783', content: '' },
+                { num: 'II', title: 'De l\'instance', articles: 'Art. 784-810', content: '' },
+                { num: 'III', title: 'Des voies de recours', articles: 'Art. 811-817', content: '' },
               ],
               content: '' 
             },
             { 
               num: 'III', 
               title: 'DE LA PROCÉDURE EN MATIÈRE ADMINISTRATIVE', 
-              articles: 'Art. 821-853',
+              articles: 'Art. 818-853',
               sections: [
-                { num: 'I', title: 'De la compétence', articles: '', content: '' },
-                { num: 'II', title: 'De l\'instance', articles: '', content: '' },
-                { num: 'III', title: 'Des voies de recours', articles: '', content: '' },
+                { num: 'I', title: 'De la compétence', articles: 'Art. 818', content: '' },
+                { num: 'II', title: 'De l\'instance', articles: 'Art. 819-848', content: '' },
+                { num: 'III', title: 'Des voies de recours', articles: 'Art. 849-853', content: '' },
               ],
               content: '' 
             },
@@ -259,7 +262,7 @@ Documentation complète pour les praticiens du droit béninois.`);
               sections: [
                 { num: 'I', title: 'Des ordonnances de référé', articles: 'Art. 854-856', content: '' },
                 { num: 'II', title: 'Des ordonnances sur requête', articles: 'Art. 857-858', content: '' },
-                { num: 'III', title: 'Des mesures d\'administration judiciaire', articles: '', content: '' },
+                { num: 'III', title: 'Des mesures d\'administration judiciaire', articles: 'Art. 859-861', content: '' },
               ],
               content: '' 
             },
@@ -276,8 +279,8 @@ Documentation complète pour les praticiens du droit béninois.`);
               title: 'DE LA PROCÉDURE EN MATIÈRE CIVILE, COMMERCIALE ET SOCIALE', 
               articles: 'Art. 862-898',
               sections: [
-                { num: 'I', title: 'De la compétence, de la saisine et de la mise au rôle', articles: '', content: '' },
-                { num: 'II', title: 'De l\'instance', articles: '', content: '' },
+                { num: 'I', title: 'De la compétence, de la saisine et de la mise au rôle', articles: 'Art. 862-870', content: '' },
+                { num: 'II', title: 'De l\'instance', articles: 'Art. 871-898', content: '' },
               ],
               content: '' 
             },
@@ -286,30 +289,30 @@ Documentation complète pour les praticiens du droit béninois.`);
               title: 'DE LA PROCÉDURE EN MATIÈRE ADMINISTRATIVE', 
               articles: 'Art. 899-905',
               sections: [
-                { num: 'I', title: 'De la compétence', articles: '', content: '' },
-                { num: 'II', title: 'De l\'instance', articles: '', content: '' },
-                { num: 'III', title: 'Des recours', articles: '', content: '' },
+                { num: 'I', title: 'De la compétence', articles: 'Art. 899', content: '' },
+                { num: 'II', title: 'De l\'instance', articles: 'Art. 900-901', content: '' },
+                { num: 'III', title: 'Des recours', articles: 'Art. 902-905', content: '' },
               ],
               content: '' 
             },
             { 
               num: 'III', 
               title: 'DE LA PROCÉDURE EN MATIÈRE DES COMPTES', 
-              articles: 'Art. 906-910',
+              articles: 'Art. 906-912',
               sections: [
-                { num: 'I', title: 'De la compétence', articles: '', content: '' },
-                { num: 'II', title: 'De l\'instance', articles: '', content: '' },
-                { num: 'III', title: 'Des recours', articles: '', content: '' },
+                { num: 'I', title: 'De la compétence', articles: 'Art. 906-907', content: '' },
+                { num: 'II', title: 'De l\'instance', articles: 'Art. 908-909', content: '' },
+                { num: 'III', title: 'Des recours', articles: 'Art. 910-912', content: '' },
               ],
               content: '' 
             },
             { 
               num: 'IV', 
               title: 'DES POUVOIRS DU PRÉSIDENT', 
-              articles: '',
+              articles: 'Art. 913-917',
               sections: [
-                { num: 'I', title: 'Des ordonnances sur requête', articles: '', content: '' },
-                { num: 'II', title: 'Des mesures d\'administration judiciaire', articles: '', content: '' },
+                { num: 'I', title: 'Des ordonnances sur requête', articles: 'Art. 913-914', content: '' },
+                { num: 'II', title: 'Des mesures d\'administration judiciaire', articles: 'Art. 915-917', content: '' },
               ],
               content: '' 
             },
@@ -324,34 +327,34 @@ Documentation complète pour les praticiens du droit béninois.`);
             { 
               num: 'I', 
               title: 'DE LA PROCÉDURE EN MATIÈRE CIVILE, COMMERCIALE ET SOCIALE', 
-              articles: 'Art. 918-980',
+              articles: 'Art. 918-947',
               sections: [
-                { num: 'I', title: 'De la saisine', articles: '', content: '' },
-                { num: 'II', title: 'De l\'instance', articles: '', content: '' },
+                { num: 'I', title: 'De la saisine', articles: 'Art. 918-932', content: '' },
+                { num: 'II', title: 'De l\'instance', articles: 'Art. 933-947', content: '' },
               ],
               content: '' 
             },
             { 
               num: 'II', 
               title: 'DE LA PROCÉDURE DEVANT LA CHAMBRE ADMINISTRATIVE', 
-              articles: '',
+              articles: 'Art. 948-955',
               sections: [
-                { num: 'I', title: 'De la compétence', articles: '', content: '' },
-                { num: 'II', title: 'De l\'instance', articles: '', content: '' },
+                { num: 'I', title: 'De la compétence', articles: 'Art. 948-952', content: '' },
+                { num: 'II', title: 'De l\'instance', articles: 'Art. 953-955', content: '' },
               ],
               content: '' 
             },
-            { num: 'III', title: 'DE LA PROCÉDURE DEVANT LA CHAMBRE DES COMPTES', articles: '', sections: [], content: '' },
+            { num: 'III', title: 'DE LA PROCÉDURE DEVANT LA CHAMBRE DES COMPTES', articles: 'Art. 956-958', sections: [], content: '' },
             { 
               num: 'IV', 
               title: 'DES DISPOSITIONS DIVERSES', 
-              articles: '',
+              articles: 'Art. 959-981',
               sections: [
-                { num: 'I', title: 'Du désistement', articles: '', content: '' },
-                { num: 'II', title: 'De la récusation', articles: '', content: '' },
-                { num: 'III', title: 'De la demande en faux', articles: '', content: '' },
-                { num: 'IV', title: 'De la prise à partie', articles: '', content: '' },
-                { num: 'V', title: 'Des dispositions particulières aux juridictions de renvoi après cassation', articles: '', content: '' },
+                { num: 'I', title: 'Du désistement', articles: 'Art. 959-961', content: '' },
+                { num: 'II', title: 'De la récusation', articles: 'Art. 962', content: '' },
+                { num: 'III', title: 'De la demande en faux', articles: 'Art. 963-966', content: '' },
+                { num: 'IV', title: 'De la prise à partie', articles: 'Art. 967-979', content: '' },
+                { num: 'V', title: 'Des dispositions particulières aux juridictions de renvoi après cassation', articles: 'Art. 980-981', content: '' },
               ],
               content: '' 
             },
@@ -372,29 +375,29 @@ Documentation complète pour les praticiens du droit béninois.`);
             { 
               num: 'I', 
               title: 'DES BIENS', 
-              articles: 'Art. 981 et s.',
+              articles: 'Art. 982-1063',
               sections: [
-                { num: 'I', title: 'De la vente des biens immeubles appartenant à des mineurs', articles: '', content: '' },
-                { num: 'II', title: 'Des partages et licitations', articles: '', content: '' },
-                { num: 'III', title: 'Des saisies', articles: '', content: '' },
-                { num: 'IV', title: 'De la vente du mobilier', articles: '', content: '' },
-                { num: 'V', title: 'De la procédure relative à l\'ouverture des successions', articles: '', content: '' },
+                { num: 'I', title: 'De la vente des biens immeubles appartenant à des mineurs', articles: 'Art. 982-992', content: '' },
+                { num: 'II', title: 'Des partages et licitations', articles: 'Art. 993-1009', content: '' },
+                { num: 'III', title: 'Des saisies', articles: 'Art. 1010-1012', content: '' },
+                { num: 'IV', title: 'De la vente du mobilier', articles: 'Art. 1013-1020', content: '' },
+                { num: 'V', title: 'De la procédure relative à l\'ouverture des successions', articles: 'Art. 1021-1063', content: '' },
               ],
               content: '' 
             },
             { 
               num: 'II', 
               title: 'DES PERSONNES', 
-              articles: '',
+              articles: 'Art. 1064-1158',
               sections: [
-                { num: 'I', title: 'Du juge des tutelles et des conseils de famille', articles: '', content: '' },
-                { num: 'II', title: 'Des régimes de protection applicables aux majeurs', articles: '', content: '' },
-                { num: 'III', title: 'De l\'intervention en justice quant aux droits des époux', articles: '', content: '' },
-                { num: 'IV', title: 'De l\'apposition des scellés', articles: '', content: '' },
-                { num: 'V', title: 'Des oppositions aux scellés', articles: '', content: '' },
-                { num: 'VI', title: 'De la levée des scellés', articles: '', content: '' },
-                { num: 'VII', title: 'De l\'inventaire', articles: '', content: '' },
-                { num: 'VIII', title: 'Du bénéfice d\'inventaire', articles: '', content: '' },
+                { num: 'I', title: 'Du juge des tutelles et des conseils de famille', articles: 'Art. 1064-1076', content: '' },
+                { num: 'II', title: 'Des régimes de protection applicables aux majeurs', articles: 'Art. 1077-1105', content: '' },
+                { num: 'III', title: 'De l\'intervention en justice quant aux droits des époux', articles: 'Art. 1106-1109', content: '' },
+                { num: 'IV', title: 'De l\'apposition des scellés', articles: 'Art. 1110-1127', content: '' },
+                { num: 'V', title: 'Des oppositions aux scellés', articles: 'Art. 1128-1129', content: '' },
+                { num: 'VI', title: 'De la levée des scellés', articles: 'Art. 1130-1143', content: '' },
+                { num: 'VII', title: 'De l\'inventaire', articles: 'Art. 1144-1147', content: '' },
+                { num: 'VIII', title: 'Du bénéfice d\'inventaire', articles: 'Art. 1148-1158', content: '' },
               ],
               content: '' 
             },
@@ -406,8 +409,8 @@ Documentation complète pour les praticiens du droit béninois.`);
           articlesIntro: '',
           contentIntro: '',
           chapitres: [
-            { num: 'I', title: 'DE LA PROCÉDURE D\'EXEQUATUR', articles: 'Art. 1159 et s.', sections: [], content: '' },
-            { num: 'II', title: 'DE LA PROCÉDURE DE L\'ARBITRAGE', articles: '', sections: [], content: '' },
+            { num: 'I', title: 'DE LA PROCÉDURE D\'EXEQUATUR', articles: 'Art. 1159-1166', sections: [], content: '' },
+            { num: 'II', title: 'DE LA PROCÉDURE DE L\'ARBITRAGE', articles: 'Art. 1167-1170', sections: [], content: '' },
           ]
         },
         {
@@ -416,26 +419,23 @@ Documentation complète pour les praticiens du droit béninois.`);
           articlesIntro: '',
           contentIntro: '',
           chapitres: [
-            { num: 'I', title: 'DES SAISIES', articles: '', sections: [], content: '' },
-            { num: 'II', title: 'DES OFFRES DE PAIEMENT ET DE LA CONSIGNATION', articles: '', sections: [], content: '' },
-            { num: 'III', title: 'DES VOIES À PRENDRE POUR AVOIR EXPÉDITION OU COPIE D\'UN ACTE', articles: '', sections: [], content: '' },
-            { num: 'IV', title: 'DE LA RECONSTITUTION DES ACTES DÉTRUITS', articles: '', sections: [], content: '' },
-            { num: 'V', title: 'DES RÉCEPTIONS DE CAUTIONNEMENT', articles: '', sections: [], content: '' },
-            { num: 'VI', title: 'DES REDDITIONS DE COMPTES', articles: '', sections: [], content: '' },
-            { num: 'VII', title: 'DES BIENS INSAISISSABLES', articles: '', sections: [], content: '' },
-            { num: 'VIII', title: 'DES PROCÉDURES SIMPLIFIÉES DE RECOUVREMENT', articles: '', sections: [], content: '' },
-            { num: 'IX', title: 'DES PETITES CRÉANCES', articles: 'Art. 768-1 et s.', sections: [], content: '' },
+            { num: 'I', title: 'DES SAISIES', articles: 'Art. 1171', sections: [], content: '' },
+            { num: 'II', title: 'DES OFFRES DE PAIEMENT ET DE LA CONSIGNATION', articles: 'Art. 1172-1177', sections: [], content: '' },
+            { num: 'III', title: 'DES VOIES À PRENDRE POUR AVOIR EXPÉDITION OU COPIE D\'UN ACTE', articles: 'Art. 1178-1198', sections: [], content: '' },
+            { num: 'IV', title: 'DE LA RECONSTITUTION DES ACTES DÉTRUITS', articles: 'Art. 1199-1203', sections: [], content: '' },
+            { num: 'V', title: 'DES RÉCEPTIONS DE CAUTIONNEMENT', articles: 'Art. 1204-1205', sections: [], content: '' },
+            { num: 'VI', title: 'DES REDDITIONS DE COMPTES', articles: 'Art. 1206-1221', sections: [], content: '' },
+            { num: 'VII', title: 'DES BIENS INSAISISSABLES', articles: 'Art. 1222-1223', sections: [], content: '' },
+            { num: 'VIII', title: 'DES PROCÉDURES SIMPLIFIÉES DE RECOUVREMENT', articles: 'Art. 1224', sections: [], content: '' },
+            { num: 'IX', title: 'DES PETITES CRÉANCES', articles: 'Art. 1225-1226', sections: [], content: '' },
           ]
         },
         {
           num: 'IV',
           title: 'DES DISPOSITIONS TRANSITOIRES ET DIVERSES',
-          articlesIntro: '',
+          articlesIntro: 'Art. 1227-1231',
           contentIntro: '',
-          chapitres: [
-            { num: 'I', title: 'DES DISPOSITIONS TRANSITOIRES', articles: '', sections: [], content: '' },
-            { num: 'II', title: 'DES DISPOSITIONS FINALES', articles: '', sections: [], content: '' },
-          ]
+          chapitres: []
         },
       ]
     },
@@ -443,8 +443,8 @@ Documentation complète pour les praticiens du droit béninois.`);
 
   const [modifications] = useState([
     { filename: 'loi-2016-16', title: 'Loi N° 2016-16 du 28 juillet 2016', content: '' },
-    { filename: 'loi-2020-08', title: 'Loi N° 2020-08 du 23 avril 2020 (Modernisation)', subsections: ['Procédure électronique', 'Petites créances (Art. 768-1 et s.)', 'Pool de l\'exécution'], content: '' },
-    { filename: 'loi-2022-20', title: 'Loi N° 2022-20 du 19 octobre 2022 (Saisies immobilières)', content: '' },
+    { filename: 'loi-2020-08', title: 'Loi N° 2020-08 du 23 avril 2020 (Modernisation)', subsections: ['Procédure électronique', 'Petites créances (Art. 768.1-768.8)', 'Pool de l\'exécution'], content: '' },
+    { filename: 'loi-2022-20', title: 'Loi N° 2022-20 du 19 octobre 2022 (Art. 585.1, saisies immobilières)', content: '' },
   ]);
 
   const [tables] = useState([
@@ -518,6 +518,9 @@ Documentation complète pour les praticiens du droit béninois.`);
   const generateChapitreContent = (livre, titre, chap) => {
     let c = `# LIVRE ${livre.num} - ${livre.title}\n## TITRE ${titre.num} - ${titre.title}\n### CHAPITRE ${chap.num} - ${chap.title}\n\n`;
     if (chap.articles) c += `**Articles:** ${chap.articles}\n\n---\n\n`;
+    if (chap.articlesIntro) {
+      c += `## Dispositions préliminaires\n\n**Articles:** ${chap.articlesIntro}\n\n[Contenu à compléter]\n\n---\n\n`;
+    }
     if (chap.sections.length > 0) {
       chap.sections.forEach(s => {
         c += `## Section ${s.num} - ${s.title}\n\n`;
@@ -560,7 +563,6 @@ Documentation complète pour les praticiens du droit béninois.`);
         const ln = romanToArabic(livre.num);
         livre.titres.forEach((titre) => {
           const tn = romanToArabic(titre.num);
-          // Fichier pour les dispositions introductives du titre (Art. 1 etc.)
           if (titre.contentIntro || titre.articlesIntro) {
             zip.file(`${fn}/references/livre-${ln}/titre-${tn}/00-dispositions-introductives.md`, generateTitreIntroContent(livre, titre));
           }
@@ -600,9 +602,9 @@ Documentation complète pour les praticiens du droit béninois.`);
         <div className="mb-4">
           <h1 className="text-2xl font-bold text-white mb-1 flex items-center gap-2">
             <Scale size={24} className="text-blue-400" />
-            Générateur CPC Bénin - Structure Officielle
+            Générateur CPC Bénin - Articles Exacts
           </h1>
-          <p className="text-slate-400 text-xs">Loi N° 2008-07 du 28 février 2011 (modifiée 2016, 2020, 2022)</p>
+          <p className="text-slate-400 text-xs">Loi N° 2008-07 - Art. 1 à 1231 (modifiée 2016, 2020, 2022)</p>
         </div>
 
         <div className="mb-4 grid grid-cols-4 gap-2">
@@ -632,13 +634,13 @@ Documentation complète pour les praticiens du droit béninois.`);
             </div>
 
             <div className="bg-slate-800 rounded-lg p-4 border border-slate-700">
-              <h2 className="text-sm font-bold text-white mb-2 flex items-center gap-2"><Book size={14} className="text-blue-400" /> Structure du Code</h2>
+              <h2 className="text-sm font-bold text-white mb-2 flex items-center gap-2"><Book size={14} className="text-blue-400" /> Structure du Code (Art. 1-1231)</h2>
               <div className="space-y-2 max-h-[500px] overflow-y-auto pr-1">
                 {livres.map((livre, li) => (
                   <div key={li} className="border border-slate-600 rounded">
                     <div className="flex items-center p-2 bg-blue-900/30 hover:bg-blue-900/50 cursor-pointer" onClick={() => setExpandedLivres({...expandedLivres, [li]: !expandedLivres[li]})}>
                       {expandedLivres[li] ? <ChevronDown size={12} className="text-blue-400" /> : <ChevronRight size={12} className="text-blue-400" />}
-                      <span className="text-white text-sm ml-2">📖 LIVRE {livre.num} - {livre.title}</span>
+                      <span className="text-white text-sm ml-2">📖 LIVRE {livre.num}</span>
                     </div>
                     {expandedLivres[li] && (
                       <div className="p-2 space-y-2">
@@ -646,30 +648,22 @@ Documentation complète pour les praticiens du droit béninois.`);
                           <div key={ti} className="border border-slate-600 rounded ml-2">
                             <div className="flex items-center p-2 bg-indigo-900/30 hover:bg-indigo-900/50 cursor-pointer" onClick={() => setExpandedTitres({...expandedTitres, [`${li}-${ti}`]: !expandedTitres[`${li}-${ti}`]})}>
                               {expandedTitres[`${li}-${ti}`] ? <ChevronDown size={10} className="text-indigo-400" /> : <ChevronRight size={10} className="text-indigo-400" />}
-                              <span className="text-white text-xs ml-2">📁 TITRE {titre.num} - {titre.title}</span>
+                              <span className="text-white text-xs ml-2">📁 TITRE {titre.num}</span>
                               {titre.articlesIntro && <span className="text-yellow-400 text-xs ml-2">({titre.articlesIntro})</span>}
                             </div>
                             {expandedTitres[`${li}-${ti}`] && (
                               <div className="p-2 space-y-2">
-                                {/* Zone pour Article 1 et dispositions introductives du Titre */}
-                                {(titre.articlesIntro || ti === 0) && (
+                                {titre.articlesIntro && (
                                   <div className="bg-yellow-900/20 border border-yellow-700/50 rounded p-2 mb-2">
                                     <div className="flex items-center gap-2 mb-2">
                                       <Edit3 size={12} className="text-yellow-400" />
-                                      <span className="text-yellow-400 text-xs font-medium">Dispositions introductives du Titre</span>
+                                      <span className="text-yellow-400 text-xs font-medium">Dispositions introductives ({titre.articlesIntro})</span>
                                     </div>
-                                    <input 
-                                      type="text" 
-                                      value={titre.articlesIntro || ''} 
-                                      onChange={e => updateTitre(li, ti, 'articlesIntro', e.target.value)} 
-                                      className="w-full px-2 py-1 bg-slate-700 border border-slate-600 rounded text-white text-xs mb-2" 
-                                      placeholder="Articles (ex: Art. 1)" 
-                                    />
                                     <textarea 
                                       value={titre.contentIntro || ''} 
                                       onChange={e => updateTitre(li, ti, 'contentIntro', e.target.value)} 
-                                      placeholder="Saisissez ici le contenu de l'Article 1 et autres dispositions introductives du Titre..." 
-                                      rows="4" 
+                                      placeholder="Saisissez le contenu des articles introductifs..." 
+                                      rows="3" 
                                       className="w-full px-2 py-1 bg-slate-700 border border-slate-600 rounded text-white text-xs font-mono resize-y" 
                                     />
                                   </div>
@@ -680,13 +674,15 @@ Documentation complète pour les praticiens du droit béninois.`);
                                     <div className="flex items-center justify-between p-1.5 bg-slate-700/50 hover:bg-slate-700 cursor-pointer" onClick={() => setExpandedChapitres({...expandedChapitres, [`${li}-${ti}-${ci}`]: !expandedChapitres[`${li}-${ti}-${ci}`]})}>
                                       <div className="flex items-center gap-1">
                                         {expandedChapitres[`${li}-${ti}-${ci}`] ? <ChevronDown size={10} className="text-green-400" /> : <ChevronRight size={10} className="text-green-400" />}
-                                        <span className="text-white text-xs">📄 Chap. {chap.num}: {chap.title.substring(0,40)}...</span>
+                                        <span className="text-white text-xs">📄 Chap. {chap.num}</span>
+                                        <span className="text-slate-400 text-xs">({chap.articles})</span>
                                         {chap.sections.length > 0 && <span className="text-cyan-400 text-xs">[{chap.sections.length} sec]</span>}
                                       </div>
                                     </div>
                                     {expandedChapitres[`${li}-${ti}-${ci}`] && (
                                       <div className="p-2 bg-slate-900/50 space-y-2">
-                                        <input type="text" value={chap.articles} onChange={e => updateChapitre(li,ti,ci,'articles',e.target.value)} className="w-full px-2 py-1 bg-slate-700 border border-slate-600 rounded text-white text-xs" placeholder="Articles (ex: Art. 2-18)" />
+                                        <p className="text-slate-300 text-xs">{chap.title}</p>
+                                        <input type="text" value={chap.articles} onChange={e => updateChapitre(li,ti,ci,'articles',e.target.value)} className="w-full px-2 py-1 bg-slate-700 border border-slate-600 rounded text-white text-xs" placeholder="Articles" />
                                         {chap.sections.length === 0 && (
                                           <textarea value={chap.content} onChange={e => updateChapitre(li,ti,ci,'content',e.target.value)} placeholder="Contenu du chapitre..." rows="4" className="w-full px-2 py-1 bg-slate-700 border border-slate-600 rounded text-white text-xs font-mono resize-y" />
                                         )}
@@ -696,12 +692,12 @@ Documentation complète pour les praticiens du droit béninois.`);
                                             {chap.sections.map((sec, si) => (
                                               <div key={si} className="bg-slate-800/50 p-2 rounded border border-slate-600">
                                                 <div className="flex items-center gap-1 mb-1">
-                                                  <span className="text-slate-400 text-xs">Section {sec.num}:</span>
+                                                  <span className="text-slate-400 text-xs">S.{sec.num}:</span>
                                                   <input type="text" value={sec.title} onChange={e => updateSection(li,ti,ci,si,'title',e.target.value)} className="flex-1 px-1 py-0.5 bg-slate-700 border border-slate-600 rounded text-white text-xs" />
-                                                  <input type="text" value={sec.articles} onChange={e => updateSection(li,ti,ci,si,'articles',e.target.value)} className="w-24 px-1 py-0.5 bg-slate-700 border border-slate-600 rounded text-white text-xs" placeholder="Articles" />
+                                                  <input type="text" value={sec.articles} onChange={e => updateSection(li,ti,ci,si,'articles',e.target.value)} className="w-28 px-1 py-0.5 bg-slate-700 border border-slate-600 rounded text-white text-xs" placeholder="Articles" />
                                                   <button onClick={() => removeSection(li,ti,ci,si)} className="text-red-400 hover:text-red-300"><Trash2 size={10} /></button>
                                                 </div>
-                                                <textarea value={sec.content} onChange={e => updateSection(li,ti,ci,si,'content',e.target.value)} placeholder="Contenu de la section..." rows="3" className="w-full px-2 py-1 bg-slate-700 border border-slate-600 rounded text-white text-xs font-mono resize-y" />
+                                                <textarea value={sec.content} onChange={e => updateSection(li,ti,ci,si,'content',e.target.value)} placeholder="Contenu..." rows="3" className="w-full px-2 py-1 bg-slate-700 border border-slate-600 rounded text-white text-xs font-mono resize-y" />
                                               </div>
                                             ))}
                                           </div>
@@ -758,15 +754,19 @@ Documentation complète pour les praticiens du droit béninois.`);
                 <Download size={16} /> {zipGenerated ? '✓ Téléchargé!' : 'Télécharger ZIP'}
               </button>
               <div className="mt-2 p-2 bg-green-900/30 border border-green-700 rounded text-green-200 text-xs text-center">
-                ✓ {stats.chapitres} chapitres + {modifications.length + tables.length} annexes
+                ✓ {stats.chapitres} chapitres + {stats.sections} sections
               </div>
             </div>
 
             <div className="bg-yellow-900/20 rounded-lg p-3 border border-yellow-700/50">
-              <h4 className="text-xs font-bold text-yellow-400 mb-2">💡 Article 1</h4>
-              <p className="text-xs text-slate-300">
-                L'Article 1 se trouve dans la zone <strong>"Dispositions introductives du Titre"</strong> (encadré jaune) sous le TITRE PREMIER.
-              </p>
+              <h4 className="text-xs font-bold text-yellow-400 mb-2">📋 Numéros exacts</h4>
+              <div className="text-xs text-slate-300 space-y-1">
+                <p>• Art. 1er: TITRE PREMIER (intro)</p>
+                <p>• Art. 607: TITRE IV (intro)</p>
+                <p>• Art. 768.1-768.8: Petites créances (Loi 2020)</p>
+                <p>• Art. 585.1: Saisies immob. (Loi 2022)</p>
+                <p>• Art. 1227-1231: Dispositions finales</p>
+              </div>
             </div>
           </div>
         </div>
