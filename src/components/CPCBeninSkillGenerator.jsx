@@ -2128,13 +2128,13 @@ export default function CPCBeninSkillGenerator() {
         <div className="mb-2 flex items-center justify-between">
           <div>
             <h1 className="text-lg font-bold text-white flex items-center gap-2">
-              <Scale size=18 className="text-blue-400" />
+              <Scale size={18} className="text-blue-400" />
               CPC Bénin v10 - Structure Complète
             </h1>
             <p className="text-slate-400 text-xs">{stats.sec} Sections • {stats.ss} Sous-sections • {stats.para} Paragraphes</p>
           </div>
           <button onClick={() => window.confirm('Reset?') && window.location.reload()} className="p-1 rounded bg-slate-700 text-slate-300">
-            <RotateCcw size=14 />
+            <RotateCcw size={14} />
           </button>
         </div>
 
@@ -2149,7 +2149,7 @@ export default function CPCBeninSkillGenerator() {
 
             <div className="bg-slate-800 rounded p-2 border border-slate-700">
               <h2 className="text-sm font-bold text-white mb-1 flex items-center gap-1">
-                <Book size=14 className="text-blue-400" /> Structure du Code
+                <Book size={14} className="text-blue-400" /> Structure du Code
               </h2>
               <div className="space-y-1 max-h-[500px] overflow-y-auto pr-1 text-xs">
                 {livres.map((livre, li) => (
